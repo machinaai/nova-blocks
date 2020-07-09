@@ -1,6 +1,6 @@
-# ant-design-blocks
+# nova-blocks
 
-umi blocks of Ant Design.
+nova blocks 
 
 ## Usage
 
