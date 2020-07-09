@@ -1,0 +1,17 @@
+{
+  "name": "@nova-blocks/button-basic",
+  "version": "1.0.0",
+  "description": "Hay cuatro tipos de botones: botón primario, botón secundario, botón punteado y botón de enlace. El botón principal aparece como máximo una vez en la misma área de operación.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/machinaai"
+  },
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}
