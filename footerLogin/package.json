@@ -15,7 +15,7 @@
     "react": ">=16.0.0"
   },
   "devDependencies": {
-    "umi": "^2.9.0",
+    "umi": "^3.2.9",
     "umi-plugin-block-dev": "^2.0.0",
     "umi-types": "^0.3.0"
   },
