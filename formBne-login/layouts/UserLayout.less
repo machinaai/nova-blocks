@@ -1,0 +1,129 @@
+@import '~antd/es/style/themes/default.less';
+@font-face {
+  font-family: Myriad Pro;
+  src: url('../assets/fonts/MYRIADPRO-SEMIBOLD.woff');
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background-color: #f0f2f5;
+}
+
+.lang {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  line-height: 44px;
+  text-align: right;
+  :global(.ant-dropdown-trigger) {
+    margin-right: 24px;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 32px 0;
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 368px;
+  height: 44px;
+  margin: 0 auto;
+  line-height: 44px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  height: 44px;
+  margin-right: 16px;
+  vertical-align: top;
+}
+
+.title {
+  position: relative;
+  top: 2px;
+  color: @heading-color;
+  font-weight: 600;
+  font-size: 33px;
+  font-family: Myriad Pro, Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.desc {
+  margin-top: 12px;
+  margin-bottom: 40px;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: space-around;
+  width: 368px;
+  margin: 0 auto;
+}
+
+.nova {
+  margin-top: 17px;
+  margin-right: 29px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  font-family: PingFang SC Regular, Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+
+  .novalink {
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+.logoNova {
+  width: 22px;
+  height: 24px;
+  margin-right: 7px;
+}
+
+.logo_Reboot img {
+  display: flex;
+  flex-direction: row;
+  width: 30px;
+  height: auto;
+  margin-top: 22px;
+  margin-left: 25px;
+  opacity: 0.25;
+}
+
+.icon {
+  margin-left: 16px;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: @primary-color;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  font-size: 24px;
+}
