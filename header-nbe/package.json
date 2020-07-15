@@ -1,5 +1,5 @@
 {
-  "name": "@umi-block/header-login",
+  "name": "@umi-block/header-nbe",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
@@ -7,7 +7,7 @@
     "name": "",
     "email": ""
   },
-  "repository": "umijs/umi-blocks/header-login",
+  "repository": "umijs/umi-blocks/header-nbe",
   "scripts": {
     "dev": "umi dev"
   },
