@@ -1,5 +1,5 @@
 {
-  "name": "@umi-block/footerLogin",
+  "name": "@umi-block/footer-nbe",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
@@ -7,7 +7,7 @@
     "name": "",
     "email": ""
   },
-  "repository": "umijs/umi-blocks/footerLogin",
+  "repository": "umijs/umi-blocks/footer-nbe",
   "scripts": {
     "dev": "umi dev"
   },
