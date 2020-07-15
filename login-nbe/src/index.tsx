@@ -17,6 +17,29 @@ interface LoginProps {
   submitting?: boolean;
 }
 
+/**
+ * Const that shows message error
+ * @param content message that shows inside input
+ */
+const LoginMessage: React.FC<{
+  content: string;
+  setIsError: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ content, setIsError }) => (
+  <Alert
+    style={{
+      marginTop: 16,
+      marginBottom: 16,
+    }}
+    message={content}
+    type="error"
+    showIcon
+    closable
+    afterClose={() => {
+      setIsError(false);
+    }}
+  />
+);
+
 const Login: React.FC<LoginProps> = (props) => {
   const intl = useIntl();
   const [form] = Form.useForm();
@@ -31,28 +54,6 @@ const Login: React.FC<LoginProps> = (props) => {
   const today = new Date();
   const currentHour = today.getHours();
   let messageGood: string;
-
-  /**
-   * Const that shows message error
-   * @param content message that shows inside input
-   */
-  const LoginMessage: React.FC<{
-    content: string;
-  }> = ({ content }) => (
-    <Alert
-      style={{
-        marginTop: 16,
-        marginBottom: 16,
-      }}
-      message={content}
-      type="error"
-      showIcon
-      closable
-      afterClose={() => {
-        setIsError(false);
-      }}
-    />
-  );
 
   const messageError: string = intl.formatMessage({
     id: 'login.messageError',
@@ -84,37 +85,6 @@ const Login: React.FC<LoginProps> = (props) => {
     messageGood = goodEvening;
   } else {
     messageGood = goodNight;
-  }
-
-  /**
-   * Variable that changes message
-   */
-  let message = (
-    <span className={styles.message}>
-      {intl.formatMessage({
-        id: 'login.messageWelcome',
-        defaultMessage: '¡Bienvenido!',
-      })}{' '}
-      {messageGood}
-    </span>
-  );
-
-  /**
-   * Function that shows message error if there is
-   */
-  if (isError) {
-    message = (
-      <span className={styles.messageError}>
-        {status === 'error' && !submitting && (
-          <LoginMessage
-            content={intl.formatMessage({
-              id: 'login.signinError',
-              defaultMessage: 'Servicio no disponible.',
-            })}
-          />
-        )}
-      </span>
-    );
   }
 
   /**
@@ -161,7 +131,27 @@ const Login: React.FC<LoginProps> = (props) => {
   return (
     <div className={styles.main}>
       <LoginForm activeKey={type} onTabChange={setType} onSubmit={handleSubmit} from={form}>
-        {message}
+        {isError ? (
+          <span className={styles.messageError}>
+            {status === 'error' && !submitting && (
+              <LoginMessage
+                content={intl.formatMessage({
+                  id: 'login.signinError',
+                  defaultMessage: 'Servicio no disponible.',
+                })}
+                setIsError={setIsError}
+              />
+            )}
+          </span>
+        ) : (
+          <span className={styles.message}>
+            {intl.formatMessage({
+              id: 'login.messageWelcome',
+              defaultMessage: '¡Bienvenido!',
+            })}{' '}
+            {messageGood}
+          </span>
+        )}
         <FormItem
           prefix={<UserOutlined />}
           className={styles.obelisco}

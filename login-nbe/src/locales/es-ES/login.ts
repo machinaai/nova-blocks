@@ -1,5 +1,4 @@
 export default {
-  'login.corporateBanking': 'Banca Empresarial',
   'login.messageError': 'Introduce la información',
   'login.messageErrorVerify': 'Verifica la información',
   'login.customer': 'Número de cliente',

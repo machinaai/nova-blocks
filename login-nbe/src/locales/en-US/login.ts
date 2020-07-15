@@ -1,5 +1,4 @@
 export default {
-  'login.corporateBanking': 'Corporate Banking',
   'login.messageError': 'Introduce information',
   'login.messageErrorVerify': 'Verify information',
   'login.customer': 'Customer number',

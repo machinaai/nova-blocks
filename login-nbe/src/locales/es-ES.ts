@@ -1,9 +1,3 @@
-import component from './es-ES/component';
-import globalHeader from './es-ES/globalHeader';
-import menu from './es-ES/menu';
-import pwa from './es-ES/pwa';
-import settingDrawer from './es-ES/settingDrawer';
-import settings from './es-ES/settings';
 import login from './es-ES/login';
 
 export default {
@@ -15,11 +9,5 @@ export default {
   'app.welcome.link.fetch-blocks': 'Obtener todos los bloques',
   'app.welcome.link.block-list':
     'Desarrollo basado en bloques, costruye rápidamente páginas estándar',
-  ...globalHeader,
-  ...menu,
-  ...settingDrawer,
-  ...settings,
-  ...pwa,
-  ...component,
   ...login,
 };
