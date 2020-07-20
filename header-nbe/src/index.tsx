@@ -1,4 +1,3 @@
-// import { useIntl } from 'umi';
 import styles from './index.less';
 import { useIntl } from 'umi';
 import React from 'react';
@@ -7,8 +6,7 @@ import logo from './assets/logos/bne-logo.svg';
 
 const Block: React.FC = (props) => {
 
-  
-  const intl = useIntl();
+const intl = useIntl();
   
   return (
 
@@ -31,7 +29,6 @@ const Block: React.FC = (props) => {
               </span>
             </div>
           </div>
-  
         </div>
       </div>
   );
