@@ -1,6 +1,6 @@
 /** @format */
 
-const prettier = require('prettier');
+// const prettier = require('prettier');
 
 const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
 const TSX_SCRIPT = /```tsx\n*(.*?(?=```))/is;
@@ -31,15 +31,15 @@ const parseJSX = (text, id = '') => {
     return '';
   }
   jsxText = jsxText.replace(/ReactDOM.render\((.*),.*mountNode.*\)/is, (match, key) => {
-    return `export default () => <div className={styles.container}><div id="${id}">${key}</div></div>`;
+    return `export default () => ${key}`;
   });
-  const importReactReg = /import(\D*)from 'react'/;
-  const importReactContent = importReactReg.test(jsxText) ? '' : "import React from 'react';";
-  jsxText = `${importReactContent}import styles from './index.less';\n\n${jsxText}`;
+  // const importReactReg = /import(\D*)from 'react'/;
+  // const importReactContent = importReactReg.test(jsxText) ? '' : "import React from 'react';";
+  jsxText = `import React from 'react';\n${jsxText}`;
 
-  try {
-    jsxText = prettier.format(jsxText, { parser: 'babel' });
-  } catch (error) {}
+  // try {
+  //   jsxText = prettier.format(jsxText, { parser: 'babel' });
+  // } catch (error) {}
 
   return jsxText;
 };
@@ -69,8 +69,8 @@ const parseStyle = (text, componentName) => {
   }
 
   if (cssText !== null) {
-    cssText = `.container {\n  :global {\n    ${cssText}\n  }\n}`;
-    cssText = prettier.format(cssText, { parser: 'less' });
+    cssText = `.container {\n:global {${cssText}}\n}`;
+    // cssText = prettier.format(cssText, { parse: 'babel' });
   }
 
   return cssText;
