@@ -6,9 +6,10 @@ import logoInstagram from './assets/icons/instagram.svg';
 import logoLinkedin from './assets/icons/linkedin.svg';
 import logoNova from './assets/logos/nova.svg';
 
-const today = new Date();
-const currentYear = today.getFullYear();
-const Block: React.FC = () => {
+const FooterNbe: React.FC = () => {
+  const today = new Date();
+  const currentYear: number = today.getFullYear();
+
   return (
     <div className={styles.footer}>
       <span className={styles.nova}>
@@ -47,4 +48,4 @@ const Block: React.FC = () => {
   );
 };
 
-export default Block;
+export default FooterNbe;
