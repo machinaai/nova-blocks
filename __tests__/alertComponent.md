@@ -14,9 +14,9 @@ title:
 The simplest usage for short messages.
 
 ```jsx
-import styles from './index.less';
-import { Alert } from 'antd';
-ReactDOM.render(<Alert message="Success Text" type="success" />, mountNode);
+import { Button } from 'antd';
+
+ReactDOM.render(<Button />, mountNode);
 ```
 
 <style>

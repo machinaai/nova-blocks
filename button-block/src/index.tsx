@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./index.less";
-import { Button } from "antd";
+import React from 'react';
+import styles from './index.less';
+import { Button } from 'antd';
 
-export default () => (
+const ButtonBlock =  () => (
   <div className={styles.container}>
     <div id="components-button-demo-block">
       <div>
@@ -20,3 +20,5 @@ export default () => (
     </div>
   </div>
 );
+
+export default ButtonBlock;

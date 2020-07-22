@@ -1,8 +1,9 @@
-.card {
-  :global {
-    .ant-alert {
+.container {
+:global {
+.ant-alert {
   margin-bottom: 16px;
 }
-
-  }
 }
+}
+
+button {}
