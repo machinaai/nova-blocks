@@ -1,16 +1,18 @@
-import React from "react";
-import styles from "./index.less";
-import { Button } from "antd";
+import React from 'react';
+import styles from './index.less';
+import { Button } from 'antd';
 
-export default () => (
+const ButtonBassic = () => (
   <div className={styles.container}>
     <div id="components-button-demo-basic">
       <div>
-        <Button type="primary">Primary</Button>
-        <Button>Default</Button>
+        <Button type="primary" >Primary</Button> 
+        <Button>Default</Button> 
         <Button type="dashed">Dashed</Button>
         <Button type="link">Link</Button>
       </div>
     </div>
   </div>
 );
+
+export default ButtonBassic;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterNbe should show correctly 1`] = `
+<div>
+  <span>
+    <a
+      href="https://novasolutionsystems.com/"
+      target="blank"
+    >
+      <img
+        alt="Logo Nova By Reboot"
+        src="test-file-stub"
+      />
+      Nova © Copyright 
+      2020
+    </a>
+  </span>
+  <div>
+    <a
+      href="https://twitter.com/novasolutionsys/"
+      target="blank"
+    >
+      <img
+        alt="Logo Twitter"
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href=" https://www.linkedin.com/company/novasolutionsystems/"
+      target="blank"
+    >
+      <img
+        alt="Logo Linkedin"
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.facebook.com/novasolutionsystems/"
+      target="blank"
+    >
+      <img
+        alt="Logo Facebook"
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/novasolutionsystems/"
+      target="blank"
+    >
+      <img
+        alt="Logo Instagram"
+        src="test-file-stub"
+      />
+    </a>
+  </div>
+</div>
+`;
