@@ -1,6 +1,7 @@
 import React from 'react';
 import FooterNbe from './index';
 import { shallow } from 'enzyme';
+import { advanceTo, clear } from 'jest-date-mock';
 
 import logoNova from './assets/logos/nova.svg';
 import logoTwitter from './assets/icons/twitter.svg';
@@ -13,15 +14,17 @@ describe('FooterNbe', () => {
 
   beforeEach(() => {
     wrapper = shallow(<FooterNbe />);
+    advanceTo(new Date(2021, 5, 13));
   });
 
   test('should show correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  test('should has contain the current Year', () => {
+  test('should has contain the year 2021', () => {
+    advanceTo(new Date(2021, 5, 13));
     let a = wrapper.find('a').at(0).text();
-    expect(a).toBe('Nova © Copyright 2020');
+    expect(a).toBe('Nova © Copyright 2021');
   });
 
   test('should has an img call logoNova', () => {
