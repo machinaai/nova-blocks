@@ -48,7 +48,6 @@ const Login: React.FC<LoginProps> = (props) => {
   const [autoLogin, setAutoLogin] = useState(true);
   const [type, setType] = useState<string>('account');
   const [isUserName, setIsUserName] = useState<boolean>(true);
-  const [isUserKey, setIsUserKey] = useState<boolean>(true);
   const [isPassword, setIsPassword] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
   const today = new Date();
@@ -97,19 +96,10 @@ const Login: React.FC<LoginProps> = (props) => {
       type: 'login/login',
       payload: { ...values, type },
     });
-    setIsUserKey(true);
     setIsUserName(true);
     setIsPassword(true);
     setIsError(true);
     form.resetFields();
-  };
-
-  /**
-   * Function that verify if input has at least 3 characters
-   * @param event input event
-   */
-  const onChangeHandlerUserKey = (event: any) => {
-    setIsUserKey(event.target.value.length < 3);
   };
 
   /**
@@ -152,29 +142,6 @@ const Login: React.FC<LoginProps> = (props) => {
             {messageGood}
           </span>
         )}
-        <FormItem
-          prefix={<UserOutlined />}
-          className={styles.obelisco}
-          name="userKey"
-          maxLength={20}
-          onPasteDisabled
-          onCopyDisabled
-          onChanged={(event) => onChangeHandlerUserKey(event)}
-          placeholder={intl.formatMessage({
-            id: 'login.customer',
-            defaultMessage: 'Número de cliente',
-          })}
-          rules={[
-            {
-              required: true,
-              message: messageError,
-            },
-            {
-              min: 3,
-              message: messageErrorVerify,
-            },
-          ]}
-        />
         <FormItem
           prefix={<UserOutlined />}
           className={styles.obelisco}
@@ -247,7 +214,7 @@ const Login: React.FC<LoginProps> = (props) => {
             })}
           </a>
         </div>
-        <Submit loading={submitting} disabled={isUserName || isUserKey || isPassword}>
+        <Submit loading={submitting} disabled={isUserName || isPassword}>
           {intl.formatMessage({
             id: 'login.signin',
             defaultMessage: 'Acceder',
