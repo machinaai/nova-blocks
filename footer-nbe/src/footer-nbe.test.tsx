@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterNbe from './index';
 import { shallow } from 'enzyme';
-import { advanceTo, clear } from 'jest-date-mock';
+import { advanceTo } from 'jest-date-mock';
 
 import logoNova from './assets/logos/nova.svg';
 import logoTwitter from './assets/icons/twitter.svg';
@@ -22,7 +22,6 @@ describe('FooterNbe', () => {
   });
 
   test('should has contain the year 2021', () => {
-    advanceTo(new Date(2021, 5, 13));
     let a = wrapper.find('a').at(0).text();
     expect(a).toBe('Nova © Copyright 2021');
   });
