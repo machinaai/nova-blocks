@@ -1,0 +1,99 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  max-width: 393px;
+  margin: 0 auto 6.23rem;
+  font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+
+  .icon {
+    margin-left: 16px;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .obelisco {
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+
+  .message {
+    display: flex;
+    justify-content: center;
+    max-width: 393px;
+    height: 24px;
+    margin: 22px auto 26px;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .button {
+    width: 100%;
+    color: #1890ff;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  :global {
+    .antd-pro-login-submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .ant-input-affix-wrapper > input.ant-input {
+      color: #000;
+      background-color: transparent;
+    }
+
+    .ant-input-affix-wrapper > input.ant-input:focus {
+      color: black;
+      border: none;
+    }
+
+    .ant-input-affix-wrapper:focus,
+    .ant-input-affix-wrapper-focused {
+      color: black;
+      background-color: #bbd6f0;
+      border-bottom: 2px solid #0091ff;
+      box-shadow: none;
+    }
+
+    .ant-form-item-has-error .ant-input,
+    .ant-form-item-has-error .ant-input-affix-wrapper,
+    .ant-form-item-has-error .ant-input:hover,
+    .ant-form-item-has-error .ant-input-affix-wrapper:hover {
+      color: black;
+      background-color: #f4dee8;
+      border-color: #f92134;
+    }
+
+    .ant-form-item-explain {
+      padding-left: 40px;
+    }
+
+    .ant-btn.disabled,
+    .ant-btn[disabled] {
+      color: #fff;
+      background-color: rgba(24, 144, 255, 0.5);
+    }
+  }
+}
