@@ -25,7 +25,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
   const pkg = require(pkgFilePath);
   const json = {
     ...pkg,
-    name: `@blocks/${name}`,
+    name: `@nova-blocks/${name}`,
     description,
   };
   const jsonStr = prettier.format(JSON.stringify(json), { parser: 'json' });
