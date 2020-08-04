@@ -1,11 +1,11 @@
 {
-  "name": "@umi-block/footer-nbe",
+  "name": "@nova-blocks/footer-nbe",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
   "authors": {
-    "name": "",
-    "email": ""
+    "name": "lzamorano",
+    "email": "lzamorano@novasolutionsystems.com"
   },
   "repository": "umijs/umi-blocks/footer-nbe",
   "scripts": {
