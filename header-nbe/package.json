@@ -1,0 +1,23 @@
+{
+  "name": "@umi-block/header-nbe",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "umijs/umi-blocks/header-nbe",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "react": ">=16.0.0"
+  },
+  "devDependencies": {
+    "umi": "^3.2.9",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-types": "^0.3.0"
+  },
+  "license": "MIT"
+}

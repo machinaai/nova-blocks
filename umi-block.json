@@ -47,6 +47,22 @@
       "name": "footer-nbe FooterNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "header-nbe HeaderNbe",
+      "value": "Header-Nbe",
+      "key": "Header-Nbe",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/header-nbe",
+      "type": "block",
+      "path": "header-nbe",
+      "isPage": false,
+      "defaultPath": "/header-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/header-nbe/snapshot.png",
+      "tags": ["General"],
+      "name": "header-nbe HeaderNbe",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
