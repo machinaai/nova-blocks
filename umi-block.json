@@ -63,6 +63,22 @@
       "name": "header-nbe HeaderNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "form-item FormItem",
+      "value": "Form-Item",
+      "key": "Form-Item",
+      "description": "Form item personalized",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/form-item",
+      "type": "block",
+      "path": "form-item",
+      "isPage": false,
+      "defaultPath": "/form-item",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/form-item/snapshot.png",
+      "tags": ["General"],
+      "name": "form-item FormItem",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
