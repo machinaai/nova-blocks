@@ -4,7 +4,7 @@ import React from 'react';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
 
-const Block: React.FC = (props) => {
+const HeaderNbe: React.FC = (props) => {
 
 const intl = useIntl();
   
@@ -34,4 +34,4 @@ const intl = useIntl();
   );
 };
 
-export default Block;
+export default HeaderNbe;
