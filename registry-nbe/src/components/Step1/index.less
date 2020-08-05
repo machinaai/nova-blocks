@@ -1,0 +1,38 @@
+@import '~antd/es/style/themes/default.less';
+
+.errorContainer {
+  width: 392px;
+  margin: 0 auto;
+}
+
+.stepForm {
+  flex-direction: column;
+  max-width: 700px;
+  margin: 40px auto 0;
+  .userContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    margin: 33px auto;
+    .accountQuestion {
+      margin-bottom: 24px;
+    }
+    .buttonContinue {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+      border-radius: 4px;
+      &:disabled {
+        color: white;
+        background-color: rgba(24, 144, 255, 0.5);
+      }
+      &:disabled:hover {
+        color: white;
+        background-color: rgba(24, 144, 255, 0.5);
+      }
+    }
+    .operations {
+      margin-top: 30px;
+    }
+  }
+}
