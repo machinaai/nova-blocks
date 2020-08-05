@@ -1,0 +1,65 @@
+@import '~antd/es/style/themes/default.less';
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .successResult {
+    max-width: 240px;
+    margin: 0 auto;
+    padding: 24px 0 8px;
+  }
+
+  .errorResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 24px 0 8px;
+
+    .imgError {
+      width: 207px;
+      height: 99px;
+      margin-top: 18px;
+    }
+
+    .legendsContainer {
+      width: 280px;
+      text-align: center;
+    }
+
+    .errorTitle {
+      margin-bottom: 18px;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+      font-size: 24px;
+      font-family: 'PingFang SC';
+      line-height: 32px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .errorSubtitle {
+      margin: 0;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      font-family: 'PingFang SC';
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-align: center;
+    }
+  }
+}
+.buttonContainer {
+  max-width: 392px;
+  margin: 0 auto;
+}
+.buttonPrincipal {
+  width: 100%;
+  height: 40px;
+  margin-top: 19px;
+  font-size: 16px;
+  border-radius: 4px;
+}
