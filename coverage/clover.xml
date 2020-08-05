@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1595435803797" clover="3.2.0">
-  <project timestamp="1595435803797" name="All files">
+<coverage generated="1595524829839" clover="3.2.0">
+  <project timestamp="1595524829839" name="All files">
     <metrics statements="74" coveredstatements="69" conditionals="45" coveredconditionals="35" methods="11" coveredmethods="11" elements="130" coveredelements="115" complexity="0" loc="74" ncloc="74" packages="4" files="4" classes="4"/>
     <package name="button-basic.src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="/home/charlycooper/Documents/react/antDesign/nova-blocks/button-basic/src/index.tsx">
+      <file name="index.tsx" path="/home/loreliz/Documentos/ant-design/repos-bloques/nova-blocks/button-basic/src/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
@@ -12,7 +12,7 @@
     </package>
     <package name="button-block.src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="/home/charlycooper/Documents/react/antDesign/nova-blocks/button-block/src/index.tsx">
+      <file name="index.tsx" path="/home/loreliz/Documentos/ant-design/repos-bloques/nova-blocks/button-block/src/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
@@ -20,7 +20,7 @@
     </package>
     <package name="footer-nbe.src">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="/home/charlycooper/Documents/react/antDesign/nova-blocks/footer-nbe/src/index.tsx">
+      <file name="index.tsx" path="/home/loreliz/Documentos/ant-design/repos-bloques/nova-blocks/footer-nbe/src/index.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="8" type="stmt"/>
@@ -30,7 +30,7 @@
     </package>
     <package name="src">
       <metrics statements="66" coveredstatements="61" conditionals="45" coveredconditionals="35" methods="8" coveredmethods="8"/>
-      <file name="parse.js" path="/home/charlycooper/Documents/react/antDesign/nova-blocks/src/parse.js">
+      <file name="parse.js" path="/home/loreliz/Documentos/ant-design/repos-bloques/nova-blocks/src/parse.js">
         <metrics statements="66" coveredstatements="61" conditionals="45" coveredconditionals="35" methods="8" coveredmethods="8"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>

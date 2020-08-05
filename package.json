@@ -14,7 +14,8 @@
     "start": "node src/index.js",
     "start-c": "node src/index.js -c",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "doc": "typedoc --options ./typedoc.json"
   },
   "dependencies": {
     "@ant-design/icons": "^4.0.2",
@@ -73,6 +74,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "jest-date-mock": "^1.0.8"
+    "jest-date-mock": "^1.0.8",
+    "typedoc": "^0.17.8"
   }
 }
