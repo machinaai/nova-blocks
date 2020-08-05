@@ -1,0 +1,17 @@
+export default {
+  'login.messageError': 'Introduce la información',
+  'login.messageErrorVerify': 'Verifica la información',
+  'login.customer': 'Número de cliente',
+  'login.user': 'Usuario',
+  'login.password': 'Contraseña',
+  'login.rememberMe': 'Recordarme',
+  'login.recoveryPassword': 'Recuperar contraseña',
+  'login.signin': 'Acceder',
+  'login.signup': 'Registro',
+  'login.itsnotme': 'No soy yo',
+  'login.signinError': 'Servicio no disponible.',
+  'login.messageWelcome': '¡Bienvenido!',
+  'login.goodDay': 'Buen día.',
+  'login.goodEvening': 'Buena tarde.',
+  'login.goodNight': 'Buena noche.',
+};
