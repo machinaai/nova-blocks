@@ -127,6 +127,22 @@
       "name": "recovery-nbe RecoveryNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "dashboard-nbe DashboardNbe",
+      "value": "Dashboard-Nbe",
+      "key": "Dashboard-Nbe",
+      "description": "form dashboard block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/dashboard-nbe",
+      "type": "block",
+      "path": "dashboard-nbe",
+      "isPage": false,
+      "defaultPath": "/dashboard-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/dashboard-nbe/snapshot.png",
+      "tags": ["Form"],
+      "name": "dashboard-nbe DashboardNbe",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
