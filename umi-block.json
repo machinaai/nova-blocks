@@ -111,6 +111,22 @@
       "name": "registry-nbe RegistryNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "recovery-nbe RecoveryNbe",
+      "value": "Recovery-Nbe",
+      "key": "Recovery-Nbe",
+      "description": "form recovery block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/recovery-nbe",
+      "type": "block",
+      "path": "recovery-nbe",
+      "isPage": false,
+      "defaultPath": "/recovery-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/recovery-nbe/snapshot.png",
+      "tags": ["Form"],
+      "name": "recovery-nbe RecoveryNbe",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }

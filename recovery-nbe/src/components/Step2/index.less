@@ -1,0 +1,74 @@
+@import '~antd/es/style/themes/default.less';
+.stepForm {
+  flex-direction: column;
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 395px;
+  margin: 33px auto 150px;
+}
+.operations {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.formItem {
+  width: 100%;
+}
+.buttonContinue {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  &:disabled {
+    color: white;
+    background-color: rgba(24, 144, 255, 0.5);
+  }
+  &:disabled:hover {
+    color: white;
+    background-color: rgba(24, 144, 255, 0.5);
+  }
+}
+.clock {
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 16px;
+}
+.clockText {
+  display: inline-flex;
+  align-items: center;
+  color: black;
+}
+.iconClock {
+  margin-right: 14px;
+  font-size: 15px;
+}
+.requestButton {
+  margin: 0 auto;
+  padding: 0;
+  color: #1890ff;
+  font-size: 14px;
+  border: 0;
+  box-shadow: none;
+}
+.requestCode {
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+  font-size: 14px;
+  border: 0;
+}
+.disable {
+  background-color: lightgray;
+  :global {
+    .ant-input-disabled {
+      color: black;
+    }
+  }
+}
