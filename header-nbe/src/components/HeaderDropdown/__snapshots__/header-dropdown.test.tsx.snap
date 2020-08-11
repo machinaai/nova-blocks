@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Dropdown should show correctly 1`] = `
+<Dropdown
+  mouseEnterDelay={0.15}
+  mouseLeaveDelay={0.1}
+  overlayClassName=""
+/>
+`;
