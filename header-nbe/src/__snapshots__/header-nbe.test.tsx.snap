@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNbe should show correctly 1`] = `
+<div>
+  <div>
+    <div>
+      <img
+        alt=""
+        src="https://images7.bamboohr.com/152496/logos/cropped.jpg?v=39"
+      />
+    </div>
+    <SelectLang />
+  </div>
+  <div>
+    <div>
+      <div>
+        <img
+          alt="logo"
+          src="test-file-stub"
+        />
+        <span />
+      </div>
+    </div>
+  </div>
+</div>
+`;

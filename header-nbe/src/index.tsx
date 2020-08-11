@@ -4,7 +4,7 @@ import React from 'react';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
 
-const HeaderNbe: React.FC = (props) => {
+const HeaderNbe: React.FC = () => {
 
 const intl = useIntl();
   
