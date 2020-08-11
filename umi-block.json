@@ -143,6 +143,22 @@
       "name": "dashboard-nbe DashboardNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "form-customizable FormCustomizable",
+      "value": "Form-Customizable",
+      "key": "Form-Customizable",
+      "description": "form dashboard block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/form-customizable",
+      "type": "block",
+      "path": "form-customizable",
+      "isPage": false,
+      "defaultPath": "/form-customizable",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/form-customizable/snapshot.png",
+      "tags": ["Form"],
+      "name": "form-customizable FormCustomizable",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
