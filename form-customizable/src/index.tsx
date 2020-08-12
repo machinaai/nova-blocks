@@ -1,65 +1,67 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'antd';
-import { useIntl, Link } from 'umi';
-import { UserOutlined, AimOutlined } from '@ant-design/icons';
+import { Link } from 'umi';
+import { AimOutlined } from '@ant-design/icons';
 import FormItem from './FormItem';
 import styles from './index.less';
+import { FormProps } from './interfaces/form-props.interface';
+import { InputProps } from './interfaces/input-auto-label.interface';
 
 /**
  * Block Customizable Form
  */
-const FormCustomizable: React.FC = (props) => {
-  const useintl = useIntl();
+const FormCustomizable: React.FC<FormProps> = (props) => {
+  const { formFields, valueFields, onSumbit, onCancel, onReturn } = props;
+  // Initial form if you don't get formFields
+  const fixtureFields: InputProps[] = [{
+    prefix: <AimOutlined />,
+    name: 'password',
+    placeholder: 'Password',
+    maxLength: 20,
+    rules: [
+      {
+        required: true,
+        message: 'Validate information',
+      },
+      {
+        min: 3,
+        message: 'Minimum length 3',
+      },
+    ],
+    inputPassword: true
+  }]
+
+  const makeFields = formFields || fixtureFields;
   const [form] = Form.useForm();
   const [, setIsDisabled] = useState();
 
   // Inputs configuration
-  const inputsFixture = [
-    {
-      prefix: <UserOutlined />,
-      name: 'user',
-      placeholder: useintl.formatMessage({ id: 'formCustom.placeholder.input1' }),
-      maxLength: 20,
-      rules: [
-        {
-          required: true,
-          message: useintl.formatMessage({ id: 'formCustom.input.empty' }),
-        },
-        {
-          min: 3,
-          message: useintl.formatMessage({ id: 'formCustom.input.check' }),
-        },
-      ],
-    },
-    {
-      prefix: <AimOutlined />,
-      name: 'password',
-      placeholder: useintl.formatMessage({ id: 'formCustom.placeholder.input2' }),
-      maxLength: 20,
-      rules: [
-        {
-          required: true,
-          message: useintl.formatMessage({ id: 'formCustom.input.empty' }),
-        },
-        {
-          min: 3,
-          message: useintl.formatMessage({ id: 'formCustom.input.check' }),
-        },
-      ],
-      inputPassword: true
-    },
-  ];
-  
   useEffect(() => {
-
+    // Auto fill fields value
+    if (valueFields) {
+      form.setFieldsValue(valueFields);
+    }
     // Disabled button validate
     setIsDisabled({});
-  },[props]);
+  }, [valueFields]);
 
   /**
    * Function cancel operation
    */
-  const returnOperation = () => {};
+  const returnOperation = () => {
+    if (onReturn) {
+      onReturn.action();
+    }
+  };
+
+  /**
+   * Function cancel operation
+   */
+  const cancelOperation = () => {
+    if (onCancel) {
+      onCancel.action();
+    }
+  };
 
   /**
    * Function that reset form fields
@@ -68,21 +70,28 @@ const FormCustomizable: React.FC = (props) => {
     form.resetFields();
   };
 
-
   /**
    * Function submit form
    */
-  const onValidateForm = async () => {};
+  const onValidateForm = async () => {
+    if (onSumbit) {
+    onSumbit.action();
+    }
+  };
 
   return (
     <>
       <Form form={form} layout="horizontal" className={styles.form} onFinish={validateForm}>
         <div className={styles.userContainer}>
-          {inputsFixture.map((item) => {
+          
+          { // Children fields form
+          makeFields.map((item: any) => {
             return <FormItem key={item.name} {...item} rules={item.rules} />;
           })}
+
+          {onSumbit && (
           <Form.Item shouldUpdate>
-          {() => (
+            {() => (
               <Button
                 type="primary"
                 htmlType="submit"
@@ -93,17 +102,22 @@ const FormCustomizable: React.FC = (props) => {
                 className={styles.buttonContinue}
                 onClick={onValidateForm}
               >
-                {useintl.formatMessage({ id: 'formCustom.validate.button' })}
+                {onSumbit.label}
               </Button>
             )}
           </Form.Item>
+          )}
           <div className={styles.operations}>
-            <Link to="#" className={styles.option1} onClick={returnOperation}>
-              {useintl.formatMessage({ id: 'formCustom.label.itsnome' })}
-            </Link>
-            <Link to="#" className={styles.option2} onClick={returnOperation}>
-              {useintl.formatMessage({ id: 'formCustom.label.cancel' })}
-            </Link>
+            {onReturn && (
+              <Link to="#" className={styles.option1} onClick={returnOperation}>
+                {onReturn.label}
+              </Link>
+            )}
+            {onCancel && (
+              <Link to="#" className={styles.option2} onClick={cancelOperation}>
+                {onCancel.label}
+              </Link>
+            )}
           </div>
         </div>
       </Form>

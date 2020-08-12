@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/label-has-for */
 import React, { useState, useEffect } from 'react';
 import { Input } from 'antd';
-import { InputProps } from './input-auto-label.interface';
+import { InputProps } from '../../interfaces/input-auto-label.interface';
 
 import styles from '../index.less';
 
