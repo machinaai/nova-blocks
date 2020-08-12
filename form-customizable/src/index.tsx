@@ -12,7 +12,7 @@ import { InputProps } from './interfaces/input-auto-label.interface';
  */
 const FormCustomizable: React.FC<FormProps> = (props) => {
   const { formFields, valueFields, onSumbit, onCancel, onReturn } = props;
-  // Initial fom if you don't get formFields
+  // Initial form if you don't get formFields
   const fixtureFields: InputProps[] = [{
     prefix: <AimOutlined />,
     name: 'password',

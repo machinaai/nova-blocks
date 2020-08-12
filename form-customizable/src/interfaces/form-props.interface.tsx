@@ -25,7 +25,7 @@ export interface FormProps {
   onReturn?: ActionInterface;
 }
   /*
-   * Propertys of events
+   * Properties of events
    */
 interface ActionInterface {
   label: string;
