@@ -49,18 +49,18 @@ const FormCustomizable: React.FC<FormProps> = (props) => {
    * Function cancel operation
    */
   const returnOperation = () => {
-    if (onReturn) {
+   
       onReturn.action();
-    }
+
   };
 
   /**
    * Function cancel operation
    */
   const cancelOperation = () => {
-    if (onCancel) {
+   
       onCancel.action();
-    }
+
   };
 
   /**
@@ -73,10 +73,9 @@ const FormCustomizable: React.FC<FormProps> = (props) => {
   /**
    * Function submit form
    */
-  const onValidateForm = async () => {
-    if (onSumbit) {
-    onSumbit.action();
-    }
+  const onValidateForm = () => {
+    const values = form.getFieldsValue();
+    onSumbit.action(values);
   };
 
   return (
