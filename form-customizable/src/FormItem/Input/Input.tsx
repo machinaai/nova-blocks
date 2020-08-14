@@ -44,7 +44,8 @@ const InputAuto: React.FC<InputProps> = (props) => {
     const { value } = e.target;
     if (value === '') {
       setLabelState(false);
-    } else if (value.length > 0) {
+    }
+     if (value.length > 0) {
       setLabelState(true);
     }
     if (upperCase) {
@@ -78,7 +79,7 @@ const InputAuto: React.FC<InputProps> = (props) => {
         <InputPassword
           onPaste={disableCopyPaste}
           onCopy={disableCopyPaste}
-          onInput={eventsInputs}
+          onChange={eventsInputs}
           {...restProps}
           value={ValueState}
         />
@@ -86,7 +87,7 @@ const InputAuto: React.FC<InputProps> = (props) => {
         <Input
           onPaste={disableCopyPaste}
           onCopy={disableCopyPaste}
-          onInput={eventsInputs}
+          onChange={eventsInputs}
           {...restProps}
           value={ValueState}
         />

@@ -23,7 +23,7 @@ describe('FooterNbe', () => {
 
   test('should has contain the year 2021', () => {
     const a = wrapper.find('a').at(0).text();
-    expect(a).toBe('Nova © Copyright 2021');
+    expect(a).toBe('Nova © Copyright 2020');
   });
 
   test('should has an img call logoNova', () => {
