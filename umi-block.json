@@ -159,6 +159,22 @@
       "name": "form-customizable FormCustomizable",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "validation-nbe ValidationNbe",
+      "value": "Validation-Nbe",
+      "key": "Validation-Nbe",
+      "description": "form validation block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/validation-nbe",
+      "type": "block",
+      "path": "validation-nbe",
+      "isPage": false,
+      "defaultPath": "/validation-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/validation-nbe/snapshot.png",
+      "tags": ["Form"],
+      "name": "validation-nbe ValidationNbe",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
