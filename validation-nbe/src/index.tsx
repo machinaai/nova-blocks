@@ -1,11 +1,9 @@
 import { Button, Form } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { Link, useIntl } from 'umi';
-import { connect } from 'react-redux';
 import { UserOutlined } from '@ant-design/icons';
 
 import FormItem from './components/FormItem';
-import { StateType } from './model';
 import styles from './index.less';
 import check from './assets/img/check.svg';
 
@@ -13,9 +11,8 @@ import check from './assets/img/check.svg';
  * Validation block functional component
  * @param props Validation block props
  */
-const ValidationNbe = (props: any) => {
+const ValidationNbe = () => {
   const useintl = useIntl();
-  const { data, dispatch } = props;
   const [form] = Form.useForm();
 
   /**
@@ -57,17 +54,6 @@ const ValidationNbe = (props: any) => {
    */
   const [equalPasswords, setEqualPasswords] = useState(false);
 
-  if (!data) {
-    return null;
-  }
-  const onFinish = () => {
-    if (dispatch) {
-      dispatch({
-        type: 'recoverStepForm/finalizeOperation',
-      });
-    }
-  };
-
   /**
    * Function that will display the rules list onFocus
    */
@@ -83,28 +69,9 @@ const ValidationNbe = (props: any) => {
   };
 
   /**
-   * Constant to save values from the Form
-   */
-  const { validateFields } = form;
-
-  /**
-   * Function that receive data
-   */
-  const onValidateForm = async () => {
-    const values = await validateFields();
-    if (dispatch) {
-      dispatch({
-        type: 'recoverStepForm/validationSetPassword',
-        payload: values,
-      });
-    }
-  };
-
-  /**
    * Funtion that executes on input event
    */
   const handleValue = (e: any) => {
-    const { user } = data;
     const { value } = e.target;
     const regExLetters = /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})/;
     const regEx2equals = /([0-9]|[aA-zZ])\1\1/;
@@ -120,7 +87,7 @@ const ValidationNbe = (props: any) => {
     } else {
       greater = false;
     }
-    if (value !== user) {
+    if (value !== 'user') {
       equalName = true;
     } else {
       equalName = false;
@@ -275,7 +242,6 @@ const ValidationNbe = (props: any) => {
               htmlType="submit"
               disabled={!equalPasswords || validateChecks}
               className={styles.buttonContinue}
-              onClick={onValidateForm}
             >
               {useintl.formatMessage({ id: 'validationNbe.label.button' })}
             </Button>
@@ -288,7 +254,6 @@ const ValidationNbe = (props: any) => {
             fontFamily: 'PingFang SC Regular, Arial, Helvetica, sans-serif',
             fontSize: '14px',
           }}
-          onClick={onFinish}
           to="#"
         >
           {useintl.formatMessage({ id: 'validationNbe.label.cancel' })}
@@ -298,6 +263,4 @@ const ValidationNbe = (props: any) => {
   );
 };
 
-export default connect(({ recoverStepForm }: { recoverStepForm: StateType }) => ({
-  data: recoverStepForm.step,
-}))(ValidationNbe);
+export default ValidationNbe;
