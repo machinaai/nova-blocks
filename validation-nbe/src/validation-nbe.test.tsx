@@ -17,22 +17,11 @@ jest.mock('umi', () => {
 describe('Validation-Nbe', () => {
   let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(<ValidationNbe />);
+    wrapper = shallow(<ValidationNbe.WrappedComponent />);
   })
 
   test('should match with snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  // test('should have the correct className', () => {
-  //   const myClass = wrapper.find('Form').at(0).hasClass('stepForm');
-  //   expect(myClass).toBeTruthy();
-  // })
-  
-
-  // test('should have Create as label', () => {
-  //   const text = wrapper.find('Button').at(0).text();
-  //   expect(text).toBe('Crear');
-  // })
   
 });
