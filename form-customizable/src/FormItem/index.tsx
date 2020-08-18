@@ -1,14 +1,13 @@
 import { Form } from 'antd';
 import React from 'react';
 
-import { InputProps } from './Input/input-auto-label.interface';
+import { InputProps } from './../interfaces/input-auto-label.interface';
 import InputAuto from './Input/Input';
 
-const FormItem = Form.Item;
 /*
  * Function that get props for just form item
  */
-const getFormItemOptions = ({ onChanged, defaultValue, customProps = {}, rules }: InputProps) => {
+export const getFormItemOptions = ({ onChanged, defaultValue, customProps = {}, rules }: InputProps) => {
   const options: {
     rules?: InputProps['rules'];
     onChange?: InputProps['onChanged'];
@@ -30,19 +29,18 @@ const getFormItemOptions = ({ onChanged, defaultValue, customProps = {}, rules }
  *
  */
 const LoginItem: React.FC<InputProps> = (props) => {
-  const { onChanged, customProps, defaultValue, rules, name, inputPassword, ...restProps } = props;
+  const { onChanged, customProps, defaultValue, rules, name, ...restProps } = props;
 
   if (!name) {
     return null;
   }
 
   const options = getFormItemOptions(props);
-  const otherProps = restProps || {};
 
   return (
-    <FormItem name={name} {...options}>
-      <InputAuto inputPassword={inputPassword} {...customProps} {...otherProps} />
-    </FormItem>
+    <Form.Item name={name} {...options}>
+      <InputAuto {...customProps} {...restProps} />
+    </Form.Item>
   );
 };
 

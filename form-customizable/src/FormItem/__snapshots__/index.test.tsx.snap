@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Should be create a snapshot 1`] = `""`;
+
+exports[`Input Should be create a snapshot 2`] = `
+<FormItem
+  name="username"
+>
+  <InputAuto />
+</FormItem>
+`;
+
+exports[`Input Should be create a snapshot with out otherprops 1`] = `""`;
