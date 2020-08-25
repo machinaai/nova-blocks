@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { advanceTo } from 'jest-date-mock';
 
 import FooterNbe from './index';
 import logoNova from './assets/logos/nova.svg';
@@ -11,10 +10,11 @@ import logoLinkedin from './assets/icons/linkedin.svg';
 
 describe('FooterNbe', () => {
   let wrapper = shallow(<FooterNbe />);
+  const MockDate = require('mockdate');
 
   beforeEach(() => {
     wrapper = shallow(<FooterNbe />);
-    advanceTo(new Date(2021, 5, 13));
+    MockDate.set(1620919810000);
   });
 
   test('should show correctly', () => {
@@ -23,7 +23,7 @@ describe('FooterNbe', () => {
 
   test('should has contain the year 2021', () => {
     const a = wrapper.find('a').at(0).text();
-    expect(a).toBe('Nova © Copyright 2020');
+    expect(a).toBe('Nova © Copyright 2021');
   });
 
   test('should has an img call logoNova', () => {
