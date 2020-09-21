@@ -3,7 +3,7 @@ import { Alert } from "antd";
 import './index.less';
 
 /** Method to show the content about different types of message */
-const AlertTimer: React.FC<any> = (props) => {
+const AlertNbe: React.FC<any> = (props) => {
   const { message = 'message here', type = 'warning', showIcon = true, closable = true} = props;
 
   return (
@@ -18,4 +18,4 @@ const AlertTimer: React.FC<any> = (props) => {
     </>
   );
 };
-export default AlertTimer;
+export default AlertNbe;

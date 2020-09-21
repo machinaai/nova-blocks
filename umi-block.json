@@ -65,20 +65,21 @@
       "features": ["antd"]
     },
     {
-      "title": "form-customizable FormCustomizable",
-      "value": "Form-Customizable",
-      "key": "Form-Customizable",
-      "description": "form dashboard block",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/form-customizable",
+      "title": "alert-nbe AlertNbe",
+      "value": "Alert-Nbe",
+      "key": "Alert-Nbe",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/alert-nbe",
       "type": "block",
-      "path": "form-customizable",
+      "path": "alert-nbe",
       "isPage": false,
-      "defaultPath": "/form-customizable",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/form-customizable/snapshot.png",
-      "tags": ["Form"],
-      "name": "form-customizable FormCustomizable",
+      "defaultPath": "/alert-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/alert-nbe/snapshot.png",
+      "tags": ["Alert"],
+      "name": "alert-nbe AlertNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
     },
+   
   ]
 }
