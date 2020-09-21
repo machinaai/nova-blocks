@@ -79,7 +79,6 @@
       "name": "alert-nbe AlertNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
-    },
-   
+    }
   ]
 }
