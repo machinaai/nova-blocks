@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TotalRequestCard should show correctly 1`] = `
+<Card
+  bodyStyle={
+    Object {
+      "padding": "20px",
+    }
+  }
+>
+  <div>
+    <div
+      className=""
+    >
+      <div>
+        <div>
+          <span>
+            Total de solicitudes
+          </span>
+          <span />
+        </div>
+        <div>
+          <div>
+            0
+          </div>
+          <div>
+            <img
+              src="test-file-stub"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      Estatus de solicitudes
+    </div>
+    <div>
+      <div>
+        <p>
+          0
+          <span>
+            Iniciadas
+          </span>
+        </p>
+        <div>
+          <img
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+      <div>
+        <p>
+          0
+          <span>
+            En proceso
+          </span>
+        </p>
+        <div>
+          <img
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+      <div>
+        <p>
+          0
+          <span>
+            Abandonadas
+          </span>
+        </p>
+        <div>
+          <img
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+      <div>
+        <p>
+          0
+          <span>
+            Terminadas
+          </span>
+        </p>
+        <div>
+          <img
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Card>
+`;
