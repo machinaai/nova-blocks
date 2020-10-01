@@ -79,6 +79,22 @@
       "name": "alert-nbe AlertNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "card-total-request CardTotalRequest",
+      "value": "CardTotalRequest",
+      "key": "CardTotalRequest",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/card-total-request",
+      "type": "block",
+      "path": "card-total-request",
+      "isPage": false,
+      "defaultPath": "/card-total-request",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-total-request/snapshot.png",
+      "tags": ["Card"],
+      "name": "card-total-request CardTotalRequest",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
