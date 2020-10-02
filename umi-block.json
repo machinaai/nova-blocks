@@ -91,8 +91,24 @@
       "isPage": false,
       "defaultPath": "/card-total-request",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-total-request/snapshot.png",
-      "tags": ["Card"],
+      "tags": ["Cards"],
       "name": "card-total-request CardTotalRequest",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
+    },
+    {
+      "title": "card-data CardData",
+      "value": "CardData",
+      "key": "CardData",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/card-data",
+      "type": "block",
+      "path": "card-data",
+      "isPage": false,
+      "defaultPath": "/card-data",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-data/snapshot.png",
+      "tags": ["Cards"],
+      "name": "card-data CardData",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
     }
