@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataCard Should be a create a snapshot without props 1`] = `
+<Fragment>
+  <Card>
+    <Row
+      gutter={8}
+    >
+      <p>
+        Porcentaje de cierre
+      </p>
+      <Tooltip
+        arrowPointAtCenter={false}
+        autoAdjustOverflow={true}
+        mouseEnterDelay={0.1}
+        mouseLeaveDelay={0.1}
+        placement="top"
+        title="Ayuda"
+        transitionName="zoom-big-fast"
+      >
+        <img
+          src="test-file-stub"
+        />
+      </Tooltip>
+    </Row>
+    <Row
+      align="middle"
+      gutter={8}
+      justify="space-between"
+    >
+      <Col
+        xl={8}
+      >
+        <withConfigConsumer(Statistic)
+          suffix="%"
+          value={0}
+          valueStyle={
+            Object {
+              "fontSize": "35px",
+              "fontWeight": 600,
+            }
+          }
+        />
+        <span>
+          1 sesión
+        </span>
+      </Col>
+      <Col
+        xl={8}
+      >
+        <withConfigConsumer(Statistic)
+          suffix="%"
+          value={0}
+          valueStyle={
+            Object {
+              "fontSize": "35px",
+            }
+          }
+        />
+        <span>
+          + 1 sesión
+        </span>
+      </Col>
+      <img
+        src="test-file-stub"
+      />
+    </Row>
+  </Card>
+</Fragment>
+`;
+
+exports[`DataCard Should be create a snapshot with props 1`] = `
+<Fragment>
+  <Card>
+    <Row
+      gutter={8}
+    >
+      <p>
+        Title1
+      </p>
+      <Tooltip
+        arrowPointAtCenter={false}
+        autoAdjustOverflow={true}
+        mouseEnterDelay={0.1}
+        mouseLeaveDelay={0.1}
+        placement="top"
+        title="Ayuda"
+        transitionName="zoom-big-fast"
+      >
+        <img
+          src="test-file-stub"
+        />
+      </Tooltip>
+    </Row>
+    <Row
+      align="middle"
+      gutter={8}
+      justify="space-between"
+    >
+      <Col
+        xl={8}
+      >
+        <withConfigConsumer(Statistic)
+          suffix="%"
+          value={0}
+          valueStyle={Object {}}
+        />
+        <span>
+          Subtitle1
+        </span>
+      </Col>
+      <Col
+        xl={8}
+      >
+        <withConfigConsumer(Statistic)
+          suffix="%"
+          value={0}
+          valueStyle={Object {}}
+        />
+        <span>
+          Subtitle2
+        </span>
+      </Col>
+      <img
+        src={Object {}}
+      />
+    </Row>
+  </Card>
+</Fragment>
+`;
