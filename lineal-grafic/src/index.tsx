@@ -1,22 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Chart, Tooltip, Geom, Axis, Legend } from 'bizcharts';
+import {DataGraficInterface} from './interfaces/dataGrafic.interface';
 import moment from "moment";
 
-interface DataGrafic {
-  data?:{
-    month:string,
-    day?:string,
-    balance:number,
-  },  
-  height?: number,
-  width?:number,
-  dropValue?:string;
-}
 const valExample= [
   {month: "09", day: "05", balance: 34},
   {month: "09", day: "06", balance: 100,}];
 
-const LinealGrafic: React.FC <DataGrafic> = ({data=valExample,width=500,height=200,dropValue='1'}) => {
+const LinealGrafic: React.FC <DataGraficInterface> = ({data=valExample,dropValue='1',width=500, height=200}) => {
   const [charData, setCharData] = useState(data);
 
   useEffect(() => {
@@ -33,7 +24,7 @@ const LinealGrafic: React.FC <DataGrafic> = ({data=valExample,width=500,height=2
       <Axis name="balance" label={{ formatter: (val:string) => `${val}%` }} />
       <Legend />
       <Tooltip useHtml htmlContent={
-        (title, items) => {
+        (title:string, items:any) => {
           let value;
           let yearValue;
           let monthh;
