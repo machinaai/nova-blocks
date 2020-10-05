@@ -112,7 +112,8 @@
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
     },
-    { "title": "grafic-cash-nbe GraficCashNbe",
+    {
+      "title": "grafic-cash-nbe GraficCashNbe",
       "value": "GraficCash-Nbe",
       "key": "GraficCash-Nbe",
       "description": "",
