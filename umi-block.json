@@ -80,6 +80,21 @@
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
     },
-   
+    {
+      "title": "grafic-cash-nbe GraficCashNbe",
+      "value": "GraficCash-Nbe",
+      "key": "GraficCash-Nbe",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/grafic-cash-nbe",
+      "type": "block",
+      "path": "grafic-cash-nbe",
+      "isPage": false,
+      "defaultPath": "/grafic-cash-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/grafic-cash-nbe/snapshot.png",
+      "tags": ["GraficCash"],
+      "name": "grafic-cash-nbe GraficCashNbe",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
+    }
   ]
 }
