@@ -123,7 +123,7 @@
       "isPage": false,
       "defaultPath": "/grafic-cash-nbe",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/grafic-cash-nbe/snapshot.png",
-      "tags": ["GraficCash"],
+      "tags": ["widgets"],
       "name": "grafic-cash-nbe GraficCashNbe",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
@@ -139,7 +139,7 @@
       "isPage": false,
       "defaultPath": "/widget-balance-summary",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/widget-balance-summary/snapshot.png",
-      "tags": ["GraficCash"],
+      "tags": ["widgets"],
       "name": "widget-balance-summary WidgetBalanceSummary",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
