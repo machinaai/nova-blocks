@@ -7,7 +7,7 @@ const valExample= [
   {month: "09", day: "05", balance: 34},
   {month: "09", day: "06", balance: 100,}];
 
-const LinealGrafic: React.FC <DataGraficInterface> = ({data=valExample,dropValue='1',width=500, height=200}) => {
+const LinealGrafic: React.FC <DataGraficInterface> = ({data=valExample,titleGrafic='',dropValue='1',width=500, height=200}) => {
   const [charData, setCharData] = useState(data);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ const LinealGrafic: React.FC <DataGraficInterface> = ({data=valExample,dropValue
   return (
     <>
     <Chart width={width} height={height}  data={charData} padding='auto' forceFit >
+      <span className='main-title'>{titleGrafic}</span>
       <Axis name={valX} />
       <Axis name="balance" label={{ formatter: (val:string) => `${val}%` }} />
       <Legend />
