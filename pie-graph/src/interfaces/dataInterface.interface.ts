@@ -2,16 +2,11 @@
  * WidgetBalanceSummaryInterface
  *
  * @export
- * @interface WidgetBalanceSummaryInterfaceProps
+ * @interface PieGraphInterfaceProps
  */
-export interface WidgetBalanceSummaryInterfaceProps {
+export interface PieGraphInterfaceProps {
   data?: DataInterface[];
-  status?: number;
-  detail?: {
-    legend: string;
-    action: string;
-  };
-  onRetry?: Function;
+  height?: number;
 }
 /*
  * Data widget balance summary

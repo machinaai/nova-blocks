@@ -1,25 +1,22 @@
 import React, { useCallback, useState } from 'react';
-import { Link, useIntl } from 'umi';
-
 import { Chart, Geom, Tooltip, Coord, Guide, Legend } from 'bizcharts';
-import { RedoOutlined } from '@ant-design/icons';
 import styles from './index.less';
-import { WidgetBalanceSummaryInterfaceProps } from './interfaces/dataInterface.interface';
+import { PieGraphInterfaceProps } from './interfaces/dataInterface.interface';
+import { dataFixture } from './fixtures/balance-summary.fixture';
 
 const { Text } = Guide;
-
-const WidgetBalanceSummary: React.FC<WidgetBalanceSummaryInterfaceProps> = ({
-  data,
-  detail,
-  status,
-  onRetry,
-}) => {
-  const intl = useIntl();
+/**
+ * PieGraph 
+ *
+ * @param {*} { data = dataFixture, height = 285 }
+ * @return {*} 
+ */
+const PieGraph: React.FC<PieGraphInterfaceProps> = ({ data = dataFixture, height = 285 }) => {
 
   const [index, setIndex] = useState(0);
 
   const onClickAccount = useCallback(
-    (event) => {
+    (event: { data: { _origin: any; }; }) => {
       if (data && event.data) {
         const { _origin: Origin } = event.data;
         const indexSelected = data.indexOf(
@@ -31,23 +28,16 @@ const WidgetBalanceSummary: React.FC<WidgetBalanceSummaryInterfaceProps> = ({
     [data],
   );
 
-  const onClickRetry = useCallback(() => {
-    if (onRetry) {
-      onRetry();
-    }
-  }, [onRetry]);
-
   const widget = (
     <div className={styles.widget}>
       <Chart
         forceUpdate
-        height={285}
-        width={276}
+        height={height}
         data={data}
         forceFit
         padding={['auto', 190, 'auto', -30]}
-        onGetG2Instance={(chart) => {
-          const geom = chart.get("geoms")[0];
+        onGetG2Instance={(chart: { get: (arg0: string) => any[]; on: (arg0: string, arg1: () => void) => void; }) => {
+          const geom = chart.get('geoms')[0];
           const items = geom.get('data');
           geom.setSelected(items[index]);
           chart.on('afterrender', () => {
@@ -101,25 +91,10 @@ const WidgetBalanceSummary: React.FC<WidgetBalanceSummaryInterfaceProps> = ({
   return (
     <>
       <div className={styles.container}>
-        <p className={styles.tittle}>{intl.formatMessage({ id: 'widgetBalanceSummary.tittle' })}</p>
-        {status !== 200 ? (
-          <div className={styles.error} onClick={onClickRetry}>
-            <RedoOutlined />
-            <p className={styles.legend}>
-              {intl.formatMessage({ id: 'widgetBalanceSummary.retry' })}
-            </p>
-          </div>
-        ) : (
-          <>{data && widget}</>
-        )}
-        {detail && (
-          <Link to={detail?.action} className={styles.detail}>
-            {detail?.legend}
-          </Link>
-        )}
+        {data && widget}
       </div>
     </>
   );
 };
 
-export default WidgetBalanceSummary;
+export default PieGraph;
