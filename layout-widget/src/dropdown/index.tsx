@@ -13,7 +13,7 @@ const menu = (options: MenuOptionsInterface[]) => (
   <Menu>
     {options.map((item) => (
       <Menu.Item key={item.id}>
-        <Button type="text" onClick={() => {item?.action}}>
+        <Button type="text" onClick={() => {item?.action(item.id)}}>
           {item.label}
         </Button>
       </Menu.Item>
