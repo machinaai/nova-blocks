@@ -6,7 +6,8 @@ export interface DataGraficInterface {
     height:number,
 }
 interface DataGrafic {
+    year?:string,
     month:string,
-    day:string,
+    day?:string,
     balance:number
 }
