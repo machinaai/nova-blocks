@@ -1,0 +1,17 @@
+.error {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.errorText{
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.errorText:hover {
+  text-decoration: underline;
+} 
