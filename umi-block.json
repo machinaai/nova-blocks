@@ -143,6 +143,22 @@
       "name": "widget-balance-summary WidgetBalanceSummary",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "layout-widget LayoutWidget",
+      "value": "LayoutWidget",
+      "key": "LayoutWidget",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/layout-widget",
+      "type": "block",
+      "path": "layout-widget",
+      "isPage": false,
+      "defaultPath": "/layout-widget",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/layout-widget/snapshot.png",
+      "tags": ["widgets"],
+      "name": "layout-widget LayoutWidget",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
