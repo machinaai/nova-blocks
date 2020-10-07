@@ -3,6 +3,7 @@ import { Chart, Geom, Tooltip, Coord, Guide, Legend } from 'bizcharts';
 import styles from './index.less';
 import { PieGraphInterfaceProps } from './interfaces/dataInterface.interface';
 import { dataFixture } from './fixtures/balance-summary.fixture';
+import { currencyHelper } from './helper/currency.helper';
 
 const { Text } = Guide;
 /**
@@ -73,7 +74,7 @@ const PieGraph: React.FC<PieGraphInterfaceProps> = ({ data = dataFixture, height
             />
             <Text
               position={['50%', '50%']}
-              content={data && data[index]?.balance?.toString()}
+              content={data && currencyHelper(Number(data[index]?.balance?.toString()))}
               style={{
                 fontSize: '30',
                 fill: '#262626',
