@@ -16,7 +16,7 @@ const RetryBlock: React.FC<Props> = ({onClick, message = 'Volver intentar', icon
   return (
     <>
       <div className={styles.error}>
-        <RedoOutlined style={{fontSize: `${iconSize}px`}}/>
+        <RedoOutlined onClick={onRetry} style={{fontSize: `${iconSize}px`}}/>
         <p onClick={onRetry} className={styles.errorText} style={{fontSize: `${fontSize}px`}}> { message } </p>
       </div>
     </>
