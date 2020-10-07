@@ -1,0 +1,21 @@
+{
+  "name": "@nova-blocks/layout-widget",
+  "version": "0.0.1",
+  "description": "Layout widget container",
+  "main": "src/index.js",
+  "repository": "umijs/umi-blocks/layout-widget",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "react": ">=16.0.0",
+    "@ant-design/icons": "^4.0.0"
+  },
+  "devDependencies": {
+    "umi": "^2.9.0",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-plugin-react": "^1.15.8",
+    "umi-types": "^0.3.0"
+  },
+  "license": "MIT"
+}
