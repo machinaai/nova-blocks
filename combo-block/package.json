@@ -1,5 +1,5 @@
 {
-  "name": "@nova-block/combo-block",
+  "name": "@nova-blocks/combo-block",
   "version": "0.0.1",
   "description": "Combo block for accounts",
   "main": "src/index.js",
