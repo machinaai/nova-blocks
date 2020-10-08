@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useIntl } from 'umi';
+import './index.less';
 import { Select, Button } from 'antd';
 import { ComboProps } from './combo.interface';
 import { ErrorEnum } from './error.enum';
