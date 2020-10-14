@@ -100,23 +100,23 @@ describe("Input", () => {
     });
   });
 
-  describe("validateForm", () => {
-    it("should call reset fields before form is finish", async () => {
-      let component;
-      const props = {
-        onSumbit: {
-          label: "validate",
-          action: () => {},
-        },
-      };
+  // describe("validateForm", () => {
+  //   it("should call reset fields before form is finish", async () => {
+  //     let component;
+  //     const props = {
+  //       onSumbit: {
+  //         label: "validate",
+  //         action: () => {},
+  //       },
+  //     };
 
-      component = renderComponent(props);
-      // const form = component.find(Form).prop('form');
-      // console.log(form);
-      // component.find(Form).prop("form");
-      component.find(Form).prop("onFinish")();
+  //     component = renderComponent(props);
+  //     // const form = component.find(Form).prop('form');
+  //     // console.log(form);
+  //     // component.find(Form).prop("form");
+  //     component.find(Form).prop("onFinish")();
 
-      expect(component).toMatchSnapshot();
-    });
-  });
+  //     expect(component).toMatchSnapshot();
+  //   });
+  // });
 });
