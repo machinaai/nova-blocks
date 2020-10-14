@@ -6,3 +6,5 @@
 .umi
 /documentation
 /coverage
+/package-lock.json
+*/package-lock.json

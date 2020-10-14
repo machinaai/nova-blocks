@@ -1,9 +1,8 @@
 import { GlobalOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
-import { getLocale, setLocale } from 'umi';
+import { getLocale, setLocale } from 'umi-plugin-react/locale';
 import { ClickParam } from 'antd/es/menu';
 import React from 'react';
-import classNames from 'classnames';
 import HeaderDropdown from '../HeaderDropdown';
 import styles from './index.less';
 
@@ -32,7 +31,7 @@ const SelectLang: React.FC<SelectLangProps> = (props) => {
   );
   return (
     <HeaderDropdown overlay={langMenu} placement="bottomRight">
-      <span className={classNames(styles.dropDown, className)}>
+      <span className={styles.dropDown}>
         <GlobalOutlined title="Language" />
       </span>
     </HeaderDropdown>
