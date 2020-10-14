@@ -159,6 +159,22 @@
       "name": "layout-widget LayoutWidget",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "row-details RowDetails",
+      "value": "RowDetails",
+      "key": "RowDetails",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/row-details",
+      "type": "block",
+      "path": "row-details",
+      "isPage": false,
+      "defaultPath": "/row-details",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/row-details/snapshot.png",
+      "tags": ["widgets"],
+      "name": "row-details RowDetails",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
