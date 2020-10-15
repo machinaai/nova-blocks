@@ -1,0 +1,257 @@
+.firtsView {
+  margin-top: 30px;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 79px;
+  }
+
+  > .details {
+    margin-top: 40px;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 66px;
+    }
+
+    > .secondHeader {
+      color: rgb(51, 51, 51);
+      font-size: 16px;
+      font-family: 'Frutiger', sans-serif;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+
+    > .list {
+      color: rgb(74, 74, 74);
+      font-size: 16px;
+      font-family: 'Frutiger', sans-serif;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.header {
+  > .optional {
+    color: rgb(147, 147, 147);
+    font-size: 14px;
+    font-family: 'Frutiger_bold', sans-serif;
+
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  > .title {
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-family: 'Frutiger_bold', sans-serif;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 34px;
+    }
+  }
+
+  > .subtitle {
+    width: 100%;
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-family: 'Frutiger', sans-serif;
+
+    @media only screen and (min-width: 768px) {
+      width: 744px;
+      font-size: 20px;
+    }
+  }
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+
+  @media only screen and (min-width: 768px) {
+    width: 804px;
+  }
+
+  > .options {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    > .again {
+      margin-left: 0;
+      color: #ed0722;
+      font-size: 18px;
+      font-family: 'Frutiger_bold', sans-serif;
+      text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        margin-left: 26px;
+      }
+    }
+  }
+}
+
+.uploadContainer {
+    margin-top: 74px;
+    margin-bottom: 1.5em;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 59px;
+      margin-bottom: 111px;
+    }
+  }
+
+:global {
+  /* tile uploaded pictures */
+
+  .upload-list-inline {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 609px;
+    }
+  }
+  .upload-list-inline .ant-upload-list-item {
+    float: right;
+    width: 273px;
+    height: 157px;
+    margin-right: 8px;
+    margin-bottom: 1.5em;
+    background: rgb(249, 249, 249);
+  }
+
+  .upload-list-inline [class*='-upload-list-rtl'] .ant-upload-list-item {
+    float: left;
+  }
+
+  .ant-upload-list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    width: fit-content;
+    height: auto;
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: initial;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .ant-upload-list-picture .ant-upload-list-item-thumbnail {
+    position: initial;
+  }
+
+  .ant-upload-list-picture .ant-upload-list-item-thumbnail img {
+    width: 100% !important;
+    height: 80% !important;
+  }
+
+  .ant-upload-list-item-card-actions.picture {
+    top: 131px;
+  }
+
+  .ant-upload-list-picture .ant-upload-list-item-name {
+    margin: 0;
+    padding-right: 0;
+    padding-bottom: 4px;
+    padding-left: 0;
+    line-height: 18px;
+  }
+
+  .ant-upload-list-item {
+    margin-top: 0;
+  }
+  .ant-upload.ant-upload-select {
+    flex-direction: column;
+    align-self: center;
+  }
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 273px;
+  height: 157px;
+  margin-bottom: 1em;
+  color: #6c757d;
+  font-size: 20px;
+  font-family: 'Frutiger', sans-serif;
+  background-color: #f6f6f6;
+  border-color: #e0e0e0;
+  border-style: dotted;
+  order: 1;
+
+  @media only screen and (min-width: 768px) {
+    width: 273px;
+    height: 157px;
+  }
+}
+
+.steps___3godb {
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+
+//botones de la segunda
+.btnUpload {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Frutiger', sans-serif;
+  background: #ed0722;
+  border-radius: 26px;
+
+  @media only screen and (min-width: 768px) {
+    width: 260px;
+    height: 52px;
+    background: #ed0722;
+    border-radius: 26px;
+  }
+}
+
+.btnUpload:focus {
+  color: #fff;
+  background: #ed0722;
+  border-style: none;
+  border-radius: 26px;
+}
+
+.btnUpload:hover {
+  color: #fff;
+  background: #ed0722;
+  border-style: none;
+  border-radius: 26px;
+}
