@@ -1,12 +1,10 @@
 import styles from './index.less';
-import { useIntl } from 'umi';
+import { formatMessage } from 'umi-plugin-react/locale';
 import React from 'react';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
 
 const HeaderNbe: React.FC = () => {
-
-const intl = useIntl();
   
   return (
 
@@ -22,7 +20,7 @@ const intl = useIntl();
             <div className={styles.header}>
               <img alt="logo" className={styles.logo} src={logo} />
               <span className={styles.title}>
-                {intl.formatMessage({
+                {formatMessage({
                   id: 'login.corporateBanking',
                   defaultMessage: 'Banca empresarial',
                 })}

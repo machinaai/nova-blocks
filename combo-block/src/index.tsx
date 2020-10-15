@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useIntl } from 'umi';
+import { formatMessage } from 'umi-plugin-react/locale';
 import './index.less';
 import { Select, Button } from 'antd';
 import { ComboProps } from './combo.interface';
@@ -15,14 +15,14 @@ const defaultData=[{
 const ComboBlock: React.FC<ComboProps> = ({ data=defaultData, title='Title here', error, retry, selected, search }) => {
   const [header, setHeader] = useState(title);
   const [valueFilter, setValueFilter] = useState('');
-  const int = useIntl();
+  //const int = useIntl();
 
   const open = error ? { open: false } : {};
 
   const placeholder = (
     <>
       { header}
-      {ErrorEnum.api === error && <Button type="link" >{int.formatMessage({ id: "comboBlock.retry" })}</Button>}
+      {ErrorEnum.api === error && <Button type="link" >{formatMessage({ id: "comboBlock.retry" })}</Button>}
     </>
   )
 
@@ -49,9 +49,9 @@ const ComboBlock: React.FC<ComboProps> = ({ data=defaultData, title='Title here'
 
   useEffect(() => {
     if (ErrorEnum.api === error) {
-      setHeader(int.formatMessage({ id: "comboBlock.error.api" }));
+      setHeader(formatMessage({ id: "comboBlock.error.api" }));
     } else if (ErrorEnum.accounts === error) {
-      setHeader(int.formatMessage({ id: "comboBlock.error.accounts" }));
+      setHeader(formatMessage({ id: "comboBlock.error.accounts" }));
     } else {
       setHeader(title);
     }

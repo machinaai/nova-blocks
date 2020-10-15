@@ -5,7 +5,7 @@ const config: IConfig = {
     ['umi-plugin-block-dev', {}],
     ['umi-plugin-react',{
       antd: true,
-      location: true
+      locale: true
     }]
   ],
 }
