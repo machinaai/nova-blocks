@@ -9,6 +9,7 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
 
   let statusProgress: any;
   let showPreviewImage;
+  let typeFile: any;
 
   let propsUpload = {
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -24,8 +25,12 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
     fileList: [],
   });
 
+  //pdf
+  const [ejemplo, setEjemplo] = useState<any>();
+
   const handleChange = ({ fileList }) => {
     setFilesSelected({ ...filesSelected, fileList });
+
   };
 
   const handlePreview = async (file: any) => {
@@ -48,15 +53,19 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
   }, [filesSelected]);
 
   const progressFunction = () => {
-    filesSelected?.fileList.forEach((element) => statusProgress = element.percent);
-   };
-   progressFunction();
+    filesSelected?.fileList.forEach((element) => {
+      (statusProgress = element.percent), console.log("ELEMENT: ", element);
+      if (element.type === "application/pdf") {
+        console.log("Es un PDF: ");
+        typeFile = "pdf";
+      }
+    });
+  };
 
-     
-  console.log('progresssss')
-   
-   console.log(statusProgress, 'status array')
-  
+  progressFunction();
+
+
+  console.log(ejemplo, 'ejemplooo')
   return (
     <div>
       {filesSelected.fileList.length >= 1 ? (
@@ -90,9 +99,45 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
             </div>
           </div>
         )}
-       <div>
-        <Upload {...propsUpload} onChange={handleChange} onPreview={handlePreview} listType="picture" withCredentials={true}>
-          {filesSelected.fileList.length >= 2 ? null :
+
+      <div>
+        {
+           typeFile ?
+           
+           (
+            <div className={styles.uploadPdf}>
+              <div className={styles.pdf}>
+              <object data={ejemplo} type="application/pdf" height="100%"></object>  
+              </div>
+              <div className={styles.pdfName}>
+                {filesSelected.fileList[0].name}
+              </div>
+            </div>
+           ) 
+           
+           :
+
+           <Upload {...propsUpload}
+         accept=".pdf, .png, .jgp"
+          onChange={handleChange}
+          onPreview={handlePreview}
+          listType="picture"
+          beforeUpload={file => {
+            const reader = new FileReader();
+            reader.onload = e => {
+              console.log(e.target);
+              let stringData = String(e.target?.result)
+              setEjemplo(stringData);
+            };
+            // reader.readAsText(file);
+            let hola = reader.readAsDataURL(file);
+            console.log(hola)
+            return false;
+          }}
+          >
+          {
+         
+          filesSelected.fileList.length >= 2 ? null :
             filesSelected.fileList.length === 1 ? (
               <div className={styles.upload}>
                 <div>
@@ -109,9 +154,10 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
                   </Button>
                 </div>
               )}
-        </Upload>
-      </div>
 
+        </Upload>
+        }
+      </div>
       {filesSelected.fileList.length >= 1 ? (
         <div className={styles.container}>
           <div className={styles.options}>
