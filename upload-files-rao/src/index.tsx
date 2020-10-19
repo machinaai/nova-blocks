@@ -12,10 +12,10 @@ export interface UploadInfoProps {
   firstTitle?:string,
   firstSubtitle?:string,
   detailsTitle?: string,
-  detailsElemen1?: string,
+  detailsElement1?: string,
   detailsElement2?: string,
   bntUploadTitle?: string,
-  second?: string,
+  secondHeaderTitle?: string,
   secondTitle?:string,
   secondSubtitle?:string,
   bntNextTitle?: string,
@@ -26,6 +26,17 @@ const UploadInfo: React.FC<UploadInfoProps> = (
   {
     typeFlowProp = UploadFixture.typeFlow,
     firstHeaderTitle = UploadFixture.UploadFirstView.headerTitle,
+    firstTitle = UploadFixture.UploadFirstView.title,
+    firstSubtitle = UploadFixture.UploadFirstView.subtitle,
+    detailsTitle = UploadFixture.UploadFirstView.details.title,
+    detailsElement1 = UploadFixture.UploadFirstView.details.element1,
+    detailsElement2 = UploadFixture.UploadFirstView.details.element2,
+    bntUploadTitle = UploadFixture.UploadFirstView.btnTitle,
+    secondHeaderTitle = UploadFixture.UploadSecondView.headerTitle,
+    secondTitle = UploadFixture.UploadSecondView.title,
+    secondSubtitle = UploadFixture.UploadSecondView.subtitle,
+    bntNextTitle= UploadFixture.UploadSecondView.options.btnTitle,
+    linkTitle = UploadFixture.UploadSecondView.options.linkTitle,
   }
   ) => {
   
@@ -88,10 +99,10 @@ const UploadInfo: React.FC<UploadInfoProps> = (
       {filesSelected.fileList.length >= 1 ? (
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.optional}>{UploadFixture.UploadSecondView.headerTitle}</div>
-            <div className={styles.title}>{UploadFixture.UploadSecondView.title}</div>
+            <div className={styles.optional}>{secondHeaderTitle}</div>
+            <div className={styles.title}>{secondTitle}</div>
             <div className={styles.subtitle}>
-            {UploadFixture.UploadSecondView.subtitle}
+            {secondSubtitle}
             </div>
           </div>
         </div>
@@ -99,17 +110,17 @@ const UploadInfo: React.FC<UploadInfoProps> = (
           <div className={styles.firtsView}>
             <div className={styles.header}>
               <div className={styles.optional}>{firstHeaderTitle}</div>
-              <div className={styles.title}>{UploadFixture.UploadFirstView.title}</div>
+              <div className={styles.title}>{firstTitle}</div>
               <div className={styles.subtitle}>
-                {UploadFixture.UploadFirstView.subtitle}
+                {firstSubtitle}
               </div>
             </div>
             <div className={styles.details}>
-            <div className={styles.secondHeader}>{UploadFixture.UploadFirstView.details.title}</div>
+            <div className={styles.secondHeader}>{detailsTitle}</div>
               <div className={styles.list}>
                 <ul>
-                  <li>{UploadFixture.UploadFirstView.details.element1}</li>
-                  <li>{UploadFixture.UploadFirstView.details.element2}</li>
+                  <li>{detailsElement1}</li>
+                  <li>{detailsElement2}</li>
                 </ul>
               </div>
             </div>
@@ -163,7 +174,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
               (
                 <div className={styles.uploadBtn}>
                   <Button className={styles.btnUpload} size="large">
-                    {UploadFixture.UploadFirstView.btnTitle}
+                    {bntUploadTitle}
                   </Button>
                 </div>
               )
@@ -173,7 +184,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
            (
             <div className={styles.uploadBtn}>
               <Button className={styles.btnUpload} size="large">
-                {UploadFixture.UploadFirstView.btnTitle}
+                {bntUploadTitle}
               </Button>
             </div>
           )
@@ -187,9 +198,9 @@ const UploadInfo: React.FC<UploadInfoProps> = (
         <div className={styles.container}>
           <div className={styles.options}>
             <div>
-              <Button className={styles.btnUpload}> {UploadFixture.UploadSecondView.options.btnTitle} </Button>
+              <Button className={styles.btnUpload}> {bntNextTitle} </Button>
             </div>
-            <div className={styles.again}>{UploadFixture.UploadSecondView.options.linkTitle}</div>
+            <div className={styles.again}>{linkTitle}</div>
           </div>
         </div>
       ) : null}
