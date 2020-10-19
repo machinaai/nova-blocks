@@ -32,5 +32,7 @@ export const UploadFixture = {
     UploadStyle :{
         icon: 'PlusOutlined',
         title: 'Cargar',
-    }
+    },
+
+    typeFlow : 0,
 }

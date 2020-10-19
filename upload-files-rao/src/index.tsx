@@ -1,14 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { Upload, Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import { UploadFixture } from './fixtures/fixture';
+import { UploadFieldsInterface } from './interfaces/interface';
 import styles from './index.less';
+import { typeFlow } from './enum/emun';
 
-export interface UploadInfoProps { }
+export interface UploadInfoProps {
+  typeFlowProp: typeFlow;
+  firstHeaderTitle?: string,
+  firstTitle?:string,
+  firstSubtitle?:string,
+  detailsTitle?: string,
+  detailsElemen1?: string,
+  detailsElement2?: string,
+  bntUploadTitle?: string,
+  second?: string,
+  secondTitle?:string,
+  secondSubtitle?:string,
+  bntNextTitle?: string,
+  linkTitle?: string,
+ }
 
-const UploadInfo: React.FC<UploadInfoProps> = () => {
-
-  let statusProgress: any;
-  let showPreviewImage;
+const UploadInfo: React.FC<UploadInfoProps> = (
+  {
+    typeFlowProp = UploadFixture.typeFlow,
+    firstHeaderTitle = UploadFixture.UploadFirstView.headerTitle,
+  }
+  ) => {
+  
   let typeFile: any;
 
   let propsUpload = {
@@ -54,7 +74,6 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
 
   const progressFunction = () => {
     filesSelected?.fileList.forEach((element) => {
-      (statusProgress = element.percent), console.log("ELEMENT: ", element);
       if (element.type === "application/pdf") {
         console.log("Es un PDF: ");
         typeFile = "pdf";
@@ -64,36 +83,33 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
 
   progressFunction();
 
-
-  console.log(ejemplo, 'ejemplooo')
   return (
     <div>
       {filesSelected.fileList.length >= 1 ? (
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.optional}>INE/IFE</div>
-            <div className={styles.title}>Valida tu documento</div>
+            <div className={styles.optional}>{UploadFixture.UploadSecondView.headerTitle}</div>
+            <div className={styles.title}>{UploadFixture.UploadSecondView.title}</div>
             <div className={styles.subtitle}>
-              Revisa que tus datos estén claros y legibles y que no tengan reflejos de luz ni sombra.
+            {UploadFixture.UploadSecondView.subtitle}
             </div>
           </div>
         </div>
       ) : (
           <div className={styles.firtsView}>
             <div className={styles.header}>
-              <div className={styles.optional}>INE/IFE</div>
-              <div className={styles.title}>Subir documento</div>
+              <div className={styles.optional}>{firstHeaderTitle}</div>
+              <div className={styles.title}>{UploadFixture.UploadFirstView.title}</div>
               <div className={styles.subtitle}>
-                Por favor selecciona una foto de tu INE/IFE por el frente y otra por el reverso,
-                revisa que tus datos estén claros y legibles y que no tengan reflejos de luz.
-          </div>
+                {UploadFixture.UploadFirstView.subtitle}
+              </div>
             </div>
             <div className={styles.details}>
-              <div className={styles.secondHeader}>Recomendaciones:</div>
+            <div className={styles.secondHeader}>{UploadFixture.UploadFirstView.details.title}</div>
               <div className={styles.list}>
                 <ul>
-                  <li>Revisa que tus datos estén claros y legibles.</li>
-                  <li>Evita reflejos de luz y sombra.</li>
+                  <li>{UploadFixture.UploadFirstView.details.element1}</li>
+                  <li>{UploadFixture.UploadFirstView.details.element2}</li>
                 </ul>
               </div>
             </div>
@@ -103,11 +119,10 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
       <div>
         {
            typeFile ?
-           
            (
             <div className={styles.uploadPdf}>
               <div className={styles.pdf}>
-              <object data={ejemplo} type="application/pdf" height="100%"></object>  
+              <object data={ejemplo} height="100%"></object>  
               </div>
               <div className={styles.pdfName}>
                 {filesSelected.fileList[0].name}
@@ -117,43 +132,53 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
            
            :
 
-           <Upload {...propsUpload}
+        <Upload {...propsUpload}
          accept=".pdf, .png, .jgp"
           onChange={handleChange}
           onPreview={handlePreview}
           listType="picture"
+          multiple = {typeFlowProp === typeFlow.INE ?  true : false}
           beforeUpload={file => {
             const reader = new FileReader();
             reader.onload = e => {
-              console.log(e.target);
               let stringData = String(e.target?.result)
               setEjemplo(stringData);
             };
-            // reader.readAsText(file);
-            let hola = reader.readAsDataURL(file);
-            console.log(hola)
+            // // reader.readAsText(file);
+            reader.readAsDataURL(file);
             return false;
           }}
           >
-          {
-         
-          filesSelected.fileList.length >= 2 ? null :
-            filesSelected.fileList.length === 1 ? (
-              <div className={styles.upload}>
-                <div>
-                  <PlusOutlined />
-                </div>
-                <div>Cargar</div>
-              </div>
-            )
+          {typeFlowProp === typeFlow.INE ? 
+            filesSelected.fileList.length >= 2 ? null :
+              filesSelected.fileList.length === 1 ? (
+                  <div className={styles.upload}>
+                    <div>
+                      <PlusOutlined />
+                    </div>
+                    <div>{UploadFixture.UploadStyle.title}</div>
+                  </div>
+                )
               :
               (
                 <div className={styles.uploadBtn}>
                   <Button className={styles.btnUpload} size="large">
-                    Subir documento
+                    {UploadFixture.UploadFirstView.btnTitle}
                   </Button>
                 </div>
-              )}
+              )
+           : 
+           typeFlowProp === typeFlow.ADDRESS ?  filesSelected.fileList.length === 1 ? null 
+           : 
+           (
+            <div className={styles.uploadBtn}>
+              <Button className={styles.btnUpload} size="large">
+                {UploadFixture.UploadFirstView.btnTitle}
+              </Button>
+            </div>
+          )
+            : null
+          }
 
         </Upload>
         }
@@ -162,9 +187,9 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
         <div className={styles.container}>
           <div className={styles.options}>
             <div>
-              <Button className={styles.btnUpload}> Continuar </Button>
+              <Button className={styles.btnUpload}> {UploadFixture.UploadSecondView.options.btnTitle} </Button>
             </div>
-            <div className={styles.again}>Subir documento nuevamente</div>
+            <div className={styles.again}>{UploadFixture.UploadSecondView.options.linkTitle}</div>
           </div>
         </div>
       ) : null}
@@ -173,5 +198,3 @@ const UploadInfo: React.FC<UploadInfoProps> = () => {
 };
 
 export default UploadInfo;
-
-
