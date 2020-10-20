@@ -1,4 +1,4 @@
-import { typeFlow } from '../enum/emun';
+import { TypeFlow } from '../enum/emun';
 export interface UploadFieldsInterface {
     firstHeaderTitle?: string,
     firstTitle?:string,
@@ -12,5 +12,5 @@ export interface UploadFieldsInterface {
     secondSubtitle?:string,
     bntNextTitle?: string,
     linkTitle?: string,
-    typeFlow: typeFlow,
+    typeFlow: TypeFlow,
 }

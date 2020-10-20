@@ -12,7 +12,8 @@
     "dev": "umi dev"
   },
   "dependencies": {
-    "react": ">=16.0.0"
+    "react": ">=16.0.0",
+    "react-iframe-comm": "^1.2.2"
   },
   "devDependencies": {
     "umi": "^2.9.0",

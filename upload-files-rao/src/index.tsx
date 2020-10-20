@@ -3,11 +3,12 @@ import { Upload, Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { UploadFixture } from './fixtures/fixture';
 import { UploadFieldsInterface } from './interfaces/interface';
+import IframeComm from 'react-iframe-comm';
 import styles from './index.less';
-import { typeFlow } from './enum/emun';
+import { TypeFlow } from './enum/emun';
 
 export interface UploadInfoProps {
-  typeFlowProp: typeFlow;
+  typeFlowProp: TypeFlow;
   firstHeaderTitle?: string,
   firstTitle?:string,
   firstSubtitle?:string,
@@ -41,6 +42,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
   ) => {
   
   let typeFile: any;
+  const multiple = typeFlowProp === TypeFlow.INE;
 
   let propsUpload = {
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -48,7 +50,6 @@ const UploadInfo: React.FC<UploadInfoProps> = (
     className: "upload-list-inline",
   };
 
-  console.log('porcentajes en props', propsUpload)
   const [filesSelected, setFilesSelected] = useState({
     previewVisible: false,
     previewImage: '',
@@ -58,6 +59,13 @@ const UploadInfo: React.FC<UploadInfoProps> = (
 
   //pdf
   const [ejemplo, setEjemplo] = useState<any>();
+
+  const attributesPdf = {
+    src: ejemplo,
+    width: "100%",
+    height: "100%",
+    frameBorder: 0,
+  };
 
   const handleChange = ({ fileList }) => {
     setFilesSelected({ ...filesSelected, fileList });
@@ -80,13 +88,11 @@ const UploadInfo: React.FC<UploadInfoProps> = (
   };
 
   useEffect(() => {
-    console.log(filesSelected, 'file slect en papá');
   }, [filesSelected]);
 
   const progressFunction = () => {
     filesSelected?.fileList.forEach((element) => {
       if (element.type === "application/pdf") {
-        console.log("Es un PDF: ");
         typeFile = "pdf";
       }
     });
@@ -133,22 +139,20 @@ const UploadInfo: React.FC<UploadInfoProps> = (
            (
             <div className={styles.uploadPdf}>
               <div className={styles.pdf}>
-              <object data={ejemplo} height="100%"></object>  
+              <IframeComm attributes={attributesPdf}/>
               </div>
               <div className={styles.pdfName}>
                 {filesSelected.fileList[0].name}
               </div>
             </div>
            ) 
-           
            :
-
         <Upload {...propsUpload}
          accept=".pdf, .png, .jgp"
           onChange={handleChange}
           onPreview={handlePreview}
           listType="picture"
-          multiple = {typeFlowProp === typeFlow.INE ?  true : false}
+          multiple = {multiple}
           beforeUpload={file => {
             const reader = new FileReader();
             reader.onload = e => {
@@ -160,7 +164,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
             return false;
           }}
           >
-          {typeFlowProp === typeFlow.INE ? 
+          {typeFlowProp === TypeFlow.INE ? 
             filesSelected.fileList.length >= 2 ? null :
               filesSelected.fileList.length === 1 ? (
                   <div className={styles.upload}>
@@ -179,7 +183,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
                 </div>
               )
            : 
-           typeFlowProp === typeFlow.ADDRESS ?  filesSelected.fileList.length === 1 ? null 
+           typeFlowProp === TypeFlow.ADDRESS ?  filesSelected.fileList.length === 1 ? null 
            : 
            (
             <div className={styles.uploadBtn}>

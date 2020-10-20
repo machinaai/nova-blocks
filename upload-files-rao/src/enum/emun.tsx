@@ -1,4 +1,4 @@
-export enum typeFlow {
+export enum TypeFlow {
     'INE',
     'ADDRESS'
 }
