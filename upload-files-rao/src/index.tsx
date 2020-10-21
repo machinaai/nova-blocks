@@ -10,18 +10,18 @@ import { TypeFlow } from './enum/emun';
 export interface UploadInfoProps {
   typeFlowProp: TypeFlow;
   firstHeaderTitle?: string,
-  firstTitle?:string,
-  firstSubtitle?:string,
+  firstTitle?: string,
+  firstSubtitle?: string,
   detailsTitle?: string,
   detailsElement1?: string,
   detailsElement2?: string,
   bntUploadTitle?: string,
   secondHeaderTitle?: string,
-  secondTitle?:string,
-  secondSubtitle?:string,
+  secondTitle?: string,
+  secondSubtitle?: string,
   bntNextTitle?: string,
   linkTitle?: string,
- }
+}
 
 const UploadInfo: React.FC<UploadInfoProps> = (
   {
@@ -36,24 +36,20 @@ const UploadInfo: React.FC<UploadInfoProps> = (
     secondHeaderTitle = UploadFixture.UploadSecondView.headerTitle,
     secondTitle = UploadFixture.UploadSecondView.title,
     secondSubtitle = UploadFixture.UploadSecondView.subtitle,
-    bntNextTitle= UploadFixture.UploadSecondView.options.btnTitle,
+    bntNextTitle = UploadFixture.UploadSecondView.options.btnTitle,
     linkTitle = UploadFixture.UploadSecondView.options.linkTitle,
   }
-  ) => {
-  
+) => {
+
   let typeFile: any;
   const multiple = typeFlowProp === TypeFlow.INE;
 
   let propsUpload = {
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-    multiple: true,
     className: "upload-list-inline",
   };
 
   const [filesSelected, setFilesSelected] = useState({
-    previewVisible: false,
-    previewImage: '',
-    previewTitle: '',
     fileList: [],
   });
 
@@ -68,8 +64,14 @@ const UploadInfo: React.FC<UploadInfoProps> = (
   };
 
   const handleChange = ({ fileList }) => {
-    setFilesSelected({ ...filesSelected, fileList });
-
+    if (fileList.length > 2) {
+      fileList = fileList.slice(-2);
+      setFilesSelected({
+        fileList
+      });
+    } else {
+      setFilesSelected({  fileList });
+    }
   };
 
   const handlePreview = async (file: any) => {
@@ -88,6 +90,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
   };
 
   useEffect(() => {
+    console.log(filesSelected, 'filesss despues del click')
   }, [filesSelected]);
 
   const progressFunction = () => {
@@ -100,6 +103,13 @@ const UploadInfo: React.FC<UploadInfoProps> = (
 
   progressFunction();
 
+  const reloadFiles = () => {
+    setFilesSelected({
+      fileList: []
+    });
+  }
+
+
   return (
     <div>
       {filesSelected.fileList.length >= 1 ? (
@@ -108,7 +118,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
             <div className={styles.optional}>{secondHeaderTitle}</div>
             <div className={styles.title}>{secondTitle}</div>
             <div className={styles.subtitle}>
-            {secondSubtitle}
+              {secondSubtitle}
             </div>
           </div>
         </div>
@@ -122,7 +132,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
               </div>
             </div>
             <div className={styles.details}>
-            <div className={styles.secondHeader}>{detailsTitle}</div>
+              <div className={styles.secondHeader}>{detailsTitle}</div>
               <div className={styles.list}>
                 <ul>
                   <li>{detailsElement1}</li>
@@ -135,67 +145,69 @@ const UploadInfo: React.FC<UploadInfoProps> = (
 
       <div>
         {
-           typeFile ?
-           (
-            <div className={styles.uploadPdf}>
-              <div className={styles.pdf}>
-              <IframeComm attributes={attributesPdf}/>
-              </div>
-              <div className={styles.pdfName}>
-                {filesSelected.fileList[0].name}
-              </div>
-            </div>
-           ) 
-           :
-        <Upload {...propsUpload}
-         accept=".pdf, .png, .jgp"
-          onChange={handleChange}
-          onPreview={handlePreview}
-          listType="picture"
-          multiple = {multiple}
-          beforeUpload={file => {
-            const reader = new FileReader();
-            reader.onload = e => {
-              let stringData = String(e.target?.result)
-              setEjemplo(stringData);
-            };
-            // // reader.readAsText(file);
-            reader.readAsDataURL(file);
-            return false;
-          }}
-          >
-          {typeFlowProp === TypeFlow.INE ? 
-            filesSelected.fileList.length >= 2 ? null :
-              filesSelected.fileList.length === 1 ? (
-                  <div className={styles.upload}>
-                    <div>
-                      <PlusOutlined />
-                    </div>
-                    <div>{UploadFixture.UploadStyle.title}</div>
-                  </div>
-                )
-              :
-              (
-                <div className={styles.uploadBtn}>
-                  <Button className={styles.btnUpload} size="large">
-                    {bntUploadTitle}
-                  </Button>
+          typeFile ?
+            (
+              <div className={styles.uploadPdf}>
+                <div className={styles.pdf}>
+                  <IframeComm attributes={attributesPdf} />
                 </div>
-              )
-           : 
-           typeFlowProp === TypeFlow.ADDRESS ?  filesSelected.fileList.length === 1 ? null 
-           : 
-           (
-            <div className={styles.uploadBtn}>
-              <Button className={styles.btnUpload} size="large">
-                {bntUploadTitle}
-              </Button>
-            </div>
-          )
-            : null
-          }
+                <div className={styles.pdfName}>
+                  {filesSelected.fileList[0].name}
+                </div>
+              </div>
+            )
+            :
+            <Upload {...propsUpload}
+              accept=".pdf, .png, .jgp"
+              onChange={handleChange}
+              fileList={filesSelected.fileList}
+              onPreview={handlePreview}
+              listType="picture"
+              multiple={multiple}
+              beforeUpload={file => {
+                const reader = new FileReader();
+                reader.onload = e => {
+                  let stringData = String(e.target?.result)
+                  setEjemplo(stringData);
+                };
+                // // reader.readAsText(file);
+                reader.readAsDataURL(file);
+                return false;
 
-        </Upload>
+              }}
+            >
+              {typeFlowProp === TypeFlow.INE ?
+                filesSelected.fileList.length >= 2 ? null :
+                  filesSelected.fileList.length === 1 ? (
+                    <div className={styles.upload}>
+                      <div>
+                        <PlusOutlined />
+                      </div>
+                      <div>{UploadFixture.UploadStyle.title}</div>
+                    </div>
+                  )
+                    :
+                    (
+                      <div className={styles.uploadBtn}>
+                        <Button className={styles.btnUpload} size="large">
+                          {bntUploadTitle}
+                        </Button>
+                      </div>
+                    )
+                :
+                typeFlowProp === TypeFlow.ADDRESS ? filesSelected.fileList.length === 1 ? null
+                  :
+                  (
+                    <div className={styles.uploadBtn}>
+                      <Button className={styles.btnUpload} size="large">
+                        {bntUploadTitle}
+                      </Button>
+                    </div>
+                  )
+                  : null
+              }
+
+            </Upload>
         }
       </div>
       {filesSelected.fileList.length >= 1 ? (
@@ -204,7 +216,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
             <div>
               <Button className={styles.btnUpload}> {bntNextTitle} </Button>
             </div>
-            <div className={styles.again}>{linkTitle}</div>
+            <div className={styles.again} onClick={reloadFiles}>{linkTitle}</div>
           </div>
         </div>
       ) : null}
