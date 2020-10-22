@@ -2,42 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Upload, Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { UploadFixture } from './fixtures/fixture';
-import { UploadFieldsInterface } from './interfaces/interface';
+import { UploadInfoProps } from './interfaces/interface';
 import IframeComm from 'react-iframe-comm';
 import styles from './index.less';
 import { TypeFlow } from './enum/emun';
 
-export interface UploadInfoProps {
-  typeFlowProp: TypeFlow;
-  firstHeaderTitle?: string,
-  firstTitle?: string,
-  firstSubtitle?: string,
-  detailsTitle?: string,
-  detailsElement1?: string,
-  detailsElement2?: string,
-  bntUploadTitle?: string,
-  secondHeaderTitle?: string,
-  secondTitle?: string,
-  secondSubtitle?: string,
-  bntNextTitle?: string,
-  linkTitle?: string,
-}
+
 
 const UploadInfo: React.FC<UploadInfoProps> = (
   {
     typeFlowProp = UploadFixture.typeFlow,
-    firstHeaderTitle = UploadFixture.UploadFirstView.headerTitle,
-    firstTitle = UploadFixture.UploadFirstView.title,
-    firstSubtitle = UploadFixture.UploadFirstView.subtitle,
-    detailsTitle = UploadFixture.UploadFirstView.details.title,
-    detailsElement1 = UploadFixture.UploadFirstView.details.element1,
-    detailsElement2 = UploadFixture.UploadFirstView.details.element2,
-    bntUploadTitle = UploadFixture.UploadFirstView.btnTitle,
-    secondHeaderTitle = UploadFixture.UploadSecondView.headerTitle,
-    secondTitle = UploadFixture.UploadSecondView.title,
-    secondSubtitle = UploadFixture.UploadSecondView.subtitle,
-    bntNextTitle = UploadFixture.UploadSecondView.options.btnTitle,
-    linkTitle = UploadFixture.UploadSecondView.options.linkTitle,
+    firtsView = UploadFixture.UploadFirstView,
+    secondView = UploadFixture.UploadSecondView,
   }
 ) => {
 
@@ -115,28 +91,28 @@ const UploadInfo: React.FC<UploadInfoProps> = (
       {filesSelected.fileList.length >= 1 ? (
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.optional}>{secondHeaderTitle}</div>
-            <div className={styles.title}>{secondTitle}</div>
+            <div className={styles.optional}>{secondView.secondHeaderTitle}</div>
+            <div className={styles.title}>{secondView.secondTitle}</div>
             <div className={styles.subtitle}>
-              {secondSubtitle}
+              {secondView.secondSubtitle}
             </div>
           </div>
         </div>
       ) : (
           <div className={styles.firtsView}>
             <div className={styles.header}>
-              <div className={styles.optional}>{firstHeaderTitle}</div>
-              <div className={styles.title}>{firstTitle}</div>
+              <div className={styles.optional}>{firtsView.firstHeaderTitle}</div>
+              <div className={styles.title}>{firtsView.firstTitle}</div>
               <div className={styles.subtitle}>
-                {firstSubtitle}
+                {firtsView.firstSubtitle}
               </div>
             </div>
             <div className={styles.details}>
-              <div className={styles.secondHeader}>{detailsTitle}</div>
+              <div className={styles.secondHeader}>{firtsView.detailsTitle}</div>
               <div className={styles.list}>
                 <ul>
-                  <li>{detailsElement1}</li>
-                  <li>{detailsElement2}</li>
+                  <li>{firtsView.detailsElement1}</li>
+                  <li>{firtsView.detailsElement2}</li>
                 </ul>
               </div>
             </div>
@@ -190,7 +166,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
                     (
                       <div className={styles.uploadBtn}>
                         <Button className={styles.btnUpload} size="large">
-                          {bntUploadTitle}
+                          {firtsView.bntUploadTitle}
                         </Button>
                       </div>
                     )
@@ -200,7 +176,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
                   (
                     <div className={styles.uploadBtn}>
                       <Button className={styles.btnUpload} size="large">
-                        {bntUploadTitle}
+                        {firtsView.bntUploadTitle}
                       </Button>
                     </div>
                   )
@@ -214,9 +190,9 @@ const UploadInfo: React.FC<UploadInfoProps> = (
         <div className={styles.container}>
           <div className={styles.options}>
             <div>
-              <Button className={styles.btnUpload}> {bntNextTitle} </Button>
+              <Button className={styles.btnUpload}> {secondView.bntNextTitle} </Button>
             </div>
-            <div className={styles.again} onClick={reloadFiles}>{linkTitle}</div>
+            <div className={styles.again} onClick={reloadFiles}>{secondView.linkTitle}</div>
           </div>
         </div>
       ) : null}

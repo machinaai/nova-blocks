@@ -1,16 +1,27 @@
 import { TypeFlow } from '../enum/emun';
-export interface UploadFieldsInterface {
+
+export interface UploadInfoProps {
+    typeFlowProp: TypeFlow;
+    firtsView: FirstViewInterface;
+    secondView : SecondViewInterface;
+  }
+  
+  
+  export interface FirstViewInterface {
     firstHeaderTitle?: string,
-    firstTitle?:string,
-    firstSubtitle?:string,
+    firstTitle?: string,
+    firstSubtitle?: string,
     detailsTitle?: string,
-    detailsElemen1?: string,
+    detailsElement1?: string,
     detailsElement2?: string,
     bntUploadTitle?: string,
-    second?: string,
-    secondTitle?:string,
-    secondSubtitle?:string,
+  }
+  
+  export interface SecondViewInterface {
+    secondHeaderTitle?: string,
+    secondTitle?: string,
+    secondSubtitle?: string,
     bntNextTitle?: string,
     linkTitle?: string,
-    typeFlow: TypeFlow,
-}
+  }
+  
