@@ -19,6 +19,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
 
   let typeFile: any;
   const multiple = typeFlowProp === TypeFlow.INE;
+  let disableBtn = true;
 
   let propsUpload = {
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -28,6 +29,8 @@ const UploadInfo: React.FC<UploadInfoProps> = (
   const [filesSelected, setFilesSelected] = useState({
     fileList: [],
   });
+
+  // const [activeBtn, setActive] = useState(true);
 
   //pdf
   const [ejemplo, setEjemplo] = useState<any>();
@@ -46,7 +49,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
         fileList
       });
     } else {
-      setFilesSelected({  fileList });
+      setFilesSelected({ fileList });
     }
   };
 
@@ -83,8 +86,21 @@ const UploadInfo: React.FC<UploadInfoProps> = (
     setFilesSelected({
       fileList: []
     });
-  }
+  };
 
+  // Condition to disable button to Continue
+
+ if(typeFlowProp === TypeFlow.INE) {
+  if(typeFile === "pdf") {
+    disableBtn = false;
+  } else if(filesSelected.fileList.length === 2) {
+    disableBtn = false;
+  }
+ } else if(typeFlowProp === TypeFlow.ADDRESS) {
+  disableBtn = false;
+ } else {
+  disableBtn = true;
+ }
 
   return (
     <div>
@@ -190,7 +206,7 @@ const UploadInfo: React.FC<UploadInfoProps> = (
         <div className={styles.container}>
           <div className={styles.options}>
             <div>
-              <Button className={styles.btnUpload}> {secondView.bntNextTitle} </Button>
+              <Button disabled = {disableBtn} className={styles.btnUpload} > {secondView.bntNextTitle} </Button>
             </div>
             <div className={styles.again} onClick={reloadFiles}>{secondView.linkTitle}</div>
           </div>
