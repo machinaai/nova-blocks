@@ -1,8 +1,8 @@
 import { TypeFlow } from '../enum/emun';
 
-export interface UploadInfoProps {
+export interface UploadBlockProps {
     typeFlowProp: TypeFlow;
-    firtsView: FirstViewInterface;
+    firstView: FirstViewInterface;
     secondView : SecondViewInterface;
   }
   
