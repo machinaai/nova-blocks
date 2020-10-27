@@ -16,18 +16,22 @@ const UploadBlock: React.FC<UploadBlockProps> = (
   }
 ) => {
 
-  // State para INE
-  const [ineFileList, setIneList] = useState();
-
   // State para Adress
   const [addressFileList, setAdressList] = useState({ fileList: [] });
+
+  // State para Adress
+  const [filesIne, setFilesIne] = useState(
+    {
+      ineFront : false,
+      ineBack : false,
+      pdfFile : false,
+    }
+  );
 
   // change view
   const [changeview, setChangeView] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log(addressFileList, 'filesss despues del click')
-    
+  useEffect(() => {    
     if (addressFileList.fileList) {
       if (addressFileList.fileList.length === 1) {
         setChangeView(true);
@@ -35,25 +39,36 @@ const UploadBlock: React.FC<UploadBlockProps> = (
         setChangeView(false);
       }
     }
-  }, [addressFileList, changeview]);
-
- 
+  }, [addressFileList]);
 
   useEffect(() => {
-    console.log(addressFileList);
-  });
+  },[changeview]);
 
-  console.log(changeview)
-  console.log(addressFileList, 'adreessss en todo')
+  useEffect(() => {
+    if(filesIne.ineFront && filesIne.ineBack) {
+      setChangeView(true);
+    } else if(filesIne.pdfFile) {
+      setChangeView(true);
+    } else {
+      setChangeView(false);
+    }
+  },[filesIne]);
+
+  const getIneFiles = (type:'ineFront' | 'ineBack' | 'pdfFile', value:boolean) => {
+    setFilesIne({
+      ...filesIne,
+      [type]: value,
+    });
+  }
 
   return (
     <div className={styles.container}>
       <UploadTitles changeview={changeview} firstView={firstView} secondView={secondView} />
       {typeFlowProp === TypeFlow.ADDRESS ?
 
-        <UploadAdress setAdressList={setAdressList} firstView={firstView} secondView={secondView} />
+        <UploadAdress setAdressList={setAdressList} />
         :
-        <UploadIne />
+        <UploadIne getIneFiles={getIneFiles} changeview={changeview} />
       }
       <div>
         { changeview ? 

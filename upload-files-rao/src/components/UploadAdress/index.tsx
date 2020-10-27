@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { FirstViewInterface, SecondViewInterface } from '../../interfaces/interface';
 import IframeComm from 'react-iframe-comm';
 import { Upload, Modal } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import styles from './index.less';
 
 export interface UploadAdressProps {
-    firstView?: FirstViewInterface;
-    secondView?: SecondViewInterface;
     setAdressList?: any;
 }
 
-const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList }) => {
+const UploadAdress: React.FC<UploadAdressProps> = ({ setAdressList }) => {
     
-    const uploadButton = (
-        <div>
-            <PlusOutlined />
-            <div style={{ marginTop: 8 }}>Upload</div>
-        </div>
-    );
     const [filesSelected, setFilesSelected] = useState({ fileList: [] });
 
     let typeFile: any;
@@ -33,24 +24,16 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList })
         frameBorder: 0,
     };
 
+    const uploadButton = (
+        <div>
+            <PlusOutlined />
+            <div style={{ marginTop: 8 }}>Selecciona</div>
+        </div>
+    );
+
     const handleChange = ({ fileList }: any) => {
         setFilesSelected({ fileList });
         setAdressList({fileList});
-    };
-
-    const handlePreview = async (file: any) => {
-        let src = file.url;
-        if (!src) {
-            src = await new Promise((resolve) => {
-                const reader = new FileReader();
-                reader.readAsDataURL(file.originFileObj);
-                reader.onload = () => resolve(reader.result);
-            });
-        }
-        const image = new Image();
-        image.src = src;
-        const imgWindow = window.open(src);
-        imgWindow?.document.write(image.outerHTML);
     };
 
     const progressFunction = () => {
@@ -63,7 +46,6 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList })
     progressFunction();
 
     useEffect(() => {
-        console.log(filesSelected, 'filesss despues del click')
     }, [filesSelected]);
 
     const [change, setChange] = useState({
@@ -85,7 +67,6 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList })
           previewTitle: file.name
         });
       }
-
 
     return (
         <div>
