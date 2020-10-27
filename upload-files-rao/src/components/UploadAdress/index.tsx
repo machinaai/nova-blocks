@@ -64,6 +64,25 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
         console.log(filesSelected, 'filesss despues del click')
     }, [filesSelected]);
 
+    const [change, setChange] = useState({
+        previewVisible: false,
+        previewImage: "",
+        fileList: [],
+      });
+
+      const handleCancel = () => {
+        setChange({ ...change, previewVisible: false });
+      };
+
+      const preview = async (file: any) => {
+        setChange({
+          ...change,
+          previewImage: file.thumbUrl || file.preview,
+          previewVisible: true,
+        });
+      }
+      
+
     return (
         <div>
             <div className={styles.title}>
@@ -88,7 +107,7 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
                             action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                             listType="picture-card"
                             fileList={filesSelected.fileList}
-                            onPreview={handlePreview}
+                            onPreview={preview}
                             onChange={handleChange}
                             beforeUpload={file => {
                                 const reader = new FileReader();
@@ -102,6 +121,17 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
                         >
                             {filesSelected.fileList.length === 1 ? null : uploadButton}
                         </Upload>
+                        <Modal
+                        visible={change.previewVisible}
+                        footer={null}
+                        onCancel={handleCancel}
+                        >
+                        <img
+                            alt="preview"
+                            style={{ width: "100%" }}
+                            src={change.previewImage}
+                        />
+                         </Modal>
                         </div>
                 }
             </div>
