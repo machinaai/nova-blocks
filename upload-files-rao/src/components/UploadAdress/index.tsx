@@ -70,6 +70,7 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList })
         previewVisible: false,
         previewImage: "",
         fileList: [],
+        previewTitle: ""
       });
 
       const handleCancel = () => {
@@ -81,9 +82,10 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList })
           ...change,
           previewImage: file.thumbUrl || file.preview,
           previewVisible: true,
+          previewTitle: file.name
         });
       }
-      
+
 
     return (
         <div>
@@ -128,6 +130,7 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList })
                         visible={change.previewVisible}
                         footer={null}
                         onCancel={handleCancel}
+                        title={change.previewTitle}
                         >
                         <img
                             alt="preview"

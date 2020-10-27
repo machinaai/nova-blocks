@@ -37,6 +37,7 @@ const UploadIne: React.FC<UploadIneProps> = () => {
       previewVisible: false,
       previewImage: "",
       fileList: [],
+      previewTitle: ""
     });
   
     const handlePreview = async (file: any) => {
@@ -44,6 +45,7 @@ const UploadIne: React.FC<UploadIneProps> = () => {
         ...change,
         previewImage: file.thumbUrl || file.preview,
         previewVisible: true,
+        previewTitle: file.name
       });
     };
   
@@ -82,6 +84,7 @@ const UploadIne: React.FC<UploadIneProps> = () => {
                   visible={change.previewVisible}
                   footer={null}
                   onCancel={handleCancel}
+                  title={change.previewTitle}
                 >
                   <img
                     alt="preview"
