@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Modal, Upload } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import styles from './index.less';
 
 export interface UploadIneProps {
 }
@@ -53,7 +54,7 @@ const UploadIne: React.FC<UploadIneProps> = () => {
     return (
         <div>
              <div>
-                 <div>
+                 <div className={styles.title}>
                     Sube la parte delantera de tu INE/IFE (jpg, png o pdf).
                  </div>
                  <div>
@@ -91,7 +92,7 @@ const UploadIne: React.FC<UploadIneProps> = () => {
              </div>
 
              <div>
-                 <div>
+                <div className={styles.title}>
                     Sube la parte trasera de tu INE/IFE (jpg, png o pdf).
                  </div>
                  <div>

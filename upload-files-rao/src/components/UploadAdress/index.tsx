@@ -8,9 +8,10 @@ import styles from './index.less';
 export interface UploadAdressProps {
     firstView?: FirstViewInterface;
     secondView?: SecondViewInterface;
+    setAdressList?: any;
 }
 
-const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
+const UploadAdress: React.FC<UploadAdressProps> = ({ firstView, setAdressList }) => {
     
     const uploadButton = (
         <div>
@@ -34,6 +35,7 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
 
     const handleChange = ({ fileList }: any) => {
         setFilesSelected({ fileList });
+        setAdressList({fileList});
     };
 
     const handlePreview = async (file: any) => {
@@ -86,7 +88,7 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
     return (
         <div>
             <div className={styles.title}>
-                Sube tu comprobante de domicilio (jpg, png o pdf).
+                {filesSelected.fileList.length === 1 ? null : "Sube tu comprobante de domicilio (jpg, png o pdf)."}
             </div>
             <div>
                 {
@@ -101,8 +103,9 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ firstView }) => {
                                 </div>
                             </div>
                         ) :
-                        <div className={styles.upload}>
+                        <div>
                         <Upload
+                            className={styles.uploadContainer}
                             accept=".pdf, .png, .jpg"
                             action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                             listType="picture-card"

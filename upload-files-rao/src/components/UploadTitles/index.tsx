@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FirstViewInterface, SecondViewInterface  } from '../../interfaces/interface';
 import styles from './index.less';
 
 export interface UploadTitlesProps {
-    firstView? : FirstViewInterface;
-    secondView ? : SecondViewInterface;
+    firstView: FirstViewInterface;
+    secondView: SecondViewInterface;
+    changeview?: boolean;
 }
  
-const UploadTitles: React.SFC<UploadTitlesProps> = ({firstView}) => {
+const UploadTitles: React.FC<UploadTitlesProps> = ({firstView, changeview, secondView}) => {
 
     return ( 
-        <div className={styles.firtsView}>
+        <Fragment>
+        {changeview ? (
+            <div className={styles.container}>
+            <div className={styles.header}>
+              <div className={styles.optional}>{secondView.secondHeaderTitle}</div>
+              <div className={styles.title}>{secondView.secondTitle}</div>
+              <div className={styles.subtitle}>
+                {secondView.secondSubtitle}
+              </div>
+            </div>
+          </div>
+        )
+        :
+        (
+            <div className={styles.firtsView}>
             <div className={styles.header}>
               <div className={styles.optional}>{firstView?.firstHeaderTitle}</div>
               <div className={styles.title}>{firstView?.firstTitle}</div>
@@ -27,7 +42,10 @@ const UploadTitles: React.SFC<UploadTitlesProps> = ({firstView}) => {
                 </ul>
               </div>
             </div>
-          </div>
+        </div>
+        )
+        }
+        </Fragment>
      );
 }
  
