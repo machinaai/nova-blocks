@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import UploadAdress from './components/UploadAdress';
 import UploadIne from './components/UploadIne';
 import { UploadBlockProps } from './interfaces/interface';
@@ -30,6 +30,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
 
   // change view
   const [changeview, setChangeView] = useState<boolean>(false);
+  const [filesSelected, setFilesSelected] = useState(false);
 
   useEffect(() => {    
     if (addressFileList.fileList) {
@@ -61,6 +62,11 @@ const UploadBlock: React.FC<UploadBlockProps> = (
     });
   }
 
+  const reloadFiles = () => {
+    console.log('click en padre ...', getIneFiles);
+    setFilesSelected(true);
+  };
+
   console.log(filesIne)
   return (
     <div className={styles.container}>
@@ -78,7 +84,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
             <div>
               <Button  className={styles.btnUpload} > {secondView.bntNextTitle} </Button>
             </div>
-            <div className={styles.again} >{secondView.linkTitle}</div>
+            <div className={styles.again} onClick={reloadFiles} >{secondView.linkTitle}</div>
           </div>
         </div>
       ) : null

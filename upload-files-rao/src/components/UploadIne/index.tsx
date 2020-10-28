@@ -7,9 +7,17 @@ import styles from './index.less';
 export interface UploadIneProps {
   getIneFiles?: any;
   changeview?: boolean;
+  onClick?: Function,
+  filesSelected?: any,
 }
 
-const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview }) => {
+const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview, onClick, filesSelected }) => {
+
+  
+  console.log('chageView...', changeview);
+  console.log('prueba');
+
+  
 
   //pdf
   const [ejemplo, setEjemplo] = useState<any>();
@@ -20,6 +28,8 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview }) => {
     height: "100%",
     frameBorder: 0,
   };
+
+  const reload = () => (onClick && onClick());
 
   //INE FRONT
   const [ineFrontSelected, setIneFront] = useState({ fileList: [] });
@@ -101,6 +111,13 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview }) => {
   }, [ineBackSelected]);
 
   console.log('pdf files',  inePdfSelected);
+
+  if(filesSelected) {
+    console.log('files en componente hijo:', ineFrontSelected);
+    ineFrontSelected.fileList = [];
+    ineBackSelected.fileList = [];
+    changeview = false;
+  }
 
   return (
     <div>
