@@ -42,5 +42,10 @@
 }
 
 .uploadContainer {
-  width: 180px;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
