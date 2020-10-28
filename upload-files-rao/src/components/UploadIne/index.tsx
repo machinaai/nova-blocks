@@ -24,13 +24,17 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview }) => {
   //INE FRONT
   const [ineFrontSelected, setIneFront] = useState({ fileList: [] });
   // Change on ine front 
-  const handleFrontChange = ({ fileList }: any) => {
-    if (fileList[0].type === 'application/pdf') {
+  const handleFrontChange = ({ fileList }: any) => { 
+    const check = fileList.some((element) => {
+      return element.type === "application/pdf";
+    });
+
+    if (check) {
       setPdfSelected({ fileList });
       getIneFiles('pdfFile', true);
     } else {
-      setIneFront({ fileList });
-      getIneFiles('ineFront', true);
+    setIneFront({ fileList });
+    getIneFiles('ineFront', true);
     }
   };
 
@@ -38,7 +42,11 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview }) => {
   const [ineBackSelected, setIneBack] = useState({ fileList: [] });
   // Change on ine front 
   const handleBackChange = ({ fileList }: any) => {
-    if (fileList[0].type === 'application/pdf') {
+    const check = fileList.some((element) => {
+      return element.type === "application/pdf";
+    });
+
+    if (check) {
       setPdfSelected({ fileList });
       getIneFiles('pdfFile', true);
     } else {
@@ -80,7 +88,20 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview }) => {
   useEffect(() => {
   }, [changeview]);
 
-  console.log(changeview, 'cambiioooooooo')
+  useEffect(() => {
+    if(ineFrontSelected.fileList.length < 1) {
+      getIneFiles('ineFront', false);
+    }
+  }, [ineFrontSelected]);
+
+  useEffect(() => {
+    if(ineBackSelected.fileList.length < 1) {
+      getIneFiles('ineBack', false)
+    }
+  }, [ineBackSelected]);
+
+  console.log('pdf files',  inePdfSelected);
+
   return (
     <div>
       {
