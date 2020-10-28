@@ -66,10 +66,9 @@ const UploadBlock: React.FC<UploadBlockProps> = (
     <div className={styles.container}>
       <UploadTitles changeview={changeview} firstView={firstView} secondView={secondView} />
       {typeFlowProp === TypeFlow.INE ?
-
-        <UploadAdress setAdressList={setAdressList} />
-        :
         <UploadIne getIneFiles={getIneFiles} changeview={changeview} />
+        :
+        <UploadAdress setAdressList={setAdressList} />
       }
       <div>
         { changeview ? 
