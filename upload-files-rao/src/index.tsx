@@ -61,6 +61,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
     });
   }
 
+  console.log(filesIne)
   return (
     <div className={styles.container}>
       <UploadTitles changeview={changeview} firstView={firstView} secondView={secondView} />
