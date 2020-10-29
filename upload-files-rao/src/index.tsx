@@ -175,7 +175,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
         setDataIneBack = {setDataIneBack}
         setPdfFileList={setPdfFileList}
         setSrcPdf ={setSrcPdf }
-        reload={reload} setReload={setReload}
+        reload={reload}
       />
         :
         <UploadAdress setAdressList={setAdressList} reload={reload} />

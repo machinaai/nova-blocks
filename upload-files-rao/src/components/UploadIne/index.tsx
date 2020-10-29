@@ -8,7 +8,6 @@ export interface UploadIneProps {
   getIneFiles?: any;
   changeview?: boolean;
   reload?: boolean;
-  setReload?: any;
   setIneFrontFileList?: any;
   setDataIneFront?: any;
   setIneBackFileList?: any;
@@ -27,19 +26,18 @@ const UploadIne: React.FC<UploadIneProps> = ({
   setPdfFileList,
   setSrcPdf,
   reload,
-  setReload,
 }) => {
   //pdf
-  const [ejemplo, setEjemplo] = useState<any>();
+  const [file, setFile] = useState<any>();
 
   const attributesPdf = {
-    src: ejemplo,
+    src: file,
     width: "100%",
     height: "100%",
     frameBorder: 0,
   };
 
-  // state to save data INE FRONT -> Ejemplo  de INE
+  // state to save data INE FRONT -> file  de INE
   const [dataIneFront, setDataFront] = useState<any>();
   //INE FRONT
   const [ineFrontSelected, setIneFront] = useState({ fileList: [] });
@@ -60,7 +58,7 @@ const UploadIne: React.FC<UploadIneProps> = ({
     }
   };
 
-  // state to save data INE BACK -> Ejemplo  de INE BACK
+  // state to save data INE BACK -> file  de INE BACK
   const [dataIneBack, setDataBack] = useState<any>();
   //INE BACK
   const [ineBackSelected, setIneBack] = useState({ fileList: [] });
@@ -129,7 +127,7 @@ const UploadIne: React.FC<UploadIneProps> = ({
     if (reload) {
       setIneFront({ fileList: [] });
       setIneBack({ fileList: [] });
-      // setEjemplo('');
+      // setFile('');
       // setPdfSelected({ fileList: [] });
     }
   }, [reload]);
@@ -192,7 +190,7 @@ const UploadIne: React.FC<UploadIneProps> = ({
                   const reader = new FileReader();
                   reader.onload = (e) => {
                     let stringData = String(e.target?.result);
-                    setEjemplo(stringData);
+                    setFile(stringData);
                     setDataFront(stringData);
                   };
                   reader.readAsDataURL(file);
@@ -219,7 +217,7 @@ const UploadIne: React.FC<UploadIneProps> = ({
                   const reader = new FileReader();
                   reader.onload = (e) => {
                     let stringData = String(e.target?.result);
-                    setEjemplo(stringData);
+                    setFile(stringData);
                     setDataBack(stringData);
                   };
                   reader.readAsDataURL(file);
