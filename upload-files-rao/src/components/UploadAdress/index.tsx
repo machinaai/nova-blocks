@@ -7,9 +7,10 @@ import styles from './index.less';
 export interface UploadAdressProps {
     setAdressList?: any;
     resetFiles?: boolean;
+    reload?: boolean,
 }
 
-const UploadAdress: React.FC<UploadAdressProps> = ({ setAdressList, resetFiles }) => {
+const UploadAdress: React.FC<UploadAdressProps> = ({ setAdressList, resetFiles, reload }) => {
     
     const [filesSelected, setFilesSelected] = useState({ fileList: [] });
 
@@ -76,7 +77,10 @@ const UploadAdress: React.FC<UploadAdressProps> = ({ setAdressList, resetFiles }
         });
       }
 
-    console.log(ejemplo, 'ejemploooo')
+      if(reload) {
+        filesSelected.fileList = [];
+      }
+
     return (
         <div>
             <div className={styles.title}>

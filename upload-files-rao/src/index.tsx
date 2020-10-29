@@ -30,7 +30,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
 
   // change view
   const [changeview, setChangeView] = useState<boolean>(false);
-  const [filesSelected, setFilesSelected] = useState(false);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {    
     if (addressFileList.fileList) {
@@ -62,19 +62,22 @@ const UploadBlock: React.FC<UploadBlockProps> = (
     });
   }
 
-  const reloadFiles = () => {
-    console.log('click en padre ...', getIneFiles);
-    setFilesSelected(true);
+  const reloadFiles = (e: any) => {
+    setReload(true);
   };
+
+  useEffect(() => {
+    setReload(false);
+  },[reload])
 
   console.log(filesIne)
   return (
     <div className={styles.container}>
       <UploadTitles changeview={changeview} firstView={firstView} secondView={secondView} />
       {typeFlowProp === TypeFlow.INE ?
-        <UploadIne getIneFiles={getIneFiles} changeview={changeview} />
+        <UploadIne getIneFiles={getIneFiles} changeview={changeview} reload={reload} setReload={setReload} />
         :
-        <UploadAdress setAdressList={setAdressList} />
+        <UploadAdress setAdressList={setAdressList} reload={reload} />
       }
       <div>
         { changeview ? 

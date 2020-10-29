@@ -7,17 +7,12 @@ import styles from './index.less';
 export interface UploadIneProps {
   getIneFiles?: any;
   changeview?: boolean;
-  onClick?: Function,
-  filesSelected?: any,
+  reload?: boolean,
+  setReload?: any;
 }
 
-const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview, onClick, filesSelected }) => {
+const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview, reload, setReload }) => {
 
-  
-  console.log('chageView...', changeview);
-  console.log('prueba');
-
-  
 
   //pdf
   const [ejemplo, setEjemplo] = useState<any>();
@@ -28,8 +23,6 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview, onClick,
     height: "100%",
     frameBorder: 0,
   };
-
-  const reload = () => (onClick && onClick());
 
   //INE FRONT
   const [ineFrontSelected, setIneFront] = useState({ fileList: [] });
@@ -110,14 +103,16 @@ const UploadIne: React.FC<UploadIneProps> = ({ getIneFiles, changeview, onClick,
     }
   }, [ineBackSelected]);
 
-  console.log('pdf files',  inePdfSelected);
 
-  if(filesSelected) {
-    console.log('files en componente hijo:', ineFrontSelected);
-    ineFrontSelected.fileList = [];
-    ineBackSelected.fileList = [];
-    changeview = false;
-  }
+  useEffect (() => {
+      if(reload ) {
+        setIneFront({ fileList: [] });
+        setIneBack({fileList: []})
+        // setEjemplo('');
+        // setPdfSelected({ fileList: [] });  
+        }
+    }, [reload])
+
 
   return (
     <div>
