@@ -30,5 +30,5 @@ export const UploadFixture = {
         title: 'Cargar',
     },
 
-    typeFlow : 0,
+    typeFlow : 1,
 }

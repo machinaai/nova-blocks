@@ -4,6 +4,12 @@ export interface UploadBlockProps {
     typeFlowProp: TypeFlow;
     firstView: FirstViewInterface;
     secondView : SecondViewInterface;
+    srcIneFront: any;
+    fileListIneFront: any;
+    srcIneBack: any;
+    fileListIneBack: any;
+    srcPdf:any;
+    fileListPdf: any;
   }
   
   
