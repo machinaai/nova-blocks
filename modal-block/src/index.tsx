@@ -2,7 +2,7 @@ import React from 'react';
 import { dataFixture } from './fixture/dataFixture';
 import { Modal, Button } from 'antd';
 import { ModalProps } from './interfaces/modal.interface';
-import styles from './index.css';
+import styles from './index.less';
 
 const ModalBlock: React.FC <ModalProps> = (props) => {
   const { title = 'Title', subtitle = 'Subtitle', options = dataFixture, visible = true, closeElement,fontFamily:font } = props

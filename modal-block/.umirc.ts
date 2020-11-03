@@ -1,9 +1,7 @@
-import { IConfig } from 'umi-types';
 
-const config: IConfig = {
-  plugins: [
-    ['umi-plugin-block-dev', {}],
-  ],
-}
-
-export default config;
+const defineConfig = {
+  nodeModulesTransform: { type: 'none' },
+  routes: [{ path: '/', component: '@/index' }],
+  locale: { default: 'es-ES', useLocalStorage: true },
+};
+export default defineConfig
