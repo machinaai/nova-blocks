@@ -1,3 +1,4 @@
+import { defineConfig } from 'umi';
 
 const defineConfig = {
   nodeModulesTransform: { type: 'none' },
