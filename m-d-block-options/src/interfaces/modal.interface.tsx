@@ -5,8 +5,7 @@ export interface ModalProps {
     fontFamily?:Fonts,
     onlyModal?:boolean,
     onlyDrawer?:boolean,
-    setElementType?:any
-
+    onClose?:Function | any
 }
 export interface ItemOptions {
     icon: any,
