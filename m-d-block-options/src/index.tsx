@@ -33,7 +33,7 @@ const OptionsBlock: React.FC<ModalProps> = (props) => {
       setShowModal(false);
       setShowDrawer(false);
     }
-  }, [onlyModal || onlyDrawer]);
+  }, [onlyModal,onlyDrawer]);
 
   return (
     <>
