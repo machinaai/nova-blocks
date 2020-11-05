@@ -161,6 +161,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
 
   useEffect(() => {
     setReload(false);
+    setChangeView(false);
   },[reload])
 
   return (

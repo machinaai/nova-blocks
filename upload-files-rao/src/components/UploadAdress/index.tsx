@@ -80,6 +80,7 @@ const UploadAdress: React.FC<UploadAdressProps> = ({
 
   if (reload) {
     filesSelected.fileList = [];
+    typeFile = undefined;
   }
 
   return (

@@ -46,7 +46,6 @@ const UploadIne: React.FC<UploadIneProps> = ({
     const check = fileList.some((element: any) => {
       return element.type === "application/pdf";
     });
-
     if (check) {
       setPdfSelected({ fileList });
       getIneFiles("pdfFile", true);
@@ -67,7 +66,6 @@ const UploadIne: React.FC<UploadIneProps> = ({
     const check = fileList.some((element) => {
       return element.type === "application/pdf";
     });
-
     if (check) {
       setPdfSelected({ fileList });
       getIneFiles("pdfFile", true);
@@ -124,15 +122,6 @@ const UploadIne: React.FC<UploadIneProps> = ({
   }, [ineBackSelected]);
 
   useEffect(() => {
-    if (reload) {
-      setIneFront({ fileList: [] });
-      setIneBack({ fileList: [] });
-      // setFile('');
-      // setPdfSelected({ fileList: [] });
-    }
-  }, [reload]);
-
-  useEffect(() => {
     if (ineFrontSelected.fileList.length === 0) {
       setDataIneFront("");
     } else {
@@ -160,6 +149,15 @@ const UploadIne: React.FC<UploadIneProps> = ({
   useEffect(() => {
     getUrlDataPdf();
   }, [dataIneFront, dataIneBack]);
+
+  useEffect(() => {
+    if (reload) {
+      setIneFront({ fileList: [] });
+      setIneBack({ fileList: [] });
+      setPdfSelected({ fileList: [] });
+      getIneFiles("pdfFile", false);
+    }
+  }, [reload]);
 
   return (
     <div>
