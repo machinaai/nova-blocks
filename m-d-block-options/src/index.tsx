@@ -5,32 +5,39 @@ import { ModalProps } from './interfaces/modal.interface';
 import styles from './index.less';
 
 const OptionsBlock: React.FC<ModalProps> = (props) => {
-  const { title = 'Title', subtitle = 'Subtitle', options = dataFixture, fontFamily: font, onlyModal=true, onlyDrawer=true, setElementType=()=>{}} = props
+  const { title = 'Title', subtitle = 'Subtitle', options = dataFixture, fontFamily: font, onlyModal = true, onlyDrawer = true, onClose } = props
   const [showModal, setShowModal] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
 
-  const closeModal = () => setShowModal(false);
-  const closeDrawer = () => setShowDrawer(false);
+  const closeModal = () => {
+    onClose()
+    setShowModal(false)
+  };
+  const closeDrawer = () => {
+    onClose();
+    setShowDrawer(false)
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     if (onlyModal && onlyDrawer) {
       let userAgent = navigator.userAgent || navigator.vendor;
       if (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) {
-        setShowDrawer(true);  
-        setElementType('drawer')
+        setShowDrawer(true);
       } else {
-        setElementType('modal')
-        setShowModal(true); 
+        setShowModal(true);
       }
-    } else{
-    onlyModal && setShowModal(true); 
-    onlyDrawer && setShowDrawer(true); 
+    } else if (onlyModal || onlyDrawer) {
+      onlyModal && setShowModal(true);
+      onlyDrawer && setShowDrawer(true);
+    } else {
+      setShowModal(false);
+      setShowDrawer(false);
     }
-  },[onlyModal || onlyDrawer]);
+  }, [onlyModal,onlyDrawer]);
 
   return (
     <>
-     <Modal
+      <Modal
         onCancel={closeModal}
         visible={showModal}
         mask={showModal}
@@ -48,7 +55,7 @@ const OptionsBlock: React.FC<ModalProps> = (props) => {
           </div>
         ))}
       </Modal>
-      <Drawer 
+      <Drawer
         placement="bottom"
         closable
         onClose={closeDrawer}
