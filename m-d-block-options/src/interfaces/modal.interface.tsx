@@ -9,8 +9,9 @@ export interface ModalProps {
 }
 export interface ItemOptions {
     icon: any,
-    valOption: string
-    action:Function|any
+    valOption: string,
+    action:Function|any,
+    color?:string
 }
 interface Fonts{
     fontTitle:string,

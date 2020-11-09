@@ -7,16 +7,19 @@ export const dataFixture= [
         {
             icon: <ExpandOutlined />,
             valOption: 'option1',
-            action:()=>5
+            action:()=>5,
+            color:'black'
         },
         {
             icon: <UploadOutlined />,
             valOption: 'option2',
-            action:action
+            action:action,
+            color:'black'
         },
         {
             icon: <InsertRowBelowOutlined />,
             valOption: 'option3',
-            action:action
+            action:action,
+            color:'black'
         }
     ]
