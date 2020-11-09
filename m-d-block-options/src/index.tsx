@@ -49,7 +49,7 @@ const OptionsBlock: React.FC<ModalProps> = (props) => {
         </div>
         {options.map(option => (
           <div className={styles.optionWrapper} key={option.valOption}>
-            <Button onClick={option.action} icon={option.icon}>
+            <Button className={styles.btnOptions} onClick={option.action} icon={option.icon} size='large' style={{color:`${option.color}`}} block>
               {option.valOption}
             </Button>
           </div>
@@ -67,7 +67,7 @@ const OptionsBlock: React.FC<ModalProps> = (props) => {
         </div>
         {options.map(option => (
           <div className={styles.optionWrapper} key={option.valOption}>
-            <Button onClick={option.action} icon={option.icon}>
+            <Button className={styles.btnOptions} onClick={option.action} icon={option.icon} size='large' style={{color:`${option.color}`}} block>
               {option.valOption}
             </Button>
           </div>
