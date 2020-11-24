@@ -1,0 +1,23 @@
+{
+  "name": "@nova-blocks/radio-button",
+  "version": "0.0.1",
+  "description": "block radio-button with different options",
+  "main": "src/index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "umijs/umi-blocks/radio-button",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "react": ">=16.0.0"
+  },
+  "devDependencies": {
+    "umi": "^3.2.23",
+    "umi-types": "^0.3.0",
+    "@umijs/preset-react": "1.x"
+  },
+  "license": "MIT"
+}
