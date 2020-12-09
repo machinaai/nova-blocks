@@ -93,68 +93,6 @@ const UploadBlock: React.FC<UploadBlockProps> = (
     });
   };
  
-  // useEffect(() => {
-  //   if(ineFrontFileList.fileList){
-  //     transformObjectIneFront(ineFrontFileList.fileList[0]);
-  //   }
-  // }, [dataIneFront,ineFrontFileList ]);
-
-  // useEffect(() => {
-  //   if(ineBackFileList.fileList){
-  //     transformObjectIneBack(ineBackFileList.fileList[0]);
-  //   }
-  // }, [dataIneback,ineBackFileList ]);
-
-  // useEffect(() => {
-  //   if(pdfFileList.fileList){
-  //     transformObjectPDF(pdfFileList.fileList[0]);
-  //   }
-  // }, [dataPdf,pdfFileList ]);
-
-  // // Transform type element
-  // const transformType = (e:any) => {
-  //   if(e?.type ) {
-  //     const arrString = e.type.split('/')
-  //     return arrString[arrString.length - 1];
-  //   }
-  //   return '';
-  // }
-
-  // const getUrlImg = (e: string) => {
-  //   if(e !== undefined) {
-  //   const urlString = e.split('base64,');
-  //   console.log(urlString[urlString.length - 1])
-  //   return urlString[urlString.length - 1];
-  //   }
-  // }
-
-  // //FUNCTION TO MAKE OBJECT INE FRONT
-  // const transformObjectIneFront = (fileList: any) => {
-  //   setObjectIneFront({
-  //     type: transformType(fileList),
-  //     phone: '5555555555',
-  //     image:  getUrlImg(dataIneFront),
-  //   });
-  // };
-
-  // //FUNCTION TO MAKE OBJECT INE BACK
-  // const transformObjectIneBack = (fileList: any) => {
-  //   setObjectIneBack({
-  //     type: transformType(fileList),
-  //     phone: '1234567890',
-  //     image:  getUrlImg(dataIneback),
-  //   });
-  // };
-
-  // //FUNCTION TO MAKE OBJECT PDF INES
-  // const transformObjectPDF = (fileList: any) => {
-  //   setObjectPdf({
-  //     type: transformType(fileList),
-  //     phone: '1234567890',
-  //     image:  getUrlImg(dataPdf),
-  //   });
-  // };
-
   const reloadFiles = (e: any) => {
     setReload(true);
   };
@@ -162,7 +100,16 @@ const UploadBlock: React.FC<UploadBlockProps> = (
   useEffect(() => {
     setReload(false);
     setChangeView(false);
-  },[reload])
+  },[reload]);
+
+  useEffect(() => {
+    // srcIneFront(dataIneFront);
+    // fileListIneFront(ineFrontFileList);
+    // srcIneBack(dataIneback);
+    // fileListIneBack(ineBackFileList);
+    // srcPdf(dataPdf);
+    // fileListPdf(pdfFileList);
+  }, [dataIneFront, ineFrontFileList, dataIneback, ineBackFileList, dataPdf, pdfFileList]);
 
   return (
     <div className={styles.container}>
@@ -187,9 +134,13 @@ const UploadBlock: React.FC<UploadBlockProps> = (
           <div className={styles.container}>
           <div className={styles.options}>
             <div>
-              <Button  className={styles.btnUpload} > {secondView.bntNextTitle} </Button>
+              <Button  className={styles.btnUpload} type="primary" > {secondView.bntNextTitle} </Button>
             </div>
-            <div className={styles.again} onClick={reloadFiles} >{secondView.linkTitle}</div>
+            <div className={styles.again}>
+                <Button type="link" onClick={reloadFiles}>
+                {secondView.linkTitle}
+                </Button>
+            </div>
           </div>
         </div>
       ) : null
