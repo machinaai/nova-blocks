@@ -234,7 +234,7 @@
       "path": "account-screen",
       "isPage": false,
       "defaultPath": "/account-screen",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/paperless/snapshot.png",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-screen/snapshot.png",
       "tags": ["pro-block"],
       "name": "account-screen AccountScreen",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
