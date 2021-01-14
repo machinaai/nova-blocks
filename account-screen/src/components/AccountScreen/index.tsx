@@ -55,7 +55,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
             {nameUser ? (
               <div className={styles.heading} style={{ fontFamily: font?.fontTitle }}>
                 <p>
-                  {`¡${intl.formatMessage({ id: 'rao-account-screen.H_title' })}`}
+                  {`¡${intl.formatMessage({ id: 'BLOCK_NAME.H_title' })}`}
                 </p>
                 <p>
                   {nameUser}!
@@ -66,7 +66,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
               )}
             <div className={styles.messageVirtual}>
               <p className={styles.txt} style={{ fontFamily: font?.fontSubtitle }}>
-                {intl.formatMessage({ id: 'rao-account-screen.H_subtitle' })}
+                {intl.formatMessage({ id: 'BLOCK_NAME.H_subtitle' })}
               </p>
             </div>
             <div className={styles.robotMobile}>
@@ -74,7 +74,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
             </div>
             <div className={styles.wallet}>
               <p className={styles.cardLabel}>
-                {intl.formatMessage({ id: 'rao-account-screen.B_desc1' })}
+                {intl.formatMessage({ id: 'BLOCK_NAME.B_desc1' })}
               </p>
               {numberCard ? (
                 <p className={styles.cardNumber}>{numberCard}</p>
@@ -90,12 +90,12 @@ export const AccountScreen: React.FC<PropsAccount> = ({
                 block
                 onClick={actionWallet}
               >
-                {intl.formatMessage({ id: 'rao-account-screen.wallet_btn' })}
+                {intl.formatMessage({ id: 'BLOCK_NAME.wallet_btn' })}
               </Button>
             </div>
 
             <div className={styles.sendMessage}>
-              <p>{intl.formatMessage({ id: 'rao-account-screen.B_desc2' })}</p>
+              <p>{intl.formatMessage({ id: 'BLOCK_NAME.B_desc2' })}</p>
             </div>
             <div className={styles.sendBtn}>
               <Button
@@ -105,12 +105,12 @@ export const AccountScreen: React.FC<PropsAccount> = ({
                 size="large"
                 onClick={actionBtn}
               >
-                {intl.formatMessage({ id: 'rao-account-screen.text_btn' })}
+                {intl.formatMessage({ id: 'BLOCK_NAME.text_btn' })}
               </Button>
             </div>
             <div className={styles.downloadContainer}>
               <p>
-                {intl.formatMessage({ id: 'rao-account-screen.F_title1' })}
+                {intl.formatMessage({ id: 'BLOCK_NAME.F_title1' })}
             </p>
               <div className={styles.imageContainer}>
                 <div className={styles.imageContainerApp}>
@@ -123,7 +123,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
             </div>
             <div className={styles.bottomWrapper2}>
               <p>
-                {intl.formatMessage({ id: 'rao-account-screen.F_title2' })}
+                {intl.formatMessage({ id: 'BLOCK_NAME.F_title2' })}
             </p>
               {downStore}
             </div>
@@ -136,7 +136,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
               size="large"
               onClick={actionBtn}
             >
-              {intl.formatMessage({ id: 'rao-account-screen.text_btn' })}
+              {intl.formatMessage({ id: 'BLOCK_NAME.text_btn' })}
             </Button>
           </div>
         </div>
