@@ -1,0 +1,29 @@
+@tablet: ~'only screen and (min-width: 720px) and (max-width: 959px)';
+@mobile: ~'only screen and (min-width: 375px) and (max-width: 719px)';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  height: 90vh;
+}
+
+.shape {
+  margin-top: auto;
+  width: 450px;
+
+
+  @media @mobile {
+    width: 300px;
+  }
+
+  .shapeimg {
+   width: 100%;
+   height: 100%;
+  }
+}
+
+.indicator {
+  margin-top: auto;
+}
