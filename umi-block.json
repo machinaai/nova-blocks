@@ -223,6 +223,22 @@
       "name": "paperless Paperless",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "account-screen AccountScreen",
+      "value": "AccountScreen",
+      "key": "AccountScreen",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/account-screen",
+      "type": "block",
+      "path": "account-screen",
+      "isPage": false,
+      "defaultPath": "/account-screen",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-screen/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "account-screen AccountScreen",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }

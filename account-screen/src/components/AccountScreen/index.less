@@ -1,0 +1,275 @@
+.container {
+  @media (min-width: 768px) {
+    margin-left: 32px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 128px;
+  }
+
+  .containerMobile{
+    background-repeat: no-repeat;
+    background-position: 50% -6px;
+    background-size: cover;
+  }
+
+  > .containerDescription {
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      color: #333;
+      font-size: 18px;
+    }
+  }
+
+  .heading {
+    padding: 17px 16px 28px 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    text-transform: capitalize;
+
+    @media (min-width: 768px) {
+      padding: 61px 0 28px 0;
+      color: black;
+      font-size: 32px;
+      text-align: initial;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 52px;
+    }
+  }
+
+  .heading > p {
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.15rem;
+    word-wrap: break-word;
+  }
+
+  .mainLogo {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
+
+    .logoDesk {
+      display: none;
+      width: 217.35px;
+      height: 138.73px;
+  
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+  
+    .logoMobile {
+      display: block;
+      width: 217.35px;
+      height: 138.73px;
+  
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .messageVirtual{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-top: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+      width: auto;
+      padding: 0;
+      color: #333;
+      font-weight: normal;
+      font-size: 32px;
+      text-align: left;
+    }
+
+    @media (min-width: 1200px) {
+      width: 559px;
+    }
+  }
+
+  .wallet {
+    width: 75%;
+    margin: 0 auto 1rem;
+    padding: 15px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+
+    > .cardLabel {
+            margin-bottom: 0;
+            font-size: 14px;
+            text-align: center;
+    }
+    > .cardNumber {
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+    }
+
+      >.btnWallet{
+        display: block;
+        margin-top: 1rem;
+
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: 90%;
+      margin: 0;
+      margin-bottom: 1rem;
+      color: #333;
+      background-color: #ebe5f2;
+      border-radius: 5px;
+
+      > .cardLabel {
+              font-size: 18px;
+            }
+
+      > .cardNumber {
+              font-size: 29px;
+            }
+    }
+
+    @media (min-width: 1200px) {
+      width: 441px;
+    }
+  }
+
+  .imageContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sendBtn {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  .btn{
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 260px;   
+      height: 52px;
+    }
+   }
+
+  .sendBtnMobile {
+    display: block;
+    margin: 32px 26px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+  } 
+
+  .downloadContainer{
+    display: none;
+    padding-top: 23px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  .buttonContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .bottomWrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .sendMessage {
+    padding-right: 16px;
+    padding-left: 16px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  .robotMobile {
+    display: block;
+    margin-bottom: 19px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .imageRobot {
+    transform: rotate(18deg) scale(1);
+  }
+
+  .imgSpace {
+    margin-right: 21px;
+  }
+
+  .robot {
+      @media (min-width: 768px) {
+        position: absolute;
+        top: 80px;
+        right: 140px;        
+      }
+      @media (min-width: 720px) and (max-width: 768px){
+        position: absolute;
+        top: 80px;
+        right: 10px;        
+      }
+      >.robotImage {
+        transform: rotate(18deg) scale(1);
+        @media (min-width: 360px) and (max-width: 720px) {
+          display: none;
+        }        
+      }
+    }
+
+}
