@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, connect, useIntl } from 'umi';
 import { ButtonsSubmit } from './components/buttons-submit';
-import imagePaper from './../assets/images/ico-paperless.png';
+import imagePaper from './assets/images/ico-paperless.png';
 import styles from './index.less';
 import { ButtonProps } from './interfaces/ButtonProps.interface';
 import { Fonts } from './interfaces/ProblockProps.interface';
