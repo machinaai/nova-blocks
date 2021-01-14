@@ -1,0 +1,145 @@
+.container {
+  margin-top: 0;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 45px;
+  }
+
+  > .title {
+    margin-bottom: 16px;
+    color: #212529;
+    font-size: 32px;
+  }
+
+  > .subtitle {
+    margin-bottom: 16px;
+    color: #212529;
+    font-size: 18px;
+  }
+}
+
+.form {
+  width: auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 620px;
+  }
+
+  .fullgroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.colum {
+  margin-bottom: 20px;
+
+  .date {
+    margin-bottom: 0;
+    padding-top: 0;
+
+    @media only screen and (min-width: 768px) {
+      padding-top: 8px;
+    }
+  }
+
+  .radio {
+    margin: 0;
+    padding: 0;
+    color: #6c757d;
+    font-size: 12px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.containerInputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+}
+
+.input {
+  // padding-bottom: 10px;
+  color: #6c757d;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  @media only screen and (min-width: 768px) {
+    width: 248px;
+    font-size: 18px;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: initial;
+  width: 100%;
+  margin-bottom: 16px;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+    }
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+
+    @media only screen and (min-width: 768px) {
+      display: inline-block;
+      width: 50%;
+      margin-left: 0;
+      margin-left: 23px;
+    }
+
+    .linkText {
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+
+      @media only screen and (min-width: 768px) {
+        justify-content: initial;
+      }
+    }
+  }
+}
+
+// eliminar cuando se agregue el ReactNode correcto
+.toolTip {
+  margin: 0;
+}
