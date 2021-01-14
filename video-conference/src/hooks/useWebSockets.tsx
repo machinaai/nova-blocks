@@ -74,7 +74,7 @@ export const useWebSockets = (
           console.log('finishProcess');
           setSuccessStage(true);
           dispatch({
-            type: 'videoConferenceV2/changeStage',
+            type: 'BLOCK_NAME_CAMEL_CASE/changeStage',
           });
 
           break;
@@ -96,7 +96,7 @@ export const useWebSockets = (
         }
 
         dispatch({
-          type: 'videoConferenceV2/setUserData',
+          type: 'BLOCK_NAME_CAMEL_CASE/setUserData',
           payload: body,
         });
       }
@@ -167,7 +167,7 @@ export const useWebSockets = (
       };
 
       dispatch({
-        type: 'videoConferenceV2/submitOTP',
+        type: 'BLOCK_NAME_CAMEL_CASE/submitOTP',
         payload: getOtp,
       });
     }

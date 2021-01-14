@@ -34,7 +34,7 @@ interface ModelType {
 
 
 const Model: ModelType = {
-  namespace: 'videoConferenceV2',
+  namespace: 'BLOCK_NAME_CAMEL_CASE',
   state: {
     flowComplete: false,
     loadingConference: false,
