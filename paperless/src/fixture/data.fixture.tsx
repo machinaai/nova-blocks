@@ -1,4 +1,4 @@
-import imagePaperless from './ico-paperless.png';
+import imagePaperless from './paperless.png';
 
 export const dataPaperless={
     iconPaperless: imagePaperless
