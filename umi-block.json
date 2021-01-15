@@ -251,7 +251,7 @@
       "isPage": false,
       "defaultPath": "/modal-drawer-options",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/modal-drawer-options/snapshot.png",
-      "tags": ["pro-block"],
+      "tags": ["block"],
       "name": "modal-drawer-options ModalDrawerOptions",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
