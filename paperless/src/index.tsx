@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, connect, useIntl } from 'umi';
 import { ButtonsSubmit } from './components/buttons-submit';
-import imagePaper from './assets/images/ico-paperless.png';
 import styles from './index.less';
 import { ButtonProps } from './interfaces/ButtonProps.interface';
 import { Fonts } from './interfaces/ProblockProps.interface';
-import { fontFixture } from "./fixture/data.fixture";
+import { fontFixture, dataPaperless } from "./fixture/data.fixture";
 import FormBlock from "./components/form-block";
 import { FormProps } from "./interfaces/FormProps.interface";
 import { StateModel } from './models/model';
@@ -28,7 +27,7 @@ interface PAGE_NAME_UPPER_CAMEL_CASEProps {
 }
 const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (props) => {
   const {
-    image = imagePaper,
+    image = dataPaperless.iconPaperless,
     colorBtn1,
     colorBtn2,
     font = fontFixture,
