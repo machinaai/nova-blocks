@@ -239,6 +239,22 @@
       "name": "account-screen AccountScreen",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "modal-drawer-options ModalDrawerOptions",
+      "value": "ModalDrawerOptions",
+      "key": "ModalDrawerOptions",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/modal-drawer-options",
+      "type": "block",
+      "path": "modal-drawer-options",
+      "isPage": false,
+      "defaultPath": "/modal-drawer-options",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/modal-drawer-options/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "modal-drawer-options ModalDrawerOptions",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }

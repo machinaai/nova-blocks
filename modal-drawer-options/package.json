@@ -1,5 +1,5 @@
 {
-  "name": "@nova-blocks/m-d-block-options",
+  "name": "@nova-blocks/modal-drawer-options",
   "version": "0.0.1",
   "description": "block with modal and drawer",
   "main": "src/index.js",
@@ -7,7 +7,7 @@
     "name": "",
     "email": ""
   },
-  "repository": "umijs/umi-blocks/m-d-block-options",
+  "repository": "umijs/umi-blocks/modal-drawer-options",
   "scripts": {
     "dev": "umi dev"
   },
