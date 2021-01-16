@@ -163,6 +163,7 @@ const AccountActivityBlock: React.FC<AccountActivityProps> = (
      */
     const optionsElement: ElementProps = {
         ...options,
+        backColorOp :'#e1ffff',
         fontFamily,
         onlyModal: showModal,
         onlyDrawer: showDrawer,

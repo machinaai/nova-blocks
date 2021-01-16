@@ -4,6 +4,7 @@ export interface ElementProps {
     title: string,
     subtitle: string,
     options: ItemOptions[],
+    backColorOp:string,
     fontFamily?:Fonts,
     onlyModal:boolean,
     onlyDrawer:boolean,  
