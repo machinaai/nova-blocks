@@ -271,6 +271,22 @@
       "name": "account-activity AccountActivity",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "register-otp RegisterOtp",
+      "value": "RegisterOtp",
+      "key": "RegisterOtp",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/register-otp",
+      "type": "block",
+      "path": "register-otp",
+      "isPage": false,
+      "defaultPath": "/register-otp",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/register-otp/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "register-otp RegisterOtp",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
