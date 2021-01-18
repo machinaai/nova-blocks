@@ -1,0 +1,77 @@
+
+.container {
+  margin-top: 5rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 45px;
+  }
+
+  .verify {
+    margin: 18px;
+    color: #8a9198;
+  }
+  .title {
+    width: 49%;
+    margin-bottom: -11px;
+    padding: 15px;
+    font-family: 'Frutiger_bold', sans-serif;
+    @media only screen and (min-width: 768px) {
+      color: #212529;
+    }
+  }
+  .subtitle {
+    width: 83%;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Frutiger', sans-serif;
+    @media only screen and (min-width: 768px) {
+      color: #212529;
+    }
+  }
+
+  .subcontainer {
+    display: block;
+    width: 100%;
+    
+    @media only screen and (min-width: 768px) {
+      width: 30%;
+      padding: 0;
+    }
+
+    > .input {
+      display: inline-block;
+      width: 11%;
+      margin: 2.5%;
+      font-weight: bolder;
+      font-size: 24px;
+      font-family: 'Frutiger_bold', sans-serif;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid #ed0722;
+    }
+  }
+
+  .timer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 12px;
+      padding: 10px;
+    
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        margin-top: 22px;
+        padding: 10px;
+      }
+      
+    > .alertTimer {
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 0;
+    }
+    > .timerCont {
+      display: inline-block;
+    }
+  }
+}
