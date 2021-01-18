@@ -255,6 +255,22 @@
       "name": "modal-drawer-options ModalDrawerOptions",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "account-activity AccountActivity",
+      "value": "AccountActivity",
+      "key": "AccountActivity",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/account-activity",
+      "type": "block",
+      "path": "account-activity",
+      "isPage": false,
+      "defaultPath": "/account-activity",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-activity/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "account-activity AccountActivity",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
