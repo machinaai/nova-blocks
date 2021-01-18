@@ -1,0 +1,19 @@
+{
+  "name": "@nova-blocks/upload-files",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "umi dev"
+  },
+  "dependencies": {
+    "react": ">=16.0.0",
+    "react-iframe-comm": "^1.2.2"
+  },
+  "devDependencies": {
+    "umi": "^3.2.23",
+    "@umijs/preset-react": "1.x",
+    "umi-types": "^0.3.0"
+  },
+  "license": "MIT"
+}
