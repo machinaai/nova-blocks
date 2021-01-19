@@ -1,0 +1,20 @@
+export default {
+  'updateAddressLocale.headerText':'Do you have your document at hand?',
+  'updateAddressLocale.title': 'Update your address',
+  'updateAddressLocale.subtitle': 'Capture a voucher less than three months old.',
+  'updateAddressLocale.title_options':'Valid vouchers are:',
+  'updateAddressLocale.op1':'Landline',
+  'updateAddressLocale.op2':'CFE',
+  'updateAddressLocale.op3':'Building',
+  'updateAddressLocale.op4':'Water',
+  'updateAddressLocale.subtitle_options':'Make sure that the address that appears on your receipt is legible',
+  'updateAddressLocale.capture_button': 'Capture voucher',
+  'updateAddressLocale.footerTitle': `Don't have your receipt at hand?`,
+  'updateAddressLocale.footerSubtitle': `Don't worry, you can update your address at another time`,
+  'updateAddressLocale.capture_laterBtn': 'Capture later',
+
+  'updateAddressLocale.modalTitle':'Capture voucher',
+  'updateAddressLocale.modalSubtitle':'Select an option',
+  'updateAddressLocale.modalOption1':'Scan document',
+  'updateAddressLocale.modalOption2':'Upload document',
+};
