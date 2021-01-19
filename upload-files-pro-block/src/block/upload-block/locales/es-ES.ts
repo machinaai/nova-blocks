@@ -1,0 +1,18 @@
+export default {
+    'upload.files.headerTitle': 'INE/IFE',
+    'upload.files.firstTitle': 'Subir documento',
+    'upload.files.firstSubtitle': 'Por favor selecciona una foto de tu INE/IFE por el frente y otra por el reverso,revisa que tus datos estén claros y legibles y que no tengan reflejos de luz.',
+    'upload.files.detailsTitle': 'Recomendaciones:',
+    'upload.files.detailsElement1': 'Revisa que tus datos estén claros y legibles.',
+    'upload.files.detailsElement2': 'Evita reflejos de luz y sombra.',
+    'upload.files.bntUploadTitle': 'Subir documento',
+    'upload.files.secondTitle': 'Valida tu documento',
+    'upload.files.secondSubtitle': 'Revisa que tus datos estén claros y legibles y que no tengan reflejos de luz ni sombra.',
+    'upload.files.bntNextTitle': 'Continuar',
+    'upload.files.linkTitle': 'Subir documento nuevamente',
+    'upload.files.ine.front': 'Sube la parte delantera de tu INE/IFE (jpg, png o pdf).',
+    'upload.files.ine.back': 'Sube la parte trasera de tu INE/IFE (jpg, png o pdf).',
+    'upload.files.adress': 'Sube tu comprobante de domicilio (jpg, png o pdf).',
+    'upload.files.upload.btn': 'Seleccionar',
+    'upload.files.spin.title': 'Cargando...',
+}
