@@ -36,14 +36,16 @@ export const Model: ModelType = {
       const responseFront = yield call(ineFromDataService, payload.objectIneFront);
       const responseBack = yield call(ineBackDataService, payload.objectIneBack);
 
-      const { status: statusFront } = responseFront;
-      const { status: statusBack } = responseBack;
+      const { status: statusFront } = responseFront; //400 -< undefined
+      const { status: statusBack } = responseBack; //200
 
-      if (statusFront && statusBack) {
-        yield put({ type: 'setStatus', payload: { front: statusFront, back: statusBack } });
+      if (statusFront) {
+        yield put({ type: 'setStatus', payload: { error: true } });
+      } else if (statusBack) {
+        yield put({ type: 'setStatus', payload: { error: true } });
       } else {
         yield put({ type: 'setDataUpload', payload: responseFront });
-        yield put({ type: 'setStatus', payload: { front: 200, back: 200 } });
+        yield put({ type: 'setStatus', payload: { error: false } });
         yield put({ type: 'setFlowStatus', payload: true });
         yield put({ type: 'setFlowStatus', payload: false });
       }
@@ -51,14 +53,13 @@ export const Model: ModelType = {
 
     *pdfData({ payload }: any, { call, put }: any) {
       const response = yield call(pdfDataService, payload);
-      console.log('responde pdf', response);
       const { status } = response;
       if (status) {
-        yield put({ type: 'setStatus', payload: { document: status } });
+        yield put({ type: 'setStatus', payload: { error: true } });
       } else {
-        yield put({ type: 'setFlowStatus', payload: true });
-        yield put({ type: 'setStatus', payload: { document: status } });
+        yield put({ type: 'setStatus', payload: { error: false } });
         yield put({ type: 'setDataUpload', payload: response });
+        yield put({ type: 'setFlowStatus', payload: true });
         yield put({ type: 'setFlowStatus', payload: false });
       }
     },

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Upload } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-import IframeComm from "react-iframe-comm";
 import styles from "./index.less";
 import { useIntl } from 'umi';
 import {convertBase64, convertType} from '../../helpers/convertBase64';
@@ -157,7 +156,7 @@ const UploadIne: React.FC<UploadIneProps> = ({
       {fileListIne.fileInePdf.fileList.length === 1 ? (
         <div className={styles.uploadPdf}>
           <div className={styles.pdf}>
-            <IframeComm attributes={attributes} />
+          <embed src={attributes.src} type="application/pdf" width="100%" height="100%" />
           </div>
           <div className={styles.pdfName}>
             {fileListIne.fileInePdf.fileList[0].name}
@@ -204,7 +203,6 @@ const UploadIne: React.FC<UploadIneProps> = ({
                 onPreview={handlePreview}
                 onChange={handleBackChange}
                 beforeUpload={(file) => {
-                  console.log(file, 'file before Upload')
                   const reader = new FileReader();
                   reader.onload = (e) => {
                     let stringData = String(e.target?.result);

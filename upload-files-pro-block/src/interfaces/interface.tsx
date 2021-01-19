@@ -7,4 +7,5 @@ export interface UploadFilesProps {
     onSetUserData?: Function;
     status?: any;
     dataUpload?:any;
+    flagFlowComplete?:any
 }

@@ -5,15 +5,17 @@ import {UploadFilesProps} from './interfaces/interface';
 import { useDispatch } from 'umi';
 import { ModelType, StateModel } from './models/model';
 import { TypeFlow } from './block/upload-block/enum/emun';
+import { UploadFixture } from './fixtures/fixture';
 import { Alert } from 'antd';
 
 const UploadFiles: React.FC<UploadFilesProps> = ({
-  phoneNumber= 55555555,
-  typeFlowProp = 0,
+  phoneNumber= UploadFixture.phoneNumber,
+  typeFlowProp = UploadFixture.typeFlow,
   onComplete,
   onSetUserData,
   status,
   dataUpload,
+  flagFlowComplete
 }) => {
   const dispatch = useDispatch();
   /**
@@ -54,7 +56,8 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
          }
       })
     } else {
-      createObjIne({ineFront:{}, ineBack:{}, inePdf:{}})
+      createObjIne({ineFront:{}, ineBack:{}, inePdf:{}});
+      setError(false);
     }
   }, [dataIneComponent]);
 
@@ -74,7 +77,8 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
         },
       }) 
     } else {
-      createObjAdress({imageAdress:{}, pdfAdress:{}})
+      createObjAdress({imageAdress:{}, pdfAdress:{}});
+      setError(false);
     }
   }, [dataAdressComponent]);
 
@@ -82,9 +86,7 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
   * Function to dispatch request model.
   */
   const action = () => {
-    console.log('holaaaaa')
     let typePdf = objectServiceIne.inePdf.image ? true : false;
-
     if(typeFlowProp === TypeFlow.INE && typePdf) {
       dispatch({
         type: 'requestModel/pdfData',
@@ -102,6 +104,9 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
     //   }
     // }
   }
+  /**
+   * Variable to create alert message error
+   */
   let alertError: any = (
     <Alert
       message="Error"
@@ -114,16 +119,11 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
   const [error, setError] = useState(false);
 
   useEffect(() => {
-      if (status) {
-        console.log(status, 'status')
-        if (status.document !== 200) {
-            setError(true);
-        } else if (status.front !== 200 || status.back !== 200) {
+        if(status && status.error) {
           setError(true);
-        }
-      } else {
-        setError(false);
-      }
+        } else {
+          setError(false);
+        }      
   }, [status]);
 
   useEffect(() => {
@@ -135,10 +135,21 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
     }
   }, []);
 
+  useEffect(() => {
+    if (dataUpload && onSetUserData) {
+      onSetUserData(dataUpload)
+    }
+  }, [dataUpload]);
+
+  useEffect(() => {
+    if (flagFlowComplete && onComplete) {
+      onComplete(flagFlowComplete);
+    }
+  }, [flagFlowComplete]);
 
   return (
     <>
-        {error ? alertError : null}
+      {error ? alertError : null}
       <UploadBlock 
         typeFlowProp={typeFlowProp} 
         getDataIne={getDataIne} 
