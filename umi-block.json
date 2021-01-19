@@ -303,6 +303,23 @@
       "name": "update-address UpdateAddress",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "upload-files UploadFiles",
+      "value": "UploadFiles",
+      "key": "UploadFiles",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/upload-files",
+      "type": "block",
+      "path": "upload-files",
+      "isPage": false,
+      "defaultPath": "/upload-files",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/upload-files/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "upload-files UploadFiles",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
+
   ]
 }
