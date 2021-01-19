@@ -287,6 +287,22 @@
       "name": "register-otp RegisterOtp",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "update-address UpdateAddress",
+      "value": "UpdateAddress",
+      "key": "UpdateAddress",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/update-address",
+      "type": "block",
+      "path": "update-address",
+      "isPage": false,
+      "defaultPath": "/update-address",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/update-address/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "update-address UpdateAddress",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
