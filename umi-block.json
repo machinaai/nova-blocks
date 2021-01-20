@@ -289,22 +289,6 @@
       "features": ["antd"]
     },
     {
-      "title": "update-address UpdateAddress",
-      "value": "UpdateAddress",
-      "key": "UpdateAddress",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/update-address",
-      "type": "block",
-      "path": "update-address",
-      "isPage": false,
-      "defaultPath": "/update-address",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/update-address/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "update-address UpdateAddress",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
       "title": "upload-files UploadFiles",
       "value": "UploadFiles",
       "key": "UploadFiles",
@@ -347,8 +331,24 @@
       "isPage": false,
       "defaultPath": "/splash-screen",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/splash-screen/snapshot.png",
-      "tags": ["block"],
+      "tags": ["pro-block"],
       "name": "splash-screen SplashScreen",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
+    },
+    {
+      "title": "identity-verification IdentityVerification",
+      "value": "IdentityVerification",
+      "key": "IdentityVerification",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/identity-verification",
+      "type": "block",
+      "path": "identity-verification",
+      "isPage": false,
+      "defaultPath": "/identity-verification",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/identity-verification/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "identity-verification IdentityVerification",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
     }
