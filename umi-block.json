@@ -321,6 +321,22 @@
       "features": ["antd"]
     },
     {
+      "title": "upload-block UploadBlock",
+      "value": "UploadBlock",
+      "key": "UploadBlock",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/upload-block",
+      "type": "block",
+      "path": "upload-block",
+      "isPage": false,
+      "defaultPath": "/upload-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/upload-block/snapshot.png",
+      "tags": ["block"],
+      "name": "upload-block UploadBlock",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
+    },
+    {
       "title": "splash-screen SplashScreen",
       "value": "SplashScreen",
       "key": "SplashScreen",
@@ -331,7 +347,7 @@
       "isPage": false,
       "defaultPath": "/splash-screen",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/splash-screen/snapshot.png",
-      "tags": ["pro-block"],
+      "tags": ["block"],
       "name": "splash-screen SplashScreen",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]

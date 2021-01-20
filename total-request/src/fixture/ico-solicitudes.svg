@@ -1,0 +1,26 @@
+
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="360" height="312" rx="10"></rect>
+        <filter x="-4.2%" y="-4.8%" width="108.3%" height="109.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-V3" transform="translate(-400.000000, -168.000000)">
+            <g id="widget-01" transform="translate(128.000000, 144.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke="#EAF0F7" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="359" height="311" rx="10"></rect>
+                </g>
+                <rect id="Rectangle" fill="#F1F1FF" x="272" y="24" width="64" height="64" rx="12"></rect>
+                <path d="M296.333333,36 L296.333333,40.6875 L291.666667,40.6875 L291.666667,45.375 L287,45.375 L287,76 L312.666667,76 L312.666667,68.8125 L317.333333,68.8125 L317.333333,64.125 L322,64.125 L322,36 L296.333333,36 Z M310.333333,73.65625 L289.333333,73.65625 L289.333333,47.71875 L303.333333,47.71875 L303.333333,54.75 L310.333333,54.75 L310.333333,73.65625 Z M310.333333,52.40625 L305.666667,52.40625 L305.666667,47.71875 L306.3501,47.71875 L310.333333,51.7197656 L310.333333,52.40625 Z M315,66.46875 L312.666667,66.46875 L312.666667,50.7489844 L307.316567,45.375 L294,45.375 L294,43.03125 L315,43.03125 L315,66.46875 Z M319.666667,61.78125 L317.333333,61.78125 L317.333333,40.6875 L298.666667,40.6875 L298.666667,38.34375 L319.666667,38.34375 L319.666667,61.78125 Z" id="Shape" fill="#704C9F" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
