@@ -1,0 +1,104 @@
+.title {
+  color: rgb(0, 0, 0);
+  font-size: 62px;
+  font-weight: bold;
+  line-height: 66px;
+  @media (min-width: 320px) and (max-width: 720px) {
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 32px;
+  }
+}
+.subtitle {
+  color: rgb(0, 0, 0);
+  font-size: 42px;
+  font-weight: normal;
+  @media (min-width: 320px) and (max-width: 720px) {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-left: 32px;
+  }
+}
+
+.withBg {
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 876px) and (max-width: 8000px) {
+  .container {
+    position: relative;
+    right: 1px;
+    bottom: 90px;
+  }
+  .withBg {
+    background-position: center center;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 2em;
+    transition: opacity 700ms;
+    width: 100%;
+    background-position: 48vw 50px;
+    background-size: 70%;
+  }
+  .features {
+    flex: 0 0 83.333333%;
+    margin-top: 70px;
+    justify-content: center;
+    margin-right: 16%;
+    margin-left: 13.5%;
+  }
+  .icoLogo {
+    width: 270px;
+    height: 150px;
+    margin-bottom: 2em;
+    background-repeat: no-repeat;
+    background-position: -1vw 0px;
+    background-size: 100%;
+  }
+}
+@media (min-width: 721px) and (max-width: 875px) {
+  .withBg {
+    background-position: 46vw 50px;
+    background-size: 70%;
+  }
+  .features {
+    flex: 0 0 83.333333%;
+    justify-content: space-between;
+    max-width: 83.333333%;
+    height: 100vh;
+    margin-left: 8.333333%;
+  }
+
+  .icoLogo {
+    width: 270px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: -20px;
+    background-size: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 720px) {
+  .withBg {
+    height: 50em;
+    background-position: -60vw 0px;
+  }
+  .icoLogo {
+    width: 193px;
+    height: 100px;
+    margin-left: 20px;
+    background-repeat: no-repeat;
+    background-position: -0vw 20px;
+    background-size: 100%;
+  }
+
+  .features {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
