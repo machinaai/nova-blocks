@@ -1,0 +1,33 @@
+
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>001-tick-inside-circle copy</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="360" height="312" rx="10"></rect>
+        <filter x="-4.2%" y="-4.8%" width="108.3%" height="109.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="32" height="32" rx="12"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-V3" transform="translate(-256.000000, -300.000000)">
+            <g id="widget-01" transform="translate(128.000000, 144.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke="#EAF0F7" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="359" height="311" rx="10"></rect>
+                </g>
+                <g id="001-tick-inside-circle-copy" transform="translate(128.000000, 156.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Mask" fill-opacity="0.1" fill="#32C5FF" xlink:href="#path-3"></use>
+                    <path d="M23.8285268,12.0310156 L17.9748683,6.17164063 C17.8650927,6.06171875 17.7162146,6 17.5609756,6 L8.58536585,6 C8.2620878,6 8,6.26234375 8,6.5859375 L8,25.4140625 C8,25.7376563 8.2620878,26 8.58536585,26 L23.4146341,26 C23.7379122,26 24,25.7376563 24,25.4140625 L24,12.4453125 C24,12.2898828 23.9383024,12.1408594 23.8285268,12.0310156 Z M22.8292683,24.828125 L9.17073171,24.828125 L9.17073171,7.171875 L17.3185171,7.171875 L22.8292683,12.6880078 L22.8292683,24.828125 Z" id="Shape" fill="#32C5FF" fill-rule="nonzero" mask="url(#mask-4)"></path>
+                    <path d="M18.4230769,15.9230769 L17.0769231,15.9230769 L17.0769231,14.5769231 C17.0769231,14.2583077 16.8186154,14 16.5,14 C16.1813846,14 15.9230769,14.2583077 15.9230769,14.5769231 L15.9230769,15.9230769 L14.5769231,15.9230769 C14.2583077,15.9230769 14,16.1813846 14,16.5 C14,16.8186154 14.2583077,17.0769231 14.5769231,17.0769231 L15.9230769,17.0769231 L15.9230769,18.4230769 C15.9230769,18.7416923 16.1813846,19 16.5,19 C16.8186154,19 17.0769231,18.7416923 17.0769231,18.4230769 L17.0769231,17.0769231 L18.4230769,17.0769231 C18.7416923,17.0769231 19,16.8186154 19,16.5 C19,16.1813846 18.7416923,15.9230769 18.4230769,15.9230769 Z" id="Path" fill="#32C5FF" fill-rule="nonzero" mask="url(#mask-4)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
