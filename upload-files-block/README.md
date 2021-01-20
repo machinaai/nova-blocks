@@ -1,4 +1,3 @@
-# Base block
 # Upload Files Block
 
 Component for uploading files and their preview.
