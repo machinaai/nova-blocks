@@ -1,0 +1,30 @@
+
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 11 Copy</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="360" height="312" rx="10"></rect>
+        <filter x="-4.2%" y="-4.8%" width="108.3%" height="109.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-V3" transform="translate(-256.000000, -379.000000)">
+            <g id="widget-01" transform="translate(128.000000, 144.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke="#EAF0F7" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="359" height="311" rx="10"></rect>
+                </g>
+                <g id="Group-11-Copy" transform="translate(128.000000, 235.000000)">
+                    <rect id="Rectangle" fill="#FEF4EB" x="0" y="0" width="32" height="32" rx="12"></rect>
+                    <g id="002-clock-with-white-face" transform="translate(6.000000, 6.000000)" fill="#FA6400" fill-rule="nonzero">
+                        <path d="M10,0 C4.47715468,0 0,4.47715468 0,10 C0,15.5228453 4.47715468,20 10,20 C15.5228453,20 20,15.5228453 20,10 C19.9941406,4.479624 15.5204179,0.00590123591 10,0 Z M4.44576513,3.46281175 C5.99678571,2.14650132 7.96574772,1.42537866 10,1.42859057 C12.0259236,1.42797353 13.9859291,2.14834284 15.5292906,3.46076097 L3.45787313,15.5321785 C0.397810265,11.9264815 0.840109989,6.52287461 4.44576513,3.46281175 Z M15.5542767,16.5372301 C14.0032561,17.8535405 12.0342941,18.5746632 10.0000419,18.5714513 C7.97411827,18.5720683 6.01411274,17.851699 4.47075121,16.5392809 L16.5422106,4.46782152 C19.6022316,8.07351852 19.1599319,13.4771672 15.5542767,16.5372301 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
