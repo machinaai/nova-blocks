@@ -319,7 +319,22 @@
       "name": "upload-files UploadFiles",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "upload-block UploadBlock",
+      "value": "UploadBlock",
+      "key": "UploadBlock",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/upload-block",
+      "type": "block",
+      "path": "upload-block",
+      "isPage": false,
+      "defaultPath": "/upload-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/upload-block/snapshot.png",
+      "tags": ["block"],
+      "name": "upload-block UploadBlock",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
-
   ]
 }
