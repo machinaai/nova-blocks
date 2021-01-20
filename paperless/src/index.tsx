@@ -11,7 +11,7 @@ import { StateModel } from './models/model';
 import { useHistory } from "react-router-dom";
 import { card } from "./fixture/cardDetail.fixture";
 
-interface PAGE_NAME_UPPER_CAMEL_CASEProps {
+interface PaperlessProps {
   image?: string,
   colorBtn1?: string,
   colorBtn2?: string,
@@ -25,7 +25,7 @@ interface PAGE_NAME_UPPER_CAMEL_CASEProps {
   onComplete?: Function;
   onReturn?: Function;
 }
-const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (props) => {
+const Paperless: React.FC<PaperlessProps> = (props) => {
   const {
     image = dataPaperless.iconPaperless,
     colorBtn1,
@@ -47,9 +47,9 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
   dispatch({ type: 'nbeWidgetCash/saveCardNumber', payload: card });
 
   const propsButton: ButtonProps = {
-    but_option1: `${intl.formatMessage({ id: 'BLOCK_NAME.button_submit_Op1' })}`,
+    but_option1: `${intl.formatMessage({ id: 'paperless_submit_Op1' })}`,
     colorOp1: colorBtn1,
-    but_option2: `${intl.formatMessage({ id: 'BLOCK_NAME.button_submit_Op2' })}`,
+    but_option2: `${intl.formatMessage({ id: 'paperless.button_submit_Op2' })}`,
     colorOp2: colorBtn2,
     actionOp2: () => { submit('cancel') }
   }
@@ -58,15 +58,15 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
   const onFinish = ({ user: { email } }: any) => {
     console.log(email);
     dispatch({
-      type: "BLOCK_NAME_CAMEL_CASE/saveCardNumber",
+      type: "paperless/saveCardNumber",
       payload: cardNumber,
     });
     dispatch({
-      type: "BLOCK_NAME_CAMEL_CASE/setFlowStatus",
+      type: "paperless/setFlowStatus",
       payload: true
     });
     dispatch({
-      type: "BLOCK_NAME_CAMEL_CASE/setEmail",
+      type: "paperless/setEmail",
       payload: email
     })
 
@@ -84,7 +84,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
     }
     return () => {
       dispatch({
-        type: "BLOCK_NAME_CAMEL_CASE/setFlowStatus",
+        type: "paperless/setFlowStatus",
         payload: false
       })
 
@@ -95,8 +95,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
     options: [
       {
         inputName: 'email',
-        label: `${intl.formatMessage({ id: 'BLOCK_NAME.placeholderEmail' })}`,
-        valPlaceholder: `${intl.formatMessage({ id: 'BLOCK_NAME.placeholderEmail' })}`,
+        label: `${intl.formatMessage({ id: 'paperless.placeholderEmail' })}`,
+        valPlaceholder: `${intl.formatMessage({ id: 'paperless.placeholderEmail' })}`,
         ruleValidate: [{ type: 'email' }]
       }
     ],
@@ -110,8 +110,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
         <div className={styles.image}>
           <img className={styles.img} src={image} alt="notification" />
         </div>
-        <h1 style={{ fontFamily: font?.fontTitle }}>{intl.formatMessage({ id: 'BLOCK_NAME.paperless_title' })}</h1>
-        <p style={{ fontFamily: font?.fontSubtitle }}>{intl.formatMessage({ id: 'BLOCK_NAME.paperless_subtitle' })}</p>
+        <h1 style={{ fontFamily: font?.fontTitle }}>{intl.formatMessage({ id: 'paperless_title' })}</h1>
+        <p style={{ fontFamily: font?.fontSubtitle }}>{intl.formatMessage({ id: 'paperless_subtitle' })}</p>
         <div className={styles.btnWrapper}>
           <FormBlock {...PropsForm} />
         </div>
@@ -120,8 +120,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
   );
 };
 
-export default connect(({ BLOCK_NAME_CAMEL_CASE }: { BLOCK_NAME_CAMEL_CASE: StateModel }) => ({
-  cardNumber: BLOCK_NAME_CAMEL_CASE.cardNumber,
-  emailVal: BLOCK_NAME_CAMEL_CASE.emailVal,
-  flowComplete: BLOCK_NAME_CAMEL_CASE.flowComplete,
-}))(PAGE_NAME_UPPER_CAMEL_CASE);
+export default connect(({ paperless }: { paperless: StateModel }) => ({
+  cardNumber: paperless.cardNumber,
+  emailVal: paperless.emailVal,
+  flowComplete: paperless.flowComplete,
+}))(Paperless);

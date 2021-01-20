@@ -24,7 +24,7 @@ interface Model {
 }
 
 const Model: Model = {
-  namespace: 'BLOCK_NAME_CAMEL_CASE',
+  namespace: 'paperless',
   state: {
     flowComplete: false,
   },

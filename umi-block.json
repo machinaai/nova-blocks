@@ -335,6 +335,22 @@
       "name": "upload-block UploadBlock",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "paperless Paperless",
+      "value": "Paperless",
+      "key": "Paperless",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/paperless",
+      "type": "block",
+      "path": "paperless",
+      "isPage": false,
+      "defaultPath": "/paperless",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/paperless/snapshot.png",
+      "tags": ["block"],
+      "name": "paperless Paperless",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
