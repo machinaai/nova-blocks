@@ -39,16 +39,16 @@ const Splash: React.FC<SplashProps> = (props) => {
         valH1: (
           <h1 style={{ fontFamily: font_family.fontTitle }}>
             {" "}
-            {intl.formatMessage({ id: "BLOCK_NAME.val1-h1" })}
+            {intl.formatMessage({ id: "Splash_Screen.val1-h1" })}
             <br />
-            {intl.formatMessage({ id: "BLOCK_NAME.val1-h1-br" })}
+            {intl.formatMessage({ id: "Splash_Screen.val1-h1-br" })}
           </h1>
         ),
         valH3: (
           <h3 style={{ fontFamily: font_family.fontSubtitle }}>
             {" "}
-            {intl.formatMessage({ id: "BLOCK_NAME.val1-h3" })}
-            <br /> {intl.formatMessage({ id: "BLOCK_NAME.val1-h3-br" })}
+            {intl.formatMessage({ id: "Splash_Screen.val1-h3" })}
+            <br /> {intl.formatMessage({ id: "Splash_Screen.val1-h3-br" })}
           </h3>
         ),
       },
@@ -57,16 +57,16 @@ const Splash: React.FC<SplashProps> = (props) => {
         valH1: (
           <h1 style={{ fontFamily: font_family.fontTitle }}>
             {" "}
-            {intl.formatMessage({ id: "BLOCK_NAME.val2-h1" })}
+            {intl.formatMessage({ id: "Splash_Screen.val2-h1" })}
             <br />
-            {intl.formatMessage({ id: "BLOCK_NAME.val2-h1-br" })}
+            {intl.formatMessage({ id: "Splash_Screen.val2-h1-br" })}
           </h1>
         ),
         valH3: (
           <h3 style={{ fontFamily: font_family.fontSubtitle }}>
             {" "}
-            {intl.formatMessage({ id: "BLOCK_NAME.val2-h3" })}
-            <br /> {intl.formatMessage({ id: "BLOCK_NAME.val2-h3-br" })}
+            {intl.formatMessage({ id: "Splash_Screen.val2-h3" })}
+            <br /> {intl.formatMessage({ id: "Splash_Screen.val2-h3-br" })}
           </h3>
         ),
       },
@@ -75,16 +75,16 @@ const Splash: React.FC<SplashProps> = (props) => {
         valH1: (
           <h1 style={{ fontFamily: font_family.fontTitle }}>
             {" "}
-            {intl.formatMessage({ id: "BLOCK_NAME.val3-h1" })}
+            {intl.formatMessage({ id: "Splash_Screen.val3-h1" })}
             <br />
-            {intl.formatMessage({ id: "BLOCK_NAME.val3-h1-br" })}
+            {intl.formatMessage({ id: "Splash_Screen.val3-h1-br" })}
           </h1>
         ),
         valH3: (
           <h3 style={{ fontFamily: font_family.fontSubtitle }}>
             {" "}
-            {intl.formatMessage({ id: "BLOCK_NAME.val3-h3" })}
-            <br /> {intl.formatMessage({ id: "BLOCK_NAME.val3-h3-br" })}
+            {intl.formatMessage({ id: "Splash_Screen.val3-h3" })}
+            <br /> {intl.formatMessage({ id: "Splash_Screen.val3-h3-br" })}
           </h3>
         ),
       },
