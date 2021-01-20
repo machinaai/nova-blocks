@@ -1,13 +1,20 @@
 # Base block
+# Upload Files Block
 
-
+Component for uploading files and their preview.
 
 ## Usage
 
-```sh
-Block Base only copy this block and rename.
-```
+Install dependencies first
 
+```bash
+npm install
+```
+Start block
+
+```bash
+npm start
+```
 ## LICENSE
 
 MIT
