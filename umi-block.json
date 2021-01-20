@@ -319,7 +319,22 @@
       "name": "upload-files UploadFiles",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "splash-screen SplashScreen",
+      "value": "SplashScreen",
+      "key": "SplashScreen",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/splash-screen",
+      "type": "block",
+      "path": "splash-screen",
+      "isPage": false,
+      "defaultPath": "/splash-screen",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/splash-screen/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "splash-screen SplashScreen",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
-
   ]
 }
