@@ -399,6 +399,6 @@
       "name": "request-by-stages RequestByStages",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
-    },
+    }
   ]
 }
