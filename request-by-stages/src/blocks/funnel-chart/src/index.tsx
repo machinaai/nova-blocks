@@ -22,7 +22,7 @@ const FunnelChartBlock: React.FC<StageRequestProps> = ({ dataOptions = optionsFi
   return (
     <>
       <div className={styles.chartContainer}>
-        <Chart height={heightCanvas} forceFit={true} padding='auto' data={charData} scale={cols} className={styles.chart}>
+        <Chart height={heightCanvas} autoFit={true} padding='auto' data={charData} scale={cols} className={styles.chart}>
           <Tooltip />
           <Axis visible={false}/>
           <Geom type="area" tooltip={false} position="type*percentage" shape="smooth" />
