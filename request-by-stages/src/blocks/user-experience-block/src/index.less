@@ -1,0 +1,44 @@
+.detailsContainer {
+  display: flex;
+  flex: 1 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgb(200, 200, 200);
+  > .detailsCol {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.detailsContainer1 {
+  display: flex;
+  flex: 1 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  > .detailsCol {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.stepsContainer {
+  display: flex;
+  font-size: 5px;
+  @media only screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.icon {
+  padding-right: 0;
+  @media only screen and (min-width: 768px) {
+    padding-right: 12px;
+  }
+  > img {
+    @media (min-width: 360px) and (max-width: 768px) {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
