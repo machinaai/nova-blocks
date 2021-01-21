@@ -351,6 +351,22 @@
       "name": "identity-verification IdentityVerification",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "total-request TotalRequest",
+      "value": "TotalRequest",
+      "key": "TotalRequest",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/total-request",
+      "type": "block",
+      "path": "total-request",
+      "isPage": false,
+      "defaultPath": "/total-request",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/total-request/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "total-request TotalRequest",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
