@@ -13,7 +13,7 @@ import ineBack from './blocks/tooltipHelp/assets/ine-back.png';
 import ifeBack from './blocks/tooltipHelp/assets/ife-back.png';
 // import { phoneTest } from '../../Account-Opening/components/Step1/index';
 
-interface PAGE_NAME_UPPER_CAMEL_CASEProps {
+interface PersonalDataProps {
   flagFlowComplete?: StateModel['flowComplete'];
   onComplete?: Function;
   onReturn?: Function;
@@ -22,7 +22,7 @@ interface PAGE_NAME_UPPER_CAMEL_CASEProps {
   phoneUser?: string | number;
 }
 
-const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
+const PersonalData: React.FC<PersonalDataProps> = ({
   flagFlowComplete,
   onComplete,
   onReturn,
@@ -116,7 +116,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
     });
 
     dispatch({
-      type: 'BLOCK_NAME_CAMEL_CASE/submitCustomerData',
+      type: 'personalData/submitCustomerData',
       payload: objectService,
     });
 
@@ -132,18 +132,21 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   const disabledDate = (current: any) => {
     return current && current > moment().subtract(6570, 'days');
   };
+  
+  
+  
 
   return (
     <div className={styles.form_data}>
       <div className={styles.container}>
         <p className={styles.title}>
           {internationalization.formatMessage({
-            id: 'BLOCK_NAME.formManually.title',
+            id: 'personaldata.formManually.title',
           })}
         </p>
         <p className={styles.subtitle}>
           {internationalization.formatMessage({
-            id: 'BLOCK_NAME.formManually.subtitle',
+            id: 'personaldata.formManually.subtitle',
           })}
         </p>
       </div>
@@ -155,17 +158,17 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                 <Form.Item name="ine" rules={[{ required: true }]}>
                   <InputAuto
                     placeholder={internationalization.formatMessage({
-                      id: 'BLOCK_NAME.formManually.id',
+                      id: 'personaldata.formManually.id',
                     })}
                     className={styles.input}
                     maxLength={18}
                     toolTip={
                       <TooltipHelp
                         title={internationalization.formatMessage({
-                          id: 'BLOCK_NAME.title',
+                          id: 'tooltipHelp.title',
                         })}
                         subtitle={internationalization.formatMessage({
-                          id: 'BLOCK_NAME.subtitle',
+                          id: 'tooltipHelp.subtitle',
                         })}
                         firstContent={ineBack}
                         secondContent={ifeBack}
@@ -179,37 +182,40 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                   />
                 </Form.Item>
               </div>
+            
               <div className={styles.colum}>
                 <Form.Item name="name" rules={[{ required: true }]}>
                   <InputAuto
                     placeholder={internationalization.formatMessage({
-                      id: 'BLOCK_NAME.formManually.name',
+                      id: 'personaldata.formManually.name',
                     })}
                     className={styles.input}
+                    upperCase
                     maxLength={60}
                     onPasteDisabled
                     onCopyDisabled
-                    onPattern="[\sA-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]*"
+                    onPattern="[A-Z0-9]*"
                     onlyLetters
                   />
                 </Form.Item>
               </div>
+
               <div className={styles.colum}>
                 <p className={styles.radio}>
                   {internationalization.formatMessage({
-                    id: 'BLOCK_NAME.formManually.gender',
+                    id: 'personaldata.formManually.gender',
                   })}
                 </p>
                 <Form.Item name="gender" rules={[{ required: true }]}>
                   <Radio.Group size="large" buttonStyle="solid">
                     <Radio value="H">
                       {internationalization.formatMessage({
-                        id: 'BLOCK_NAME.formManually.gender.1',
+                        id: 'personaldata.formManually.gender.1',
                       })}
                     </Radio>
                     <Radio value="M">
                       {internationalization.formatMessage({
-                        id: 'BLOCK_NAME.formManually.gender.2',
+                        id: 'personaldata.formManually.gender.2',
                       })}
                     </Radio>
                   </Radio.Group>
@@ -224,7 +230,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                       format={dateFormat}
                       picker="date"
                       placeholder={internationalization.formatMessage({
-                        id: 'BLOCK_NAME.formManually.date',
+                        id: 'personaldata.formManually.date',
                       })}
                       defaultPickerValue={
                         dataSave?.customerData.datebirth || moment('01/01/1990', dateFormat)
@@ -238,10 +244,10 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                 </ConfigProvider>
               </div>
               <div className={styles.colum}>
-                <Form.Item name="birthplace" rules={[{ required: true }]}>
+                <Form.Item name="address" rules={[{ required: true }]}>
                   <InputAuto
                     placeholder={internationalization.formatMessage({
-                      id: 'BLOCK_NAME.formManually.address',
+                      id: 'personaldata.formManually.address',
                     })}
                     className={styles.input}
                     maxLength={100}
@@ -255,7 +261,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                 <Form.Item name="curp" rules={[{ required: true }]}>
                   <InputAuto
                     placeholder={internationalization.formatMessage({
-                      id: 'BLOCK_NAME.formManually.curp',
+                      id: 'personaldata.formManually.curp',
                     })}
                     className={styles.input}
                     upperCase
@@ -267,6 +273,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                   />
                 </Form.Item>
               </div>
+
             </div>
           </div>
           <div className={styles.btnContainer}>
@@ -279,12 +286,12 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                     shape="round"
                     htmlType="submit"
                     disabled={
-                      !form.isFieldsTouched(true) ||
+                      !form.isFieldsTouched(true) || form.getFieldValue(['curp'])?.length < 18 || form.getFieldValue(['ine'])?.length <18 ||
                       form.getFieldsError().filter(({ errors }) => errors.length).length
                     }
                   >
                     {internationalization.formatMessage({
-                      id: 'BLOCK_NAME.formManually.save',
+                      id: 'personaldata.formManually.save',
                     })}
                   </Button>
                 )}
@@ -293,7 +300,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
             <div className={styles.link}>
               <Button type="link">
                 {internationalization.formatMessage({
-                  id: 'BLOCK_NAME.verifyIdentify.action.continue.other',
+                  id: 'personaldata.verifyIdentify.action.continue.other',
                 })}
               </Button>
             </div>
@@ -304,8 +311,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   );
 };
 
-export default connect(({ BLOCK_NAME_CAMEL_CASE }: { BLOCK_NAME_CAMEL_CASE: StateModel }) => ({
-  dataSave: BLOCK_NAME_CAMEL_CASE.data,
-  status: BLOCK_NAME_CAMEL_CASE.status,
-  flagFlowComplete: BLOCK_NAME_CAMEL_CASE.flowComplete,
-}))(PAGE_NAME_UPPER_CAMEL_CASE);
+export default connect(({ personalData }: { personalData: StateModel }) => ({
+  dataSave: personalData.data,
+  status: personalData.status,
+  flagFlowComplete: personalData.flowComplete,
+}))(PersonalData);

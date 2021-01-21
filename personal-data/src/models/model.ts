@@ -23,7 +23,7 @@ interface ModelState {
 }
 
 const Model: ModelState = {
-  namespace: 'BLOCK_NAME_CAMEL_CASE',
+  namespace: 'personalData',
   state: {
     flowComplete: false,
   },
