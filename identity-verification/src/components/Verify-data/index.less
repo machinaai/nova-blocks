@@ -1,0 +1,145 @@
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin-top: -1rem;
+
+    .header_title {
+      margin-top: 50px;
+      .title {
+        margin-top: 50px;
+        font-size: 2rem;
+        font-family: 'Signika-Bold', sans-serif;
+      }
+      .subtitle {
+        margin-bottom: 3rem;
+        font-size: 18px;
+        font-family: 'Signika-Regular', sans-serif;
+      }
+    }
+
+    .subcontainer {
+      display: block;
+      width: 729px;
+
+      > .field_container {
+        display: block;
+        width: 100%;
+        .label {
+          display: inline-block;
+          width: 27%;
+          margin-bottom: 0.5rem;
+          font-size: 18px;
+          font-family: 'Signika-Regular', sans-serif;
+        }
+        .p {
+          display: inline-block;
+          width: 73%;
+          margin-bottom: 0.5rem;
+          color: #212529;
+          font-size: 18px;
+          font-family: 'Signika-Bold', sans-serif;
+        }
+      }
+    }
+    .buttons_container {
+      margin-bottom: 99px;
+      
+      .group_radio {
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 1rem;
+        .radio_button {
+          display: inline-block;
+          width: 7%;
+        }
+
+        .radio_label {
+          display: inline-block;
+          width: 92%;
+          color: black;
+          font-size: 18px;
+          font-family: 'Signika-Regular', sans-serif;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header_title {
+    margin-top: -3rem;;
+    .title {
+      margin-top: 50px;
+      font-size: 2rem;
+      font-family: 'Signika-Bold', sans-serif;
+    }
+    .subtitle {
+      display: none;
+    }
+  }
+
+  .subcontainer {
+    display: block;
+    width: 100%;
+
+    > .field_container {
+      display: block;
+      width: 100%;
+
+      .label {
+        width: 215px;
+        margin-bottom: 0.5rem;
+        font-size: 12px;
+        font-family: 'Signika-Regular', sans-serif;
+      }
+      .p {
+        display: block;
+        width: 97%;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-family: 'Signika-Bold', sans-serif;
+        border: none;
+        border-bottom: 1px solid #d2d2d2;
+        outline: none;
+      }
+    }
+  }
+
+  .buttons_container {
+    margin-bottom: 30px;
+    .group_radio {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-top: 2rem;
+      margin-bottom: 21px;
+      .radio_button {
+        display: inline-block;
+        width: 12%;
+      }
+
+      .radio_label {
+        display: inline-block;
+        width: 88%;
+        margin: 0;
+        color: black;
+        font-family: 'Signika-Regular', sans-serif;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  cursor: pointer;
+
+  @media only screen and (min-width: 768px) {
+    width: auto;
+  }
+}

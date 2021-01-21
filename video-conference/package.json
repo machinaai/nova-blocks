@@ -1,5 +1,5 @@
 {
-  "name": "@nova-pro-blocks/video-conference",
+  "name": "@nova-blocks/video-conference",
   "version": "0.0.1",
   "description": "Pro block video conference with janus",
   "publishConfig": {
