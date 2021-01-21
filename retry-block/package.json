@@ -1,5 +1,5 @@
 {
-  "name": "@umi-block/retry-block",
+  "name": "@nova-blocks/retry-block",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
