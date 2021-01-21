@@ -367,6 +367,22 @@
       "name": "total-request TotalRequest",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "used-devices UsedDevices",
+      "value": "UsedDevices",
+      "key": "UsedDevices",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/used-devices",
+      "type": "block",
+      "path": "used-devices",
+      "isPage": false,
+      "defaultPath": "/used-devices",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/used-devices/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "used-devices UsedDevices",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
