@@ -1,0 +1,33 @@
+
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="360" height="144" rx="10"></rect>
+        <filter x="-4.2%" y="-10.4%" width="108.3%" height="120.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-V3" transform="translate(-792.000000, -336.000000)">
+            <g id="widget-01-copy-3" transform="translate(520.000000, 312.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke="#EAF0F7" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="359" height="143" rx="10"></rect>
+                </g>
+                <rect id="Rectangle" fill-opacity="0.1" fill="#0091FF" x="272" y="24" width="64" height="64" rx="12"></rect>
+                <g id="smartphone" transform="translate(292.000000, 36.000000)" fill="#0091FF" fill-rule="nonzero">
+                    <path d="M18.0000603,0 L6.00002009,0 C2.69147914,0 0,2.61663551 0,5.83334798 L0,34.166652 C0,37.3832864 2.69139878,40 6.00002009,40 L17.9999799,40 C21.3085209,40 24,37.3833645 24,34.166652 L24,5.83334798 C24,2.61663551 21.3086012,0 18.0000603,0 Z M22.285743,34.1665739 C22.285743,36.46321 20.3623166,38.3332064 18.0000603,38.3332064 L6.00002009,38.3332064 C3.6377638,38.3332064 1.71433737,36.46321 1.71433737,34.1665739 L1.71433737,5.83334798 C1.71433737,3.53671184 3.6377638,1.66671549 6.00002009,1.66671549 L17.9999799,1.66671549 C20.3622362,1.66671549 22.285743,3.53671184 22.285743,5.83334798 L22.285743,34.1665739 L22.285743,34.1665739 Z" id="Shape"></path>
+                    <path d="M23.1429117,7 L0.857168686,7 C0.384026357,7 0,7.44801725 0,8 C0,8.55198275 0.384026357,9 0.857168686,9 L23.1428313,9 C23.6159736,9 24,8.55198275 24,8 C24,7.44801725 23.616054,7 23.1429117,7 Z" id="Path"></path>
+                    <path d="M23.1429117,30 L0.857168686,30 C0.384026357,30 0,30.4480172 0,31 C0,31.5519828 0.384026357,32 0.857168686,32 L23.1428313,32 C23.6159736,32 24,31.5519828 24,31 C24,30.4480172 23.616054,30 23.1429117,30 Z" id="Path"></path>
+                    <circle id="Oval" cx="12.5" cy="35.5" r="1.5"></circle>
+                    <path d="M15.1249795,3 L9.87502051,3 C9.39202428,3 9,3.44803825 9,4.00004688 C9,4.5520555 9.39202428,5 9.87502051,5 L15.1249795,5 C15.6079757,5 16,4.55196175 16,3.99995312 C16,3.4479445 15.6079757,3 15.1249795,3 Z" id="Path"></path>
+                    <path d="M12.004944,3 L11.9850746,3 C11.4358209,3 11,3.44803825 11,4.00004688 C11,4.5520555 11.4556903,5 12.004944,5 C12.5541978,5 13,4.55196175 13,3.99995312 C13,3.4479445 12.5541978,3 12.004944,3 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
