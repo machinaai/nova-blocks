@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.widget {
+  width: 100%;
+}
+
+.chart {
+  justify-content: space-around;
+}
+
+.tittle {
+  width: 100%;
+  padding-top: 16px;
+  padding-left: 24px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  cursor: pointer;
+
+  .legend {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .widget {
+    width: 135%;
+  }
+}
