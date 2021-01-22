@@ -13,14 +13,14 @@ interface ItemOption {
 
 
 export interface PropsProblock{
-    imagesCarousel:string[];
-    logo1:string;
-    logo2:string;
-    iconNextButton:string;
-    iconCircle:string;
-    font_family:Fonts[]
+    imagesCarousel?:string[];
+    logo1?:string;
+    logo2?:string;
+    iconNextButton?:string;
+    iconCircle?:string;
+    font_family?:Fonts[]
 }
 export interface Fonts{
-    fontTitle:string,
-    fontSubtitle:string
+    fontTitle?:string,
+    fontSubtitle?:string
 }
