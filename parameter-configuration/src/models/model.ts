@@ -3,7 +3,7 @@
 /**
  * Interface state of model
  */
-export interface StateModel {}
+export interface StateModel { }
 /**
  * Interface Model dva
  *

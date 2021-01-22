@@ -28,3 +28,4 @@ export default {
   'radioOp2': 'Falso',
   'slider.block.placeholder': 'Ingrese valor'
 };
+

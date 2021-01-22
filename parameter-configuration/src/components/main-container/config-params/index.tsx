@@ -88,4 +88,3 @@ export const ConfigParamsContainer: React.FC<Props> = ({font}) => {
         </>
     )
 }
-
