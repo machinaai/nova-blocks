@@ -112,8 +112,8 @@ const Paperless: React.FC<PaperlessProps> = (props) => {
         <div className={styles.image}>
           <img className={styles.img} src={image} alt="notification" />
         </div>
-        <h1 style={{ fontFamily: font?.fontTitle }}>{intl.formatMessage({ id: 'Registry_Paperless.paperless_title' })}</h1>
-        <p style={{ fontFamily: font?.fontSubtitle }}>{intl.formatMessage({ id: 'Registry_Paperless.paperless_subtitle' })}</p>
+        <h1 className={styles.title} style={{ fontFamily: font?.fontTitle }}>{intl.formatMessage({ id: 'Registry_Paperless.paperless_title' })}</h1>
+        <p className={styles.paragraph} style={{ fontFamily: font?.fontSubtitle }}>{intl.formatMessage({ id: 'Registry_Paperless.paperless_subtitle' })}</p>
         <div className={styles.btnWrapper}>
           <FormBlock {...PropsForm} />
         </div>
