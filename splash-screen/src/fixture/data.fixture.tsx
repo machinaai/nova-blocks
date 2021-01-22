@@ -1,9 +1,9 @@
-import circle from "./circle-bg.png";
-import logo from "./Novabank.svg";
-import logoMobile from "./Novabank-mobile.svg";
-import robot01 from "./Robot-01.gif";
-import robot02 from "./Robot-02.gif";
-import robot03 from "./Robot-03.gif";
+import circle from "./multmedia/circle-bg.png";
+import logo from "./multmedia/Novabank.svg";
+import logoMobile from "./multmedia/Novabank-mobile.svg";
+import robot01 from "./multmedia/Robot-01.gif";
+import robot02 from "./multmedia/Robot-02.gif";
+import robot03 from "./multmedia/Robot-03.gif";
 
 export const dataImages = {
   backgroundImage:circle,

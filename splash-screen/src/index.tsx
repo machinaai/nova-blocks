@@ -8,11 +8,11 @@ import { Fonts } from "./interfaces/splash-screen";
 import { dataImages, dataFonts, carousel } from "./fixture/data.fixture";
 
 interface SplashProps {
-  imagesCarousel: string[];
-  logo1: string;
-  logo2: string;
-  iconCircle: string;
-  font_family: Fonts;
+  imagesCarousel?: string[];
+  logo1?: string;
+  logo2?: string;
+  iconCircle?: string;
+  font_family?: Fonts;
   onComplete?: Function;
 }
 /**
