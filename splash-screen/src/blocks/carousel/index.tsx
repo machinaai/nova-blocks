@@ -5,7 +5,7 @@ import { useIntl } from "umi";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { PropsCarousel } from "./interfaces/carousel.interface";
 import { dataFixture } from "./fixture/data.fixture";
-import styles from "./index.css";
+import styles from "./index.less";
 
 const CarouselBlock: React.FC<PropsCarousel> = (props = dataFixture) => {
   const { options, redirect } = props;
@@ -33,14 +33,27 @@ const CarouselBlock: React.FC<PropsCarousel> = (props = dataFixture) => {
   const slideNumberBtn = buttonState.slideNumber + 1;
 
   const btnReg = isRegistryBtn ? (
-    <Button type="primary" shape="round">
-      <Link to={redirect}>{intl.formatMessage({ id: "carousel.signUp" })}</Link>
-    </Button>
+    <div className={styles.btnReg}>
+      <Button
+        type="primary"
+        shape="round"
+        onClick={() => {
+          redirect && redirect(true);
+        }}
+      >
+        {intl.formatMessage({ id: "carousel.sign_up" })}
+      </Button>
+    </div>
   ) : (
-    <Button onClick={handleNext} type="text">
+    <div onClick={handleNext} className={styles.btnReg}>
       {intl.formatMessage({ id: "carousel.next" })}
-      <Button size="large" shape="circle" icon={<ArrowRightOutlined />} />
-    </Button>
+      <Button
+        style={{ marginLeft: "10px" }}
+        size="large"
+        shape="circle"
+        icon={<ArrowRightOutlined />}
+      />
+    </div>
   );
   return (
     <>

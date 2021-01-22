@@ -1,6 +1,6 @@
 export interface PropsCarousel {
     options: ItemOption[];
-    redirect: Function
+    redirect?: Function
     iconNextButton?: string
   }
  export interface ItemOption {
