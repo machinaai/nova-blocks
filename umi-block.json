@@ -399,6 +399,22 @@
       "name": "request-by-stages RequestByStages",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "used-channels UsedChannels",
+      "value": "UsedChannels",
+      "key": "UsedChannels",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/used-channels",
+      "type": "block",
+      "path": "used-channels",
+      "isPage": false,
+      "defaultPath": "/used-channels",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/used-channels/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "used-channels UsedChannels",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
