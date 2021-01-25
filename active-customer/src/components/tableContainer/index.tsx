@@ -17,27 +17,27 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, action }) 
 
     const columnsTable = [
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col1' }),
+            title: intl.formatMessage({ id: 'tableContainer.Table-col1' }),
             dataIndex: 'idAccount',
             key: 'idAccount',
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col2' }),
+            title: intl.formatMessage({ id: 'tableContainer.Table-col2' }),
             dataIndex: 'customerName',
             key: 'customerName',
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col3' }),
+            title: intl.formatMessage({ id: 'tableContainer.Table-col3' }),
             dataIndex: 'product',
             key: 'product',
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col4' }),
+            title: intl.formatMessage({ id: 'tableContainer.Table-col4' }),
             dataIndex: 'request',
             key: 'request',
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col5' }),
+            title: intl.formatMessage({ id: 'tableContainer.Table-col5' }),
             dataIndex: 'data',
             key: 'data',
             render: (text: any) => (
@@ -54,7 +54,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, action }) 
         action
     }
     const propsInputSearch = {
-        placeholderVal: intl.formatMessage({ id: 'BLOCK_NAME.Search-title' }),
+        placeholderVal: intl.formatMessage({ id: 'tableContainer.Search-title' }),
         actionInput: getValInput
     }
     

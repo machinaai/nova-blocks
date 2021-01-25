@@ -1,8 +1,8 @@
 export default {
-  'BLOCK_NAME.Table-col1':'Número de cuenta',
-  'BLOCK_NAME.Table-col2':'Nombre de cliente',
-  'BLOCK_NAME.Table-col3':'Productos activos',
-  'BLOCK_NAME.Table-col4':'Solicitudes activas',
-  'BLOCK_NAME.Table-col5':'información',
-  'BLOCK_NAME.Search-title':'Búsqueda por: número de cuenta o nombre del cliente'  
+  'tableContainer.Table-col1':'Número de cuenta',
+  'tableContainer.Table-col2':'Nombre de cliente',
+  'tableContainer.Table-col3':'Productos activos',
+  'tableContainer.Table-col4':'Solicitudes activas',
+  'tableContainer.Table-col5':'información',
+  'tableContainer.Search-title':'Búsqueda por: número de cuenta o nombre del cliente'  
 };

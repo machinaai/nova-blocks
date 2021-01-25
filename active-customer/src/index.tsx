@@ -7,13 +7,13 @@ import { useHistory } from 'react-router';
 import { getCleanData } from './helpers/getCleanData';
 import { dataFixture } from './fixture/dataFixture';
 
-interface PAGE_NAME_UPPER_CAMEL_CASEProps {
+interface ActiveCustomerProps {
   routePath?: StateModelCustomers['routePath']
   activeCustomer?: StateModelCustomers['activeCustomer'];
   status?: StateModelCustomers['error'];
 }
 
-const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
+const ActiveCustomer: React.FC<ActiveCustomerProps> = ({
   routePath,
   activeCustomer,
   status }) => {
@@ -22,7 +22,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
 
   const getActiveCustomers = () => {
     dispatch({
-      type: 'BLOCK_NAME_CAMEL_CASE/getActiveCustomers',
+      type: 'activeCustomer/getActiveCustomers',
     });
   };
 
@@ -33,7 +33,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   const setValField = (val: any) => {
     const { idAccount } = val;    
     dispatch({
-      type: 'BLOCK_NAME_CAMEL_CASE/setIdAccount',
+      type: 'activeCustomer/setIdAccount',
       payload: idAccount
     });
     router.push(`${routePath}?id=${idAccount}`);
@@ -51,8 +51,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   );
 };
 
-export default connect(({ Active_Customer }: { Active_Customer: StateModelCustomers }) => ({
-  activeCustomer: Active_Customer.activeCustomer,
-  status: Active_Customer.error,
-  routePath: Active_Customer.routePath,
-}))(PAGE_NAME_UPPER_CAMEL_CASE);
+export default connect(({ activeCustomer }: { activeCustomer: StateModelCustomers }) => ({
+  activeCustomer: activeCustomer.activeCustomer,
+  status: activeCustomer.error,
+  routePath: activeCustomer.routePath,
+}))(ActiveCustomer);
