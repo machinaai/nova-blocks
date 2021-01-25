@@ -415,6 +415,38 @@
       "name": "used-channels UsedChannels",
       "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
       "features": ["antd"]
+    },
+    {
+      "title": "console-real-time-table consoleRealTimeTable",
+      "value": "consoleRealTimeTable",
+      "key": "consoleRealTimeTable",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/console-real-time-table",
+      "type": "block",
+      "path": "console-real-time-table",
+      "isPage": false,
+      "defaultPath": "/console-real-time-table",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/console-real-time-table/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "console-real-time-table consoleRealTimeTable",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
+    },
+    {
+      "title": "console-client-details consoleClientDetails",
+      "value": "consoleClientDetails",
+      "key": "consoleClientDetails",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/console-client-details",
+      "type": "block",
+      "path": "console-client-details",
+      "isPage": false,
+      "defaultPath": "/console-client-details",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/console-client-details/snapshot.png",
+      "tags": ["pro-block"],
+      "name": "console-client-details consoleClientDetails",
+      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
+      "features": ["antd"]
     }
   ]
 }
