@@ -24,7 +24,7 @@ interface Model {
 }
 
 const Model: Model = {
-  namespace: 'Client_Details',
+  namespace: 'clientDetails',
   state: {},
   effects: {
     *getClientInformation({ payload }:any, { call, put }:any) {

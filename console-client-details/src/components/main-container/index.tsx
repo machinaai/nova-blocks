@@ -109,14 +109,14 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
      */
     const dataForm = {
         section1: {
-            titleSection: `${intl.formatMessage({ id: 'Client_Details.Form-title-sec1' })}`,
+            titleSection: `${intl.formatMessage({ id: 'clientDetails.Form-title-sec1' })}`,
             fields: {
                 col1: [
                     {
                         inputName: 'username',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field1' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field1' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field1' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field1' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -125,9 +125,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'lastname',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field2' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field2' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field2' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field2' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -136,9 +136,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'mothername',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field3' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field3' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field3' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field3' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -149,9 +149,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                 col2: [
                     {
                         inputName: 'gender',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field4' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field4' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field4' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field4' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -160,7 +160,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'birthday',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field5' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,
                         element:
                             <>
                                 <DatePicker
@@ -174,9 +174,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'nacionality',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field6' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field6' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field6' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field6' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -185,18 +185,18 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'curp',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field7' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field7' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`}
                             maxLength={100}
                             onChange={changeCapitalCurp}
                         />
                     },
                     {
                         inputName: 'ine',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field8' })} INE/IFE:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field8' })} INE/IFE:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field8' })} INE/IFE:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field8' })} INE/IFE:`}
                             maxLength={100}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
@@ -208,14 +208,14 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
             }
         },
         section2: {
-            titleSection: `${intl.formatMessage({ id: 'Client_Details.Form-title-sec2' })}`,
+            titleSection: `${intl.formatMessage({ id: 'clientDetails.Form-title-sec2' })}`,
             fields: {
                 col1: [
                     {
                         inputName: 'street',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field9' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field9' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field9' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field9' })}:`}
                             maxLength={100}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
@@ -224,9 +224,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'numberstreet',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field10' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field10' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field10' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field10' })}:`}
                             maxLength={100}
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
@@ -235,9 +235,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'suburb',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field11' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field11' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field11' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field11' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLettersAndNumbers}
                             onPaste={disableCopyPaste}
@@ -246,9 +246,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'townhall',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field12' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field12' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field12' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field12' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -259,9 +259,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                 col2: [
                     {
                         inputName: 'cp',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field13' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field13' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field13' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field13' })}:`}
                             maxLength={100}
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
@@ -270,9 +270,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     },
                     {
                         inputName: 'city',
-                        label: `${intl.formatMessage({ id: 'Client_Details.Form-field14' })}:`,
+                        label: `${intl.formatMessage({ id: 'clientDetails.Form-field14' })}:`,
                         element: <Input
-                            placeholder={`${intl.formatMessage({ id: 'Client_Details.Form-field14' })}:`}
+                            placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field14' })}:`}
                             maxLength={100}
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
@@ -306,7 +306,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                 iconIncomplete: imgDoc
             },
             {
-                step: `${intl.formatMessage({ id: 'Client_Details.firm' })}`,
+                step: `${intl.formatMessage({ id: 'clientDetails.firm' })}`,
                 complete: stepsDetails?.firma,
                 iconIncomplete: imgDoc
             },
@@ -363,8 +363,8 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         </div>
                         {imagesDocs.length !== 0 && <UploadBlock {...uploadProps} />}
                         <AudioBlock {...audioProps} />
-                        <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'Client_Details.Form-btn' })}</Button>
-                        <Button href={`${pathBtnReturn}`} size='large' type="link" block >{intl.formatMessage({ id: 'Client_Details.Form-btn-return' })}</Button>
+                        <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'clientDetails.Form-btn' })}</Button>
+                        <Button href={`${pathBtnReturn}`} size='large' type="link" block >{intl.formatMessage({ id: 'clientDetails.Form-btn-return' })}</Button>
                     </Col>
                 </Row>
             </Col>
@@ -391,8 +391,8 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         <FormBlock {...propsForm} />
                     </Col>
                     <Col xs={24} xl={8}>
-                        <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'Client_Details.Form-btn' })}</Button>
-                        <Button href={`${pathBtnReturn}`} size='large' type="link" block >{intl.formatMessage({ id: 'Client_Details.Form-btn-return' })}</Button>
+                        <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'clientDetails.Form-btn' })}</Button>
+                        <Button href={`${pathBtnReturn}`} size='large' type="link" block >{intl.formatMessage({ id: 'clientDetails.Form-btn-return' })}</Button>
                     </Col>
                 </Row>
             </Col>

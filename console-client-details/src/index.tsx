@@ -40,7 +40,7 @@ const ConsoleClientDetails: React.FC<ConsoleClientDetailsProps> = (props) => {
 
   const getClientDetail = () => {
     dispatch({
-      type: 'Client_Details/getClientInformation',
+      type: 'clientDetails/getClientInformation',
       payload: idRequest
     });
   };
@@ -48,7 +48,7 @@ const ConsoleClientDetails: React.FC<ConsoleClientDetailsProps> = (props) => {
   useEffect(() => {
     return () => {
       dispatch({
-        type: 'Client_Details/setClientInformation',
+        type: 'clientDetails/setClientInformation',
         payload: null
       });
     }
@@ -61,7 +61,7 @@ const ConsoleClientDetails: React.FC<ConsoleClientDetailsProps> = (props) => {
    useEffect(() => {    
     dataForm.birthday = moment(dataForm.birthday).format('DD/MM/YYYY'); 
     dispatch({
-      type: 'Client_Details/setDataForm',
+      type: 'clientDetails/setDataForm',
       payload: dataForm
     });
   }, [dataForm]);
@@ -80,8 +80,8 @@ const ConsoleClientDetails: React.FC<ConsoleClientDetailsProps> = (props) => {
   );
 };
 
-export default connect(({ Client_Details }: { Client_Details: StateModelClient }) => ({
-  clientDetail: Client_Details.clientDetail,
-  idRequest: Client_Details.idRequest,
-  status: Client_Details.error,
+export default connect(({ clientDetails }: { clientDetails: StateModelClient }) => ({
+  clientDetail: clientDetails.clientDetail,
+  idRequest: clientDetails.idRequest,
+  status: clientDetails.error,
 }))(ConsoleClientDetails);

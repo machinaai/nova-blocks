@@ -1,5 +1,5 @@
 {
-  "name": "@nova-pro-blocks/console-real-time-table",
+  "name": "@nova-blocks/console-client-details",
   "version": "0.0.1",
   "description": "Pro-block to show data in the table in real time",
   "license": "ISC",
