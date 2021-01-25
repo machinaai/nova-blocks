@@ -34,8 +34,8 @@ const CustomerVideoComponent: React.FC<Props> = ({ videoDocs, nameCustomer,fontF
                 <Col span={24}>
                     <Row>
                         <Col xs={24} md={14} xl={14}>
-                            <p className={styles.clientInfo} style={{fontFamily:`${fontFam}`}}>{`${intl.formatMessage({ id: 'BLOCK_NAME.Video-product' })}:`} <span>{`${intl.formatMessage({ id: 'BLOCK_NAME.Video-name-product' })}`}</span></p>
-                            <p className={styles.clientInfo} style={{fontFamily:`${fontFam}`}}>{`${intl.formatMessage({ id: 'BLOCK_NAME.Video-client' })}:`} <strong>{nameCustomer}</strong></p>
+                            <p className={styles.clientInfo} style={{fontFamily:`${fontFam}`}}>{`${intl.formatMessage({ id: 'Client_Details.Video-product' })}:`} <span>{`${intl.formatMessage({ id: 'Client_Details.Video-name-product' })}`}</span></p>
+                            <p className={styles.clientInfo} style={{fontFamily:`${fontFam}`}}>{`${intl.formatMessage({ id: 'Client_Details.Video-client' })}:`} <strong>{nameCustomer}</strong></p>
                         </Col>
                         <Col xs={24} md={10} xl={10}>
                             <CarouselBlock  {...videoProps} />
