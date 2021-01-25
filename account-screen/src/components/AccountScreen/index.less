@@ -1,4 +1,9 @@
 .container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  overflow-x: hidden;
+
   @media (min-width: 768px) {
     margin-left: 32px;
   }
@@ -253,23 +258,38 @@
     margin-right: 21px;
   }
 
-  .robot {
-      @media (min-width: 768px) {
-        position: absolute;
-        top: 80px;
-        right: 140px;        
-      }
-      @media (min-width: 720px) and (max-width: 768px){
-        position: absolute;
-        top: 80px;
-        right: 10px;        
-      }
-      >.robotImage {
-        transform: rotate(18deg) scale(1);
-        @media (min-width: 360px) and (max-width: 720px) {
-          display: none;
-        }        
-      }
+  > .containerImages {
+    display: none;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: 0 -6px;
+    background-size: 78rem;
+
+    @media (min-width: 768px) {
+      display: block;
     }
 
+    @media (min-width: 768px) and (max-width: 1400px) {
+      background-size: 60rem;
+    }
+
+    @media (max-width: 1500px) {
+      background-size: 68rem;
+    }
+
+    > .robot {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      >.robotImage {
+        transform: rotate(18deg) scale(1);
+      }
+    }
+  }
 }

@@ -83,9 +83,9 @@ const  PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     iconCircle
   }
   return (
-    <div className={`${styles.withBg}`} style={{ backgroundImage: `url(${iconCircle})` }}>
-      <AccountScreen {...propAccount} />
-    </div>
+    <>
+    <AccountScreen {...propAccount} />
+    </>
   );
 };
 
