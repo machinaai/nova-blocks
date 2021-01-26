@@ -1,20 +1,22 @@
+import { LegendsCard } from './usedDevices.interface';
+
 export interface PropsDataReq {
-  title?: string,
-  fontFam?: Fonts,
-  imgTitle?: string | React.ReactNode,
+  titles?: LegendsCard,
+  fontFam?: Fonts | any,
+  imageCard?: string,
   optionInfo?: OptionInfo,
   options?: ItemOptions[],
 }
 interface ItemOptions {
-  valOp?: number | string,
+  valOp?: string | number | unknown,
   nameOp?: string
 }
 interface OptionInfo {
-  tooltipTitle?:string,
+  tooltipTitle: string,
   icon: string | React.ReactNode,
   action: Function | any
 }
-interface Fonts {
+export interface Fonts {
   fontTitle: string,
   fontValOp: string,
   fontNameOp: string,

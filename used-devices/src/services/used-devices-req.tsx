@@ -1,15 +1,18 @@
 import { enviromentEndPoints } from '../enviroments/enviroments.fixture';
-import { ComponentsDefinition } from '@/interfaces/componentsDefinition.interface';
+import { ServiceParams } from '@/interfaces/componentsDefinition.interface';
 import request from 'umi-request';
 
 const errorHandler = (error: { response: Response }): Response => {
   return error.response;
 };
-export async function UsedDevicesService(params: ComponentsDefinition) {
-  if (params) {
-    const { userType, startDate, endDate } = params;
+export async function UsedDevicesService(params: ServiceParams) {
+  const { data, endPoint} = params;    
+  console.log('paramas', params)
+  if (data) {  
+    const {userType, startDate,endDate} = data;
+    
     return request(
-      `${enviromentEndPoints.usedDevicesRequest}?userType=${userType}&startDate=${startDate}&endDate=${endDate}`,
+      `${endPoint}?userType=${userType}&startDate=${startDate}&endDate=${endDate}`,
       {
         method: 'GET',
         errorHandler
@@ -17,7 +20,7 @@ export async function UsedDevicesService(params: ComponentsDefinition) {
     );
   } else {
     return request(
-      `${enviromentEndPoints.usedDevicesRequest}?userType=&startDate=&endDate=`,
+      `${params?.endPoint}?userType=&startDate=&endDate=`,
       {
         method: 'GET',
         errorHandler

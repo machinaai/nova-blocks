@@ -6,6 +6,7 @@ export const dataFixture = {
     fontValOp: 'Signika-Medium',
     fontNameOp: 'Signika-Medium'
   },
-  imgTitle: logoDispositivo,
-  actionInfo: () => { console.log('Option info') }
+  actionInfo: () => { console.log('Option info') },
+  enviromentEndPoints: '/services/flowconsole/api/dashboard/_search/request-close',
+  imageCard: logoDispositivo,
 }

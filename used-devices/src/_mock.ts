@@ -6,8 +6,17 @@ export default {
     res: Response,
   ) => {
     res.status(200).send({
-      android: 5,
-      ios: 2,
+      respo1: 9,
+      respo2: 12,
+    });
+  },
+  'GET /services/flowconsole/api/dashboard/_search/request-close': (
+    req: Request,
+    res: Response,
+  ) => {
+    res.status(200).send({
+      respo1: 2,
+      respo2: 3,
     });
   },
 };

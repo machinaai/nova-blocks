@@ -1,6 +1,6 @@
 export default {
-  'Used_Devices.usedDevices_title':'Used devices',
-  'Used_Devices.usedDevices_nameOp1':'Android',
-  'Used_Devices.usedDevices_nameOp2':'iOs',
-  'Used_Devices.titleTooltip':'Help'
+  'usedDevices.title': 'Used devices',
+  'usedDevices.nameOp1': 'Android',
+  'usedDevices.nameOp2': 'iOs',
+  'usedDevices.titleTooltip': 'Help'
 };
