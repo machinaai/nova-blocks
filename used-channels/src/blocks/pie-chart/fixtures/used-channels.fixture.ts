@@ -1,21 +1,20 @@
 /*
-* Data mock to show used channels
-*/
+ * Data mock to show used channels
+ */
 export const dataFixture = [
-    {
-        type: 'mobile',
-        total: 40,
-        percentage: 0.5
-    },
-    {
-        type: 'web',
-        total: 20,
-        percentage: 0.1
-    },
-    {
-        type: 'tablet',
-        total: 15,
-        percentage: 0.1
-    },
-   
+  {
+    type: "mobile",
+    value: 2,
+    percentage: 0.4
+  },
+  {
+    type: "web",
+    value: 2,
+    percentage: 0.4
+  },
+  {
+    type: "tablet",
+    value: 1,
+    percentage: 0.2
+  },
 ];

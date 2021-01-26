@@ -9,6 +9,7 @@ export interface PieChartProps {
 export interface DataChart {
     type:string,
     value:number,
+    percent:number,
 }
 
 export interface ChannelsProps {

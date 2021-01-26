@@ -85,7 +85,6 @@ const ConsoleUsedChannels: React.FC<Used_ChannelsProps> = ({
     valOp: val
   }
 
-  // const resultDevices: DataChart[] = dataDevice ? getPercentage(dataDevice) : getPercentage(dataChartFixture);
   const resultDevices: DataChart[] = getPercentage(dataDevice);
   const dataPie: PieChartProps = {
     data: resultDevices,

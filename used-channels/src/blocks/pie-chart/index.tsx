@@ -1,9 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Chart, Geom, Tooltip, Coord, Guide, Axis, Interval, Interaction, Coordinate, registerShape, DonutChart, View, Annotation, Legend } from 'bizcharts';
+import { Chart, Tooltip, Axis, Interval, Coordinate, View, Annotation, Legend } from 'bizcharts';
 import { PieChartProps } from './interfaces/dataInterface.interface';
 import { dataFixture } from './fixtures/used-channels.fixture';
 import styles from './index.less';
-import DataSet from "@antv/data-set";
 
 const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, indexVal = 0, setVal }) => {
   const [index, setIndex] = useState(0);
@@ -26,33 +25,7 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
     [data],
   );
 
-  const values: Array<Object> = [];
-
-  for (let i = 0; i < 24; i++) {
-    const item = {};
-    item.type = i + "";
-    item.value = 10;
-    values.push(item);
-  };
-  const { DataView } = DataSet;
-  const dv = new DataView();
-  dv.source(values).transform({
-    type: "percent",
-    field: "value",
-    dimension: "type",
-    as: "percent"
-  });
-  const userDv = new DataView();
-
-  userDv.source(data).transform({
-    type: 'percent',
-    field: 'value',
-    dimension: 'type',
-    as: 'percent',
-  });
-
-
-  let colors = ['#9e59ff', '#3092ff', '#e8e8e8'];
+  const colors = ['#9e59ff', '#3092ff', '#e8e8e8'];
 
   const widget = (
     <div className={styles.widget}>
@@ -67,7 +40,7 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
         forceFit
       >
         <Legend visible={false} />
-        <View data={dv.rows}>
+        <View data={data}>
           <Legend visible={false} />
           <Tooltip shared showTitle={false} />
           <Coordinate type="theta" innerRadius={0.9} />
@@ -122,12 +95,7 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
             }]}
           />
         </View>
-        <View data={userDv.rows} scale={{
-          percent: {
-            formatter: (val) => {
-              return (val * 100).toFixed(2) + '%';
-            },
-          }
+        <View data={data} scale={{
         }}>
           <Coordinate type="theta" innerRadius={0.75} />
           <Interval

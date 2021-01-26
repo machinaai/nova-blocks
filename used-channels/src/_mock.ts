@@ -6,9 +6,9 @@ export default {
     res: Response,
   ) => {
     res.status(200).send({
-      mobile: 30,
-      web: 30,
-      tablet: 40,
+      mobile: 3,
+      web: 1,
+      tablet: 1,
     });
   },
 };
