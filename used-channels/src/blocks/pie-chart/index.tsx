@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Chart, Geom, Tooltip, Coord, Guide } from 'bizcharts';
+import { Chart, Geom, Tooltip, Coord, Guide, Axis, Interval, Interaction, Coordinate, registerShape, DonutChart, View, Annotation, Legend } from 'bizcharts';
 import { PieChartProps } from './interfaces/dataInterface.interface';
 import { dataFixture } from './fixtures/used-channels.fixture';
 import styles from './index.less';
+import DataSet from "@antv/data-set";
 
-const { Text } = Guide;
 const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, indexVal = 0, setVal }) => {
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
     setIndex(indexVal);
   }, [indexVal])
@@ -25,54 +26,119 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
     [data],
   );
 
+  const values: Array<Object> = [];
+
+  for (let i = 0; i < 24; i++) {
+    const item = {};
+    item.type = i + "";
+    item.value = 10;
+    values.push(item);
+  };
+  const { DataView } = DataSet;
+  const dv = new DataView();
+  dv.source(values).transform({
+    type: "percent",
+    field: "value",
+    dimension: "type",
+    as: "percent"
+  });
+  const userDv = new DataView();
+
+  userDv.source(data).transform({
+    type: 'percent',
+    field: 'value',
+    dimension: 'type',
+    as: 'percent',
+  });
+
+
+  let colors = ['#9e59ff', '#3092ff', '#e8e8e8'];
+
   const widget = (
     <div className={styles.widget}>
-      <Chart
-        forceUpdate
-        height={height}
-        data={data}
-        forceFit
-        padding={[20, 80, 20, 20]}
-        onGetG2Instance={(chart: { get: (arg0: string) => any[]; on: (arg0: string, arg1: () => void) => void; }) => {
-          const geom = chart.get('geoms')[0];
-          const items = geom.get('data');
-          geom.setSelected(items[index]);
-          chart.on('afterrender', () => {
-            geom.setSelected(items[index]);
-          });
-        }}
-        onPlotClick={onClickAccount}
-      >
-        <Coord type="theta" innerRadius={0.75} />
 
-        <Tooltip showTitle={false} />
-        <Geom type="intervalStack" position="percentage" color="type" shape="circle">
-          <Guide>
-            <Text
-              position={['50%', '50%']}
-              content={data && `${data[index]?.percentage?.toString()}%`}
-              style={{
-                fontSize: '30',
-                fill: '#262626',
-                textAlign: 'center',
-                fontWeight: 'bold',
-              }}
-              offsetY={-20}
-            />
-            <Text
-              position={['50%', '50%']}
-              content={data && data[index]?.type}
-              style={{
-                fontSize: '14',
-                fill: '#000000',
-                textAlign: 'center',
-              }}
-              offsetY={10}
-            />
-          </Guide>
-        </Geom>
+      <Chart
+        placeholder={false}
+        height={height}
+        autoFit
+        label={false}
+        style={{ padding: '20, 80, 20, 20' }}
+        forceUpdate
+        forceFit
+      >
+        <Legend visible={false} />
+        <View data={dv.rows}>
+          <Legend visible={false} />
+          <Tooltip shared showTitle={false} />
+          <Coordinate type="theta" innerRadius={0.9} />
+          <Interval
+            position="percent"
+            adjust="stack"
+            color={['type', colors]}
+            style={{
+              stroke: '#444',
+              lineWidth: 1,
+            }}
+            tooltip={false}
+          />
+          <Annotation.Text
+            position={['50%', '40%']}
+            content={data && `${data[index]?.value?.toString()}%`}
+            className={styles.percentaje}
+            style={{
+              fontSize: '30',
+              fill: '#262626',
+              textAlign: 'center',
+              fontWeight: 'bold',
+              marginTop: '50%',
+            }}
+            offsetY={-20}
+          />
+          <Annotation.Text
+            position={['50%', '60%']}
+            content={data && data[index]?.type}
+            style={{
+              fontSize: '20',
+              fill: '#000000',
+              textAlign: 'center',
+              fontWeight: 'bold',
+            }}
+            offsetY={10}
+          />
+        </View>
+        <View data={data}>
+          <Axis visible={false} />
+          <Coordinate type="polar" innerRadius={0.9} />
+          <Interval
+            label={false}
+            position="type*value"
+            color="#444"
+            tooltip={false}
+            size={['type', (val) => {
+              if (val % 3 === 0) {
+                return 4;
+              }
+              return 1;
+            }]}
+          />
+        </View>
+        <View data={userDv.rows} scale={{
+          percent: {
+            formatter: (val) => {
+              return (val * 100).toFixed(2) + '%';
+            },
+          }
+        }}>
+          <Coordinate type="theta" innerRadius={0.75} />
+          <Interval
+            position="percent"
+            adjust="stack"
+            color="type"
+            label={false}
+          />
+        </View>
       </Chart>
-    </div>
+    </div >
   );
 
   return (
