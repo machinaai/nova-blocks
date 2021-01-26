@@ -9,8 +9,7 @@ export const getPercentage = (data: any) => {
         ...dataDevice,
         {
           type: property,
-          total: data[property],
-          percentage: Number(((100 * data[property]) / totalDev).toFixed(2)),
+          value: Number(((100 * data[property]) / totalDev).toFixed(2)),
         },
       ];
     }
@@ -20,18 +19,15 @@ export const getPercentage = (data: any) => {
   return [
     {
       type: 'mobile',
-      total: 0,
-      percentage: 0,
+      value: 0,
     },
     {
       type: 'web',
-      total: 0,
-      percentage: 0,
+      value: 0,
     },
     {
       type: 'tablet',
-      total: 0,
-      percentage: 0,
+      value: 0,
     },
   ];
 };
