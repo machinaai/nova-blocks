@@ -3,58 +3,63 @@ import { connect, useDispatch, useIntl } from 'umi';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { StateModelDevices } from './models/model';
 import { dataFixture } from './fixture/data.fixture';
-import DataRequestBlock from './components/card-data-request/src';
+import DataRequestBlock from './components/card-data-request';
 import { Fonts, PropsDataReq } from './interfaces/dataReq.interface';
+import {ConsoleUsedDevicesProps} from  './interfaces/usedDevices.interface';
+import { useFixture } from './hooks/useFixture';
 
-interface ConsoleUsedDevicesProps {
-  fontFam?: Fonts,
-  imgTitle?: string | React.ReactNode,
-  actionOpInfo?: Function,
-
-  usedDevices: StateModelDevices['usedDevices'],
-  dateRequest: StateModelDevices['dateRequest'],
-  error: StateModelDevices['error'];
-}
-const ConsoleUsedDevices: React.FC<ConsoleUsedDevicesProps> = (props) => {
-  const {
+const ConsoleUsedDevices: React.FC<ConsoleUsedDevicesProps> = ({
     fontFam = dataFixture.font,
-    imgTitle = dataFixture.imgTitle,
+    legends,
+    enviromentEndPoints = dataFixture.enviromentEndPoints,
     actionOpInfo = dataFixture.actionInfo,
     usedDevices,
     dateRequest,
+    imageCard = dataFixture.imageCard,
     error
-  } = props;
+}) => {
   const dispatch = useDispatch();
   const intl = useIntl();
+  const intlHook = useFixture();
+  let informationObjet;
+
+  if(!legends) {
+    informationObjet = intlHook;
+  } else  {
+    informationObjet = legends;
+  }
 
   const getTotalRequest = () => {
-    dispatch({ type: 'Used_Devices/getUsedDevices', payload: dateRequest });
+    dispatch({ type: 'usedDevices/getUsedDevices', payload:{ data: dateRequest, endPoint : enviromentEndPoints  }});
   };
 
   useEffect(() => {
     getTotalRequest();
   }, [dateRequest]);
 
+  let objectValues =  usedDevices ? Object.values(usedDevices) : [];
+  
   const dataReq: PropsDataReq = {
-    title: intl.formatMessage({ id: 'Used_Devices.usedDevices_title' }),
+    titles: informationObjet,
+    imageCard,
     fontFam,
-    imgTitle,
     optionInfo: {
-      tooltipTitle: intl.formatMessage({ id: 'Used_Devices.titleTooltip' }),
+      tooltipTitle: intl.formatMessage({ id: 'usedDevices.titleTooltip' }),
       icon: <InfoCircleOutlined style={{ fontSize: '16px' }} />,
       action: actionOpInfo
     },
     options: [
       {
-        valOp: usedDevices?.android !== undefined ? usedDevices.android : 0,
-        nameOp: `${intl.formatMessage({ id: 'Used_Devices.usedDevices_nameOp1' })}`,
+        valOp: objectValues ? objectValues[0] : 0,
+        nameOp: informationObjet.label1,
       },
       {
-        valOp: usedDevices?.ios !== undefined ? usedDevices.ios : 0,
-        nameOp: `${intl.formatMessage({ id: 'Used_Devices.usedDevices_nameOp2' })}`,
+        valOp: objectValues ? objectValues[1] : 0,
+        nameOp: informationObjet.label2,
       }
     ]
   }
+
   return (
     <>
       <DataRequestBlock {...dataReq} />
@@ -62,8 +67,8 @@ const ConsoleUsedDevices: React.FC<ConsoleUsedDevicesProps> = (props) => {
   );
 };
 
-export default connect(({ Used_Devices }: { Used_Devices: StateModelDevices }) => ({
-  usedDevices: Used_Devices.usedDevices,
-  dateRequest: Used_Devices.dateRequest,
-  error: Used_Devices.error,
+export default connect(({ usedDevices }: { usedDevices: StateModelDevices }) => ({
+  usedDevices: usedDevices.usedDevices,
+  dateRequest: usedDevices.dateRequest,
+  error: usedDevices.error,
 }))(ConsoleUsedDevices);

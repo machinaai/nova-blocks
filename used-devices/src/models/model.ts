@@ -6,8 +6,9 @@ import { ComponentsDefinition } from '../interfaces/componentsDefinition.interfa
 
 export interface StateModelDevices {
   usedDevices?: RequestProp;
-  dateRequest?:ComponentsDefinition;
+  dateRequest?: ComponentsDefinition;
   error?: ErrorResponseEnum;
+  endPointRequest?: string;
 }
 
 interface Model {
@@ -20,14 +21,18 @@ interface Model {
     setUsedDevices: Reducer<StateModelDevices>;
     setDateRequest: Reducer<StateModelDevices>;
     setError: Reducer<StateModelDevices>;
+    setEndPoin: Reducer<StateModelDevices>;
   };
 }
 
 const Model: Model = {
-  namespace: 'Used_Devices',
-  state: {},
+  namespace: 'usedDevices',
+  state: {
+    usedDevices: undefined
+  },
   effects: {
-    *getUsedDevices({ payload }:any, { call, put }:any) {
+    *getUsedDevices({ payload }: any, { call, put }: any) {
+      console.log(payload, 'payload')
       const res = yield call(UsedDevicesService, payload);
       yield put({
         type: res.status ? 'setError' : 'setUsedDevices',
@@ -36,13 +41,13 @@ const Model: Model = {
     },
   },
   reducers: {
-    setUsedDevices(state : any, { payload } :any) {
+    setUsedDevices(state: any, { payload }: any) {
       return {
         ...state,
         usedDevices: payload,
       };
     },
-    setDateRequest(state : any, { payload } :any) {
+    setDateRequest(state: any, { payload }: any) {
       return {
         ...state,
         dateRequest: payload,
@@ -52,6 +57,13 @@ const Model: Model = {
       return {
         ...state,
         error: payload,
+      };
+    },
+    setEndPoin(state: any, { payload }: any) {
+      console.log('enviromentEndPoints', payload)
+      return {
+        ...state,
+        endPointRequest: payload,
       };
     },
   },
