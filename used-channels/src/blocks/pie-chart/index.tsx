@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Chart, Geom, Tooltip, Coord, Guide, Axis, Interval, Interaction, Coordinate, registerShape, DonutChart, View, Annotation, Legend } from 'bizcharts';
+import { Chart, Tooltip, Axis, Interval, Coordinate, View, Annotation, Legend } from 'bizcharts';
 import { PieChartProps } from './interfaces/dataInterface.interface';
 import { dataFixture } from './fixtures/used-channels.fixture';
 import styles from './index.less';
