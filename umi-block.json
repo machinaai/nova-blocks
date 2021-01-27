@@ -1,452 +1,764 @@
 {
-  "blocks": [
+  "list": [
     {
-      "title": "button-Type",
+      "title": "account-activity",
+      "value": "account-activity",
+      "key": "account-activity",
+      "description": "Pro-block for account-activity of account opening",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/account-activity",
+      "type": "block",
+      "path": "account-activity",
+      "isPage": false,
+      "defaultPath": "account-activity",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-activity/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "account-activity",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "account-screen",
+      "value": "account-screen",
+      "key": "account-screen",
+      "description": "Pro-block account screen",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/account-screen",
+      "type": "block",
+      "path": "account-screen",
+      "isPage": false,
+      "defaultPath": "account-screen",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-screen/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "account-screen",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "active-customer",
+      "value": "active-customer",
+      "key": "active-customer",
+      "description": "Pro-block to show data in the table in real time",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/active-customer",
+      "type": "block",
+      "path": "active-customer",
+      "isPage": false,
+      "defaultPath": "active-customer",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/active-customer/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "active-customer",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "alert-nbe",
+      "value": "alert-nbe",
+      "key": "alert-nbe",
+      "description": "Alert customizable block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/alert-nbe",
+      "type": "block",
+      "path": "alert-nbe",
+      "isPage": false,
+      "defaultPath": "alert-nbe",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/alert-nbe/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "alert-nbe",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "bar-graph",
+      "value": "bar-graph",
+      "key": "bar-graph",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/bar-graph",
+      "type": "block",
+      "path": "bar-graph",
+      "isPage": false,
+      "defaultPath": "bar-graph",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/bar-graph/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "bar-graph",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "button-basic",
       "value": "button-basic",
       "key": "button-basic",
-      "description": "",
+      "description": "Hay cuatro tipos de botones: botón primario, botón secundario, botón punteado y botón de enlace. El botón principal aparece como máximo una vez en la misma área de operación.",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/button-basic",
       "type": "block",
       "path": "button-basic",
       "isPage": false,
-      "defaultPath": "/button-basic",
+      "defaultPath": "button-basic",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/button-basic/snapshot.png",
-      "tags": ["General"],
-      "name": "button-Type",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-basic",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "button-basic",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "button-Block Button",
+      "title": "button-block",
       "value": "button-block",
       "key": "button-block",
-      "description": "",
+      "description": "`block` La propiedad hará que el botón se ajuste al ancho principal.",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/button-block",
       "type": "block",
       "path": "button-block",
       "isPage": false,
-      "defaultPath": "/button-block",
+      "defaultPath": "button-block",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/button-block/snapshot.png",
-      "tags": ["General"],
-      "name": "button-Block Button",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "button-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "footer-nbe FooterNbe",
-      "value": "Footer-Nbe",
-      "key": "Footer-Nbe",
+      "title": "card-data",
+      "value": "card-data",
+      "key": "card-data",
+      "description": "Card to show different information to RAO",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/card-data",
+      "type": "block",
+      "path": "card-data",
+      "isPage": false,
+      "defaultPath": "card-data",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-data/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "card-data",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "card-total-request",
+      "value": "card-total-request",
+      "key": "card-total-request",
+      "description": "Card to show total request to RAO",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/card-total-request",
+      "type": "block",
+      "path": "card-total-request",
+      "isPage": false,
+      "defaultPath": "card-total-request",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-total-request/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "card-total-request",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "collapse-table-block",
+      "value": "collapse-table-block",
+      "key": "collapse-table-block",
+      "description": "block to show data in collapse element",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/collapse-table-block",
+      "type": "block",
+      "path": "collapse-table-block",
+      "isPage": false,
+      "defaultPath": "collapse-table-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/collapse-table-block/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "collapse-table-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "combo-block",
+      "value": "combo-block",
+      "key": "combo-block",
+      "description": "Combo block for accounts",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/combo-block",
+      "type": "block",
+      "path": "combo-block",
+      "isPage": false,
+      "defaultPath": "combo-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/combo-block/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "combo-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "console-client-details",
+      "value": "console-client-details",
+      "key": "console-client-details",
+      "description": "Pro-block to show data in the table in real time",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/console-client-details",
+      "type": "block",
+      "path": "console-client-details",
+      "isPage": false,
+      "defaultPath": "console-client-details",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/console-client-details/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "console-client-details",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "console-real-time-table",
+      "value": "console-real-time-table",
+      "key": "console-real-time-table",
+      "description": "Pro-block to show data in the table in real time",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/console-real-time-table",
+      "type": "block",
+      "path": "console-real-time-table",
+      "isPage": false,
+      "defaultPath": "console-real-time-table",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/console-real-time-table/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "console-real-time-table",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "currency-block",
+      "value": "currency-block",
+      "key": "currency-block",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/currency-block",
+      "type": "block",
+      "path": "currency-block",
+      "isPage": false,
+      "defaultPath": "currency-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/currency-block/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "currency-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "footer-nbe",
+      "value": "footer-nbe",
+      "key": "footer-nbe",
       "description": "",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/footer-nbe",
       "type": "block",
       "path": "footer-nbe",
       "isPage": false,
-      "defaultPath": "/footer-nbe",
+      "defaultPath": "footer-nbe",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/footer-nbe/snapshot.png",
-      "tags": ["General"],
-      "name": "footer-nbe FooterNbe",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "footer-nbe",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "header-nbe HeaderNbe",
-      "value": "Header-Nbe",
-      "key": "Header-Nbe",
+      "title": "form-customizable",
+      "value": "form-customizable",
+      "key": "form-customizable",
+      "description": "Form customizable block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/form-customizable",
+      "type": "block",
+      "path": "form-customizable",
+      "isPage": false,
+      "defaultPath": "form-customizable",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/form-customizable/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "form-customizable",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "header-nbe",
+      "value": "header-nbe",
+      "key": "header-nbe",
       "description": "",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/header-nbe",
       "type": "block",
       "path": "header-nbe",
       "isPage": false,
-      "defaultPath": "/header-nbe",
+      "defaultPath": "header-nbe",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/header-nbe/snapshot.png",
-      "tags": ["General"],
-      "name": "header-nbe HeaderNbe",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "header-nbe",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "alert-nbe AlertNbe",
-      "value": "Alert-Nbe",
-      "key": "Alert-Nbe",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/alert-nbe",
+      "title": "identity-verification",
+      "value": "identity-verification",
+      "key": "identity-verification",
+      "description": "Pro block identity-verification",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/identity-verification",
       "type": "block",
-      "path": "alert-nbe",
+      "path": "identity-verification",
       "isPage": false,
-      "defaultPath": "/alert-nbe",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/alert-nbe/snapshot.png",
-      "tags": ["block"],
-      "name": "alert-nbe AlertNbe",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "identity-verification",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/identity-verification/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "identity-verification",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "card-total-request CardTotalRequest",
-      "value": "CardTotalRequest",
-      "key": "CardTotalRequest",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/card-total-request",
+      "title": "layout-widget",
+      "value": "layout-widget",
+      "key": "layout-widget",
+      "description": "Layout widget container",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/layout-widget",
       "type": "block",
-      "path": "card-total-request",
+      "path": "layout-widget",
       "isPage": false,
-      "defaultPath": "/card-total-request",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-total-request/snapshot.png",
-      "tags": ["block"],
-      "name": "card-total-request CardTotalRequest",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "layout-widget",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/layout-widget/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "layout-widget",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "card-data CardData",
-      "value": "CardData",
-      "key": "CardData",
+      "title": "lineal-grafic",
+      "value": "lineal-grafic",
+      "key": "lineal-grafic",
       "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/card-data",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/lineal-grafic",
       "type": "block",
-      "path": "card-data",
+      "path": "lineal-grafic",
       "isPage": false,
-      "defaultPath": "/card-data",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/card-data/snapshot.png",
-      "tags": ["block"],
-      "name": "card-data CardData",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "lineal-grafic",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/lineal-grafic/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "lineal-grafic",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "grafic-cash-nbe GraficCashNbe",
-      "value": "GraficCash-Nbe",
-      "key": "GraficCash-Nbe",
+      "title": "modal-block",
+      "value": "modal-block",
+      "key": "modal-block",
       "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/grafic-cash-nbe",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/modal-block",
       "type": "block",
-      "path": "grafic-cash-nbe",
+      "path": "modal-block",
       "isPage": false,
-      "defaultPath": "/grafic-cash-nbe",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/grafic-cash-nbe/snapshot.png",
-      "tags": ["block"],
-      "name": "grafic-cash-nbe GraficCashNbe",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "modal-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/modal-block/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "modal-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "pie-graph PieGraph",
-      "value": "pie-graph-Nbe",
-      "key": "pie-graph-Nbe",
+      "title": "modal-drawer-options",
+      "value": "modal-drawer-options",
+      "key": "modal-drawer-options",
+      "description": "block with modal and drawer",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/modal-drawer-options",
+      "type": "block",
+      "path": "modal-drawer-options",
+      "isPage": false,
+      "defaultPath": "modal-drawer-options",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/modal-drawer-options/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "modal-drawer-options",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "paperless",
+      "value": "paperless",
+      "key": "paperless",
+      "description": "Pro-block for paperless in the account opening flow",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/paperless",
+      "type": "block",
+      "path": "paperless",
+      "isPage": false,
+      "defaultPath": "paperless",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/paperless/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "paperless",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "parameter-configuration",
+      "value": "parameter-configuration",
+      "key": "parameter-configuration",
+      "description": "Parameter configuration Pro Block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/parameter-configuration",
+      "type": "block",
+      "path": "parameter-configuration",
+      "isPage": false,
+      "defaultPath": "parameter-configuration",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/parameter-configuration/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "parameter-configuration",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "personal-data",
+      "value": "personal-data",
+      "key": "personal-data",
+      "description": "personal-data",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/personal-data",
+      "type": "block",
+      "path": "personal-data",
+      "isPage": false,
+      "defaultPath": "personal-data",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/personal-data/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "personal-data",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "pie-graph",
+      "value": "pie-graph",
+      "key": "pie-graph",
       "description": "",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/pie-graph",
       "type": "block",
       "path": "pie-graph",
       "isPage": false,
-      "defaultPath": "/pie-graph",
+      "defaultPath": "pie-graph",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/pie-graph/snapshot.png",
-      "tags": ["block"],
-      "name": "pie-graph PieGraph",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "pie-graph",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "layout-widget LayoutWidget",
-      "value": "LayoutWidget",
-      "key": "LayoutWidget",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/layout-widget",
+      "title": "register-otp",
+      "value": "register-otp",
+      "key": "register-otp",
+      "description": "Pro block register otp",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/register-otp",
       "type": "block",
-      "path": "layout-widget",
+      "path": "register-otp",
       "isPage": false,
-      "defaultPath": "/layout-widget",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/layout-widget/snapshot.png",
-      "tags": ["block"],
-      "name": "layout-widget LayoutWidget",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "register-otp",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/register-otp/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "register-otp",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "row-details RowDetails",
-      "value": "RowDetails",
-      "key": "RowDetails",
+      "title": "request-by-stages",
+      "value": "request-by-stages",
+      "key": "request-by-stages",
+      "description": "Request by Stages pro block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/request-by-stages",
+      "type": "block",
+      "path": "request-by-stages",
+      "isPage": false,
+      "defaultPath": "request-by-stages",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/request-by-stages/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "request-by-stages",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "retry-block",
+      "value": "retry-block",
+      "key": "retry-block",
+      "description": "",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/retry-block",
+      "type": "block",
+      "path": "retry-block",
+      "isPage": false,
+      "defaultPath": "retry-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/retry-block/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "retry-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
+      "title": "row-details",
+      "value": "row-details",
+      "key": "row-details",
       "description": "",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/row-details",
       "type": "block",
       "path": "row-details",
       "isPage": false,
-      "defaultPath": "/row-details",
+      "defaultPath": "row-details",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/row-details/snapshot.png",
-      "tags": ["block"],
-      "name": "row-details RowDetails",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "row-details",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "video-conference VideoConference",
-      "value": "VideoConference",
-      "key": "VideoConference",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/video-conference",
+      "title": "splash-screen",
+      "value": "splash-screen",
+      "key": "splash-screen",
+      "description": "Pro-block for splash screen",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/splash-screen",
       "type": "block",
-      "path": "video-conference",
+      "path": "splash-screen",
       "isPage": false,
-      "defaultPath": "/video-conference",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/video-conference/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "video-conference VideoConference",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "splash-screen",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/splash-screen/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "splash-screen",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "personal-data PersonalData",
-      "value": "PersonalData",
-      "key": "PersonalData",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/personal-data",
+      "title": "total-request",
+      "value": "total-request",
+      "key": "total-request",
+      "description": "Total Request Card ",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/total-request",
       "type": "block",
-      "path": "personal-data",
+      "path": "total-request",
       "isPage": false,
-      "defaultPath": "/personal-data",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/personal-data/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "personal-data PersonalData",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "total-request",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/total-request/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "total-request",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "paperless Paperless",
-      "value": "Paperless",
-      "key": "Paperless",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/paperless",
+      "title": "update-address",
+      "value": "update-address",
+      "key": "update-address",
+      "description": "Rao-update-address",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/update-address",
       "type": "block",
-      "path": "paperless",
+      "path": "update-address",
       "isPage": false,
-      "defaultPath": "/paperless",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/paperless/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "paperless Paperless",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "update-address",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/update-address/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "update-address",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "account-screen AccountScreen",
-      "value": "AccountScreen",
-      "key": "AccountScreen",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/account-screen",
-      "type": "block",
-      "path": "account-screen",
-      "isPage": false,
-      "defaultPath": "/account-screen",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-screen/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "account-screen AccountScreen",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "modal-drawer-options ModalDrawerOptions",
-      "value": "ModalDrawerOptions",
-      "key": "ModalDrawerOptions",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/modal-drawer-options",
-      "type": "block",
-      "path": "modal-drawer-options",
-      "isPage": false,
-      "defaultPath": "/modal-drawer-options",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/modal-drawer-options/snapshot.png",
-      "tags": ["block"],
-      "name": "modal-drawer-options ModalDrawerOptions",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "account-activity AccountActivity",
-      "value": "AccountActivity",
-      "key": "AccountActivity",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/account-activity",
-      "type": "block",
-      "path": "account-activity",
-      "isPage": false,
-      "defaultPath": "/account-activity",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/account-activity/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "account-activity AccountActivity",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "register-otp RegisterOtp",
-      "value": "RegisterOtp",
-      "key": "RegisterOtp",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/register-otp",
-      "type": "block",
-      "path": "register-otp",
-      "isPage": false,
-      "defaultPath": "/register-otp",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/register-otp/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "register-otp RegisterOtp",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "upload-files-pro-block UploadFiles",
-      "value": "UploadFiles",
-      "key": "UploadFiles",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/upload-files-pro-block",
-      "type": "block",
-      "path": "upload-files-pro-block",
-      "isPage": false,
-      "defaultPath": "/upload-files-pro-block",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/upload-files-pro-block/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "upload-files-pro-block UploadFiles",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "upload-files-block UploadBlock",
-      "value": "UploadBlock",
-      "key": "UploadBlock",
+      "title": "upload-files-block",
+      "value": "upload-files-block",
+      "key": "upload-files-block",
       "description": "",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/upload-files-block",
       "type": "block",
       "path": "upload-files-block",
       "isPage": false,
-      "defaultPath": "/upload-files-block",
+      "defaultPath": "upload-files-block",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/upload-files-block/snapshot.png",
-      "tags": ["block"],
-      "name": "upload-files-block UploadBlock",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "upload-files-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "splash-screen SplashScreen",
-      "value": "SplashScreen",
-      "key": "SplashScreen",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/splash-screen",
+      "title": "upload-files-pro-block",
+      "value": "upload-files-pro-block",
+      "key": "upload-files-pro-block",
+      "description": "Upload Files Pro block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/upload-files-pro-block",
       "type": "block",
-      "path": "splash-screen",
+      "path": "upload-files-pro-block",
       "isPage": false,
-      "defaultPath": "/splash-screen",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/splash-screen/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "splash-screen SplashScreen",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "upload-files-pro-block",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/upload-files-pro-block/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "upload-files-pro-block",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "identity-verification IdentityVerification",
-      "value": "IdentityVerification",
-      "key": "IdentityVerification",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/identity-verification",
-      "type": "block",
-      "path": "identity-verification",
-      "isPage": false,
-      "defaultPath": "/identity-verification",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/identity-verification/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "identity-verification IdentityVerification",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "total-request TotalRequest",
-      "value": "TotalRequest",
-      "key": "TotalRequest",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/total-request",
-      "type": "block",
-      "path": "total-request",
-      "isPage": false,
-      "defaultPath": "/total-request",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/total-request/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "total-request TotalRequest",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "used-devices UsedDevices",
-      "value": "UsedDevices",
-      "key": "UsedDevices",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/used-devices",
-      "type": "block",
-      "path": "used-devices",
-      "isPage": false,
-      "defaultPath": "/used-devices",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/used-devices/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "used-devices UsedDevices",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },    
-    {
-      "title": "request-by-stages RequestByStages",
-      "value": "RequestByStages",
-      "key": "RequestByStages",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/request-by-stages",
-      "type": "block",
-      "path": "request-by-stages",
-      "isPage": false,
-      "defaultPath": "/request-by-stages",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/request-by-stages/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "request-by-stages RequestByStages",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
-    },
-    {
-      "title": "used-channels UsedChannels",
-      "value": "UsedChannels",
-      "key": "UsedChannels",
-      "description": "",
+      "title": "used-channels",
+      "value": "used-channels",
+      "key": "used-channels",
+      "description": "Pro-block to show used channels",
       "url": "https://github.com/machinaai/nova-blocks/tree/master/used-channels",
       "type": "block",
       "path": "used-channels",
       "isPage": false,
-      "defaultPath": "/used-channels",
+      "defaultPath": "used-channels",
       "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/used-channels/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "used-channels UsedChannels",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "tags": [
+        "blocks"
+      ],
+      "name": "used-channels",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "console-real-time-table consoleRealTimeTable",
-      "value": "consoleRealTimeTable",
-      "key": "consoleRealTimeTable",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/console-real-time-table",
+      "title": "used-devices",
+      "value": "used-devices",
+      "key": "used-devices",
+      "description": "Block for used devices in administration console",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/used-devices",
       "type": "block",
-      "path": "console-real-time-table",
+      "path": "used-devices",
       "isPage": false,
-      "defaultPath": "/console-real-time-table",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/console-real-time-table/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "console-real-time-table consoleRealTimeTable",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "used-devices",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/used-devices/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "used-devices",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     },
     {
-      "title": "console-client-details consoleClientDetails",
-      "value": "consoleClientDetails",
-      "key": "consoleClientDetails",
-      "description": "",
-      "url": "https://github.com/machinaai/nova-blocks/tree/master/console-client-details",
+      "title": "video-conference",
+      "value": "video-conference",
+      "key": "video-conference",
+      "description": "Pro block video conference with janus",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/video-conference",
       "type": "block",
-      "path": "console-client-details",
+      "path": "video-conference",
       "isPage": false,
-      "defaultPath": "/console-client-details",
-      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/console-client-details/snapshot.png",
-      "tags": ["pro-block"],
-      "name": "console-client-details consoleClientDetails",
-      "previewUrl": "https://ant.design/components/button-cn/#components-button-demo-block",
-      "features": ["antd"]
+      "defaultPath": "video-conference",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/video-conference/snapshot.png",
+      "tags": [
+        "blocks"
+      ],
+      "name": "video-conference",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
     }
   ]
 }
