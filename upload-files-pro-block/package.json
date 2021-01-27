@@ -1,5 +1,5 @@
 {
-  "name": "@nova-blocks/upload-files-pro-block",
+  "name": "@nova-pro-blocks/upload-files-pro-block",
   "version": "0.0.1",
   "description": "Upload Files Pro block",
   "publishConfig": {

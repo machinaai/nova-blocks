@@ -1,5 +1,5 @@
 {
-  "name": "@nova-blocks/register-otp",
+  "name": "@nova-pro-blocks/register-otp",
   "version": "0.0.1",
   "description": "Pro block register otp",
   "publishConfig": {
