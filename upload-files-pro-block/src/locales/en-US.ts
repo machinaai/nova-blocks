@@ -1,7 +1,5 @@
 export default {
-    'upload.files.headerTitle': 'INE/IFE',
     'upload.files.firstTitle': 'Upload document',
-    'upload.files.firstSubtitle': 'Please select a photo of your INE / IFE on the front and another on the back, check that your data is clear and legible and does not have light reflections.',
     'upload.files.detailsTitle': 'Recommendations:',
     'upload.files.detailsElement1': 'Check that your data is clear and legible.',
     'upload.files.detailsElement2': 'Avoid reflections of light and shadow.',
@@ -15,4 +13,9 @@ export default {
     'upload.files.adress': 'Upload your proof of address (jpg, png or pdf).',
     'upload.files.upload.btn': 'Upload',
     'upload.files.spin.title': 'Loading...',
+    'upload.files.headerTitle.0': 'INE/IFE',
+    'upload.files.firstSubtitle.0': 'Please select a photo of your INE / IFE on the front and another on the back, check that your data is clear and legible and does not have light reflections.',
+    'upload.files.headerTitle.1': 'Proof of address',
+    'upload.files.firstSubtitle.1': 'Select a photo of your proof of address, check that the data is clear and legible and does not have light reflections.',
 }
+

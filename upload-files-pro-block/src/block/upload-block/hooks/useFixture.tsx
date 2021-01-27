@@ -1,22 +1,23 @@
 import React,{Fragment} from 'react'
 import { useIntl } from 'umi';
+import { TypeFlow } from '../enum/emun';
  
-export const useFixture = () => {
+export const useFixture = (typeFlowProp : any) => {
 
     const internationalization = useIntl();
 
     return  {
             UploadFirstView : {
-                firstHeaderTitle: internationalization.formatMessage({ id: `upload.files.headerTitle`}),
+                firstHeaderTitle: typeFlowProp === TypeFlow.INE ? internationalization.formatMessage({ id: `upload.files.headerTitle.0`}) : internationalization.formatMessage({ id: `upload.files.headerTitle.1`}),
                 firstTitle: internationalization.formatMessage({ id: `upload.files.firstTitle`}),
-                firstSubtitle:  internationalization.formatMessage({ id: `upload.files.firstSubtitle`}),
+                firstSubtitle:  typeFlowProp === TypeFlow.INE ? internationalization.formatMessage({ id: `upload.files.firstSubtitle.0`}): internationalization.formatMessage({ id: `upload.files.firstSubtitle.1`}),
                 detailsTitle:  internationalization.formatMessage({ id: `upload.files.detailsTitle`}),
                 detailsElement1:  internationalization.formatMessage({ id: `upload.files.detailsElement1`}),
                 detailsElement2:  internationalization.formatMessage({ id: `upload.files.detailsElement2`}),
                 bntUploadTitle :  internationalization.formatMessage({ id: `upload.files.bntUploadTitle`}),
             },
             UploadSecondView : {
-                secondHeaderTitle: internationalization.formatMessage({ id: `upload.files.headerTitle`}),
+                secondHeaderTitle: typeFlowProp === TypeFlow.INE ? internationalization.formatMessage({ id: `upload.files.headerTitle.0`}) : internationalization.formatMessage({ id: `upload.files.headerTitle.1`}),
                 secondTitle: internationalization.formatMessage({ id: `upload.files.secondTitle`}),
                 secondSubtitle: internationalization.formatMessage({ id: `upload.files.secondSubtitle`}),
                 bntNextTitle : internationalization.formatMessage({ id: `upload.files.bntNextTitle`}),
