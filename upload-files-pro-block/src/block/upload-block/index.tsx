@@ -22,7 +22,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
   /**
    * Variable to instantiate useFixture Hook
   */
-  let objFixture = useFixture()
+  let objFixture = useFixture(typeFlowProp)
  
 
   let firstView = objFixture.UploadFirstView;

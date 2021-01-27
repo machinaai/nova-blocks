@@ -5,7 +5,7 @@
 import { TypeFlow } from '../block/upload-block/enum/emun';
 
 export const UploadFixture = {
-    typeFlow: TypeFlow.INE,
+    typeFlow: 1,
     phoneNumber: '5575982301',
   };
   
