@@ -16,6 +16,7 @@ const ConsoleUsedDevices: React.FC<ConsoleUsedDevicesProps> = ({
     usedDevices,
     dateRequest,
     imageCard = dataFixture.imageCard,
+    percentage,
     error
 }) => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ const ConsoleUsedDevices: React.FC<ConsoleUsedDevicesProps> = ({
     titles: informationObjet,
     imageCard,
     fontFam,
+    percentage,
     optionInfo: {
       tooltipTitle: intl.formatMessage({ id: 'usedDevices.titleTooltip' }),
       icon: <InfoCircleOutlined style={{ fontSize: '16px' }} />,

@@ -6,6 +6,7 @@ export interface PropsDataReq {
   imageCard?: string,
   optionInfo?: OptionInfo,
   options?: ItemOptions[],
+  percentage?: boolean,
 }
 interface ItemOptions {
   valOp?: string | number | unknown,

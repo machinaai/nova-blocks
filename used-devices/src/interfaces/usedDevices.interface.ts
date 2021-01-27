@@ -9,6 +9,7 @@ export interface ConsoleUsedDevicesProps {
   legends?: LegendsCard,
   enviromentEndPoints?: string;
   imageCard?: string
+  percentage?: boolean;
 }
 
 export interface LegendsCard {

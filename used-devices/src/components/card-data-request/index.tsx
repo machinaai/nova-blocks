@@ -10,6 +10,7 @@ const DataRequestBlock: React.FC<PropsDataReq> = ({
   imageCard,
   optionInfo,
   options,
+  percentage
 }) => {
 
   return (
@@ -28,7 +29,7 @@ const DataRequestBlock: React.FC<PropsDataReq> = ({
             {options?.map((op: any) => (
               <div className={styles.options} key={op.nameOp}>
                 <p className={styles.valOption} style={{ fontFamily: fontFam?.fontValOp }}>
-                  {op.valOp}
+                  {op.valOp}{percentage ? '%' : ''}
                 </p>
                 <p className={styles.nameOption} style={{ fontFamily: fontFam?.fontNameOp }}>{op.nameOp}</p>
               </div>
