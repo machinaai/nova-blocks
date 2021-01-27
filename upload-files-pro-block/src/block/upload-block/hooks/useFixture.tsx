@@ -2,7 +2,7 @@ import React,{Fragment} from 'react'
 import { useIntl } from 'umi';
 import { TypeFlow } from '../enum/emun';
  
-export const useFixture = (typeFlowProp : any) => {
+export const useFixture = (typeFlowProp : TypeFlow) => {
 
     const internationalization = useIntl();
 
