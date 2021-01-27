@@ -4,7 +4,7 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import { StateModelDevices } from './models/model';
 import { dataFixture } from './fixture/data.fixture';
 import DataRequestBlock from './components/card-data-request';
-import { Fonts, PropsDataReq } from './interfaces/dataReq.interface';
+import { PropsDataReq } from './interfaces/dataReq.interface';
 import {ConsoleUsedDevicesProps} from  './interfaces/usedDevices.interface';
 import { useFixture } from './hooks/useFixture';
 

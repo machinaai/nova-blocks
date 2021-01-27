@@ -1,4 +1,5 @@
-
+import { StateModelDevices } from '../models/model';
+import { Fonts } from './dataReq.interface';
 export interface ConsoleUsedDevicesProps {
   fontFam?: Fonts,
   actionOpInfo?: Function,
