@@ -11,7 +11,7 @@ export const getPercentage = (data: any) => {
         {
           type: property,
           value: Number(((100 * data[property]) / totalDev).toFixed(2)),
-          percent: Number(((100 * data[property]) / totalDev).toFixed(2))/100,
+          percent: Number(((100 * data[property]) / totalDev).toFixed(2)),
         },
       ];
     }
