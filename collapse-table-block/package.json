@@ -1,5 +1,5 @@
 {
-  "name": "@nova-blocks/collapse-table-block",
+  "name": "@nova-pro-blocks/collapse-table-block",
   "version": "0.0.1",
   "description": "block to show data in collapse element",
   "main": "src/index.js",
