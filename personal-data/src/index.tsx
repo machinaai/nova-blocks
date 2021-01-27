@@ -194,7 +194,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                     maxLength={60}
                     onPasteDisabled
                     onCopyDisabled
-                    onPattern="[A-Z0-9]*"
+                    onPattern="[\sA-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ.,]*"
                     onlyLetters
                   />
                 </Form.Item>
