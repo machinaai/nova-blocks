@@ -41,7 +41,7 @@ const CarouselBlock: React.FC<PropsCarousel> = (props = dataFixture) => {
           redirect && redirect(true);
         }}
       >
-        {intl.formatMessage({ id: "carousel.sign_up" })}
+        {intl.formatMessage({ id: "carousel.signUp" })}
       </Button>
     </div>
   ) : (
