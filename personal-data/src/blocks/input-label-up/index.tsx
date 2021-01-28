@@ -27,7 +27,7 @@ const InputAuto: React.FC<InputProps> = (props) => {
     onlyNumbersAndLetters,
     ...restProps
   } = props;
-  const [LabelState, setLabelState] = useState(false);
+  const [LabelState, setLabelState] = useState(true);
   const [ValueState, setValue] = useState('');
   const size = useWindowSize();
   const internationalization = useIntl();
@@ -78,7 +78,7 @@ const InputAuto: React.FC<InputProps> = (props) => {
     }
 
     if (value === '') {
-      setLabelState(false);
+      setLabelState(true);
     }
     if (value.length > 0) {
       setLabelState(true);
@@ -151,6 +151,7 @@ const InputAuto: React.FC<InputProps> = (props) => {
           onCopy={disableCopyPaste}
           onInput={eventsInputs}
           {...restProps}
+          placeholder={''}
           value={ValueState}
           pattern={onPattern}
         />
