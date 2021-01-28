@@ -132,6 +132,10 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
         type: 'requestModel/setStatus',
         payload: undefined,
       });
+      dispatch({
+        type: 'requestModel/setDataUpload',
+        payload: {},
+      });
     }
   }, []);
 
