@@ -11,10 +11,10 @@
     "start": "umi dev"
   },
   "dependencies": {
-    "react": "^16.12.0",
-    "@ant-design/icons": "^4.0.0",
-    "umi-request": "^1.0.0",
-    "antd": "^4.7.2"
+    "react": ">=16.12.0",
+    "@ant-design/icons": "=>4.0.0",
+    "umi-request": ">=1.0.0",
+    "antd": ">=4.7.2"
   },
   "peerDependencies": {
     "@ant-design/pro-layout": "^4.5.5"
