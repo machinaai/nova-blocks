@@ -32,8 +32,6 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
     const dateFormat = 'DD/MM/YYYY';
     const stepsDetails = dataDetails?.stepsComplete;
 
-    const [curp, setCurp] = useState('');
-    const [ine, setIne] = useState('');
     const [birthDate, setBirthDate] = useState('01/01/1990');
     const [birt, setBirt] = useState(regExp.test(birthDate) ? moment(birthDate, 'DD/MM/YYYY') : undefined);
 
@@ -41,10 +39,6 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
         setBirthDate(moment(dataDetails?.birthDate).format(dateFormat));
     }, [dataDetails?.birthDate]);
 
-    useEffect(() => {
-        setCurp(dataDetails?.curp,);
-        setIne(dataDetails?.identificationNumber);        
-    }, [dataDetails]);
 
     useEffect(()=>{
         setBirt(regExp.test(birthDate) ? moment(birthDate, 'DD/MM/YYYY') : undefined)
@@ -59,8 +53,8 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
         mothername: dataDetails?.mLastName,
         gender: dataDetails?.gender,
         nacionality: 'Mexicana',
-        curp,
-        ine,
+        curp: dataDetails?.curp,
+        ine: dataDetails?.identificationNumber,
         street: dataDetails?.street,
         numberstreet: dataDetails?.externalNumber,
         suburb: dataDetails?.nieghborhood,
@@ -70,17 +64,6 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
         birthday: birt
     }
     const { imagesDocs, videoDocs, audioDocs } = getCleanDocuments(dataDetails?.documents);
-    /**
-     * Function to change the curp value to upper case.
-     * @param e event with curp value
-     */
-    const changeCapitalCurp = (e: any) => setCurp(e.target.value.toUpperCase());
-
-    /**
-     * Function to change the ine value to upper case.
-     * @param e event with ine value
-     */
-    const changeCapitalIne = (e: any) => setIne(e.target.value.toUpperCase());
 
     /**
      * Function to get form values.
@@ -121,6 +104,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -132,6 +116,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -143,6 +128,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                 ],
@@ -156,6 +142,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -181,6 +168,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -189,7 +177,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`}
                             maxLength={18}
-                            onChange={changeCapitalCurp}
+                            className={styles.inputUpperCase}
                         />
                     },
                     {
@@ -201,7 +189,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
                             onKeyPress={onlyLettersAndNumbers}
-                            onChange={changeCapitalIne}
+                            className={styles.inputUpperCase}
                         />
                     },
                 ]
@@ -220,6 +208,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
                             onKeyPress={onlyLettersAndNumbers}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -231,6 +220,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -242,6 +232,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLettersAndNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -253,6 +244,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                 ],
@@ -266,6 +258,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -277,6 +270,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                 ]
