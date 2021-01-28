@@ -188,7 +188,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`,
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`}
-                            maxLength={100}
+                            maxLength={18}
                             onChange={changeCapitalCurp}
                         />
                     },
@@ -197,7 +197,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field8' })} INE/IFE:`,
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field8' })} INE/IFE:`}
-                            maxLength={100}
+                            maxLength={18}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
                             onKeyPress={onlyLettersAndNumbers}
@@ -262,7 +262,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field13' })}:`,
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field13' })}:`}
-                            maxLength={100}
+                            maxLength={5}
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
