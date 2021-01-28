@@ -25,7 +25,7 @@ interface Model {
 }
 
 const Model: Model = {
-  namespace: 'Active_Customer',
+  namespace: 'activeCustomer',
   state: {},
   effects: {
     *getActiveCustomers({ payload }:any, { call, put }:any) {
