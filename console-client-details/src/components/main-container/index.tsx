@@ -1,4 +1,4 @@
-import { Button, Col, DatePicker, Input, Row, Form } from 'antd';
+import { Button, Col, DatePicker, Input, Row, Form, Skeleton } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { Link, useIntl } from 'umi';
 import moment from 'moment';
@@ -32,77 +32,47 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
     const dateFormat = 'DD/MM/YYYY';
     const stepsDetails = dataDetails?.stepsComplete;
 
-    const [curp, setCurp] = useState('');
-    const [ine, setIne] = useState('');
-    const [birthDate, setBirthDate] = useState('01/01/1990');
-    const [birt, setBirt] = useState(regExp.test(birthDate) ? moment(birthDate, 'DD/MM/YYYY') : undefined);
-
-    useEffect(() => {
-        setBirthDate(moment(dataDetails?.birthDate).format(dateFormat));
-    }, [dataDetails?.birthDate]);
-
-    useEffect(() => {
-        setCurp(dataDetails?.curp,);
-        setIne(dataDetails?.identificationNumber);        
-    }, [dataDetails]);
-
-    useEffect(()=>{
-        setBirt(regExp.test(birthDate) ? moment(birthDate, 'DD/MM/YYYY') : undefined)
-    },[birthDate]);
+    const [birt, setBirt] = useState<any>(undefined);
+    const birthDate = moment(dataDetails?.birthDate).format(dateFormat);
+    const [load, setLoad] = useState(false);
 
     /**
      * Values to set in the form about the data received.
      */
-    const setDataFixture = {
-        username: dataDetails?.userName,
-        lastname: dataDetails?.userLastName,
-        mothername: dataDetails?.mLastName,
-        gender: dataDetails?.gender,
-        nacionality: 'Mexicana',
-        curp,
-        ine,
-        street: dataDetails?.street,
-        numberstreet: dataDetails?.externalNumber,
-        suburb: dataDetails?.nieghborhood,
-        townhall: dataDetails?.municipaly,
-        cp: dataDetails?.postalCode,
-        city: dataDetails?.state,
-        birthday: birt
-    }
-    const { imagesDocs, videoDocs, audioDocs } = getCleanDocuments(dataDetails?.documents);
-    /**
-     * Function to change the curp value to upper case.
-     * @param e event with curp value
-     */
-    const changeCapitalCurp = (e: any) => setCurp(e.target.value.toUpperCase());
+    useEffect(() => {
+        form.setFieldsValue({
+            username: dataDetails?.userName,
+            lastname: dataDetails?.userLastName,
+            mothername: dataDetails?.mLastName,
+            gender: dataDetails?.gender,
+            nacionality: 'Mexicana',
+            curp: dataDetails?.curp,
+            ine: dataDetails?.identificationNumber,
+            street: dataDetails?.street,
+            numberstreet: dataDetails?.externalNumber,
+            suburb: dataDetails?.nieghborhood,
+            townhall: dataDetails?.municipaly,
+            cp: dataDetails?.postalCode,
+            city: dataDetails?.state,
+            birthday: moment(dataDetails.birthDate ? dataDetails.birthDate : '01/01/1990', dateFormat)
+        })
+        setBirt(moment(dataDetails.birthDate ? birthDate : '01/01/1990'));
+    }, [dataDetails]);
 
-    /**
-     * Function to change the ine value to upper case.
-     * @param e event with ine value
-     */
-    const changeCapitalIne = (e: any) => setIne(e.target.value.toUpperCase());
+    const { imagesDocs, videoDocs, audioDocs } = getCleanDocuments(dataDetails?.documents);
 
     /**
      * Function to get form values.
      */
     const getDataForm = () => {
-        setDataForm(form.getFieldsValue());
+        setDataForm({ ...form.getFieldsValue(), birthday: birt });
+        setLoad(true);
     }
-
-    /**
- * Function to set data in the form.
- */
-    const setDataInForm = () => {
-        form.setFieldsValue(setDataFixture)
-    }
-
-    useEffect(() => {
-        setDataInForm();
-    }, [setDataFixture]);
 
     const handlePickerChange = (e: any) => {
         setBirt(e);
     }
+
 
     /**
      * Definition of fields for the form.
@@ -121,6 +91,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -132,6 +103,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -143,6 +115,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                 ],
@@ -156,6 +129,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -163,9 +137,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,
                         element:
                             <>
-                                <DatePicker
+                                 <DatePicker
                                     format='DD/MM/YYYY'
-                                    value={birt}
+                                    value={moment(dataDetails.birthDate ? birt : '01/01/1990', dateFormat)}
                                     onChange={handlePickerChange}
                                     defaultPickerValue={regExp.test(birthDate) ? birt : moment('01/01/1990', 'DD/MM/YYYY')}
                                     inputReadOnly
@@ -181,6 +155,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -188,8 +163,8 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`,
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field7' })}:`}
-                            maxLength={100}
-                            onChange={changeCapitalCurp}
+                            maxLength={18}
+                            className={styles.inputUpperCase}
                         />
                     },
                     {
@@ -197,11 +172,11 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field8' })} INE/IFE:`,
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field8' })} INE/IFE:`}
-                            maxLength={100}
+                            maxLength={18}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
                             onKeyPress={onlyLettersAndNumbers}
-                            onChange={changeCapitalIne}
+                            className={styles.inputUpperCase}
                         />
                     },
                 ]
@@ -220,6 +195,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
                             onKeyPress={onlyLettersAndNumbers}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -231,6 +207,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -242,6 +219,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLettersAndNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -253,6 +231,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                 ],
@@ -262,10 +241,11 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field13' })}:`,
                         element: <Input
                             placeholder={`${intl.formatMessage({ id: 'clientDetails.Form-field13' })}:`}
-                            maxLength={100}
+                            maxLength={5}
                             onKeyPress={onlyNumbers}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                     {
@@ -277,6 +257,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             onKeyPress={onlyLetters}
                             onPaste={disableCopyPaste}
                             onCopy={disableCopyPaste}
+                            className={styles.inputCapitalize}
                         />
                     },
                 ]
@@ -355,7 +336,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                 <Row>
                     <Col xs={24} md={15} xl={15} className={styles.container}>
                         <CustomerVideoComponent {...customerVideo} />
-                        <FormBlock {...propsForm} />
+                        {
+                            load ? <Skeleton /> : <FormBlock {...propsForm} />
+                        }
                     </Col>
                     <Col xs={24} md={8} xl={8}>
                         <div className={styles.stepsCont}>
@@ -388,7 +371,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
             <Col span={24}>
                 <Row>
                     <Col xs={24} xl={15} className={styles.container}>
-                        <FormBlock {...propsForm} />
+                    {
+                            load ? <Skeleton /> : <FormBlock {...propsForm} />
+                    }
                     </Col>
                     <Col xs={24} xl={8}>
                         <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'clientDetails.Form-btn' })}</Button>
