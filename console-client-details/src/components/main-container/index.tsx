@@ -337,7 +337,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                     <Col xs={24} md={15} xl={15} className={styles.container}>
                         <CustomerVideoComponent {...customerVideo} />
                         {
-                            load ? <Skeleton /> : <FormBlock {...propsForm} />
+                            load ? <Skeleton active /> : <FormBlock {...propsForm} />
                         }
                     </Col>
                     <Col xs={24} md={8} xl={8}>
@@ -372,7 +372,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                 <Row>
                     <Col xs={24} xl={15} className={styles.container}>
                     {
-                            load ? <Skeleton /> : <FormBlock {...propsForm} />
+                            load ? <Skeleton active /> : <FormBlock {...propsForm} />
                     }
                     </Col>
                     <Col xs={24} xl={8}>
