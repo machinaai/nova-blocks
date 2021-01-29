@@ -32,56 +32,40 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
     const dateFormat = 'DD/MM/YYYY';
     const stepsDetails = dataDetails?.stepsComplete;
 
-    const [birthDate, setBirthDate] = useState('01/01/1990');
-    const [birt, setBirt] = useState(regExp.test(birthDate) ? moment(birthDate, 'DD/MM/YYYY') : undefined);
-
-    useEffect(() => {
-        setBirthDate(moment(dataDetails?.birthDate).format(dateFormat));
-    }, [dataDetails?.birthDate]);
-
-
-    useEffect(()=>{
-        setBirt(regExp.test(birthDate) ? moment(birthDate, 'DD/MM/YYYY') : undefined)
-    },[birthDate]);
+    const [birt, setBirt] = useState<any>(undefined);
+    const birthDate = moment(dataDetails?.birthDate).format(dateFormat);
 
     /**
      * Values to set in the form about the data received.
      */
-    const setDataFixture = {
-        username: dataDetails?.userName,
-        lastname: dataDetails?.userLastName,
-        mothername: dataDetails?.mLastName,
-        gender: dataDetails?.gender,
-        nacionality: 'Mexicana',
-        curp: dataDetails?.curp,
-        ine: dataDetails?.identificationNumber,
-        street: dataDetails?.street,
-        numberstreet: dataDetails?.externalNumber,
-        suburb: dataDetails?.nieghborhood,
-        townhall: dataDetails?.municipaly,
-        cp: dataDetails?.postalCode,
-        city: dataDetails?.state,
-        birthday: birt
-    }
+    useEffect(() => {
+        form.setFieldsValue({
+            username: dataDetails?.userName,
+            lastname: dataDetails?.userLastName,
+            mothername: dataDetails?.mLastName,
+            gender: dataDetails?.gender,
+            nacionality: 'Mexicana',
+            curp: dataDetails?.curp,
+            ine: dataDetails?.identificationNumber,
+            street: dataDetails?.street,
+            numberstreet: dataDetails?.externalNumber,
+            suburb: dataDetails?.nieghborhood,
+            townhall: dataDetails?.municipaly,
+            cp: dataDetails?.postalCode,
+            city: dataDetails?.state,
+            birthday: moment(dataDetails.birthDate ? dataDetails.birthDate : '01/01/1990', dateFormat)
+        })
+        setBirt(moment(dataDetails.birthDate ? birthDate : '01/01/1990'));
+    }, [dataDetails]);
+
     const { imagesDocs, videoDocs, audioDocs } = getCleanDocuments(dataDetails?.documents);
 
     /**
      * Function to get form values.
      */
     const getDataForm = () => {
-        setDataForm(form.getFieldsValue());
+        setDataForm({ ...form.getFieldsValue(), birthday: birt });
     }
-
-    /**
- * Function to set data in the form.
- */
-    const setDataInForm = () => {
-        form.setFieldsValue(setDataFixture)
-    }
-
-    useEffect(() => {
-        setDataInForm();
-    }, [setDataFixture]);
 
     const handlePickerChange = (e: any) => {
         setBirt(e);
@@ -150,9 +134,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,
                         element:
                             <>
-                                <DatePicker
+                                 <DatePicker
                                     format='DD/MM/YYYY'
-                                    value={birt}
+                                    value={moment(dataDetails.birthDate ? birt : '01/01/1990', dateFormat)}
                                     onChange={handlePickerChange}
                                     defaultPickerValue={regExp.test(birthDate) ? birt : moment('01/01/1990', 'DD/MM/YYYY')}
                                     inputReadOnly
