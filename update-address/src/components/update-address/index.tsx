@@ -12,7 +12,7 @@ interface Props {
     setShowDrawer: Function
 }
 
-export const UpdateAddress: React.FC<Props> = ({
+const UpdateAddress: React.FC<Props> = ({
     fontFamily: font,
     colorBtn,
     actionBtn,
@@ -64,3 +64,4 @@ export const UpdateAddress: React.FC<Props> = ({
         </div>
     )
 }
+export default UpdateAddress;
