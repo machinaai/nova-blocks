@@ -8,10 +8,8 @@ on:
   workflow_dispatch:
 jobs:
   build_umi_ui:
-    name: build umi blocks
     runs-on: ubuntu-latest
     steps:
-      - name: run script
       - uses: actions/setup-node@v2.1.4
       - run: |
           npm ci
