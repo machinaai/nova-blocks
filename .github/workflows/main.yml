@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v2.1.4
       - run: |
-          npm ci
+          npm i
           npm run lint-ui
 
 
