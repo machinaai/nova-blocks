@@ -137,7 +137,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,
                         element:
                             <>
-                                <DatePicker
+                                 <DatePicker
                                     format='DD/MM/YYYY'
                                     value={moment(dataDetails.birthDate ? birt : '01/01/1990', dateFormat)}
                                     onChange={handlePickerChange}
