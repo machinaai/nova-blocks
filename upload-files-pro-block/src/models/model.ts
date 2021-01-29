@@ -1,5 +1,5 @@
 import { Effect, Reducer } from '@@/core/umiExports';
-import { ineFromDataService, ineBackDataService, pdfDataService } from '../service';
+import { uploadFilesServices } from '../service';
 
 export interface StateModel {
   data?: any;
@@ -12,11 +12,7 @@ export interface ModelType {
   namespace: string;
   state: any;
   effects: {
-    // getData: Effect;
-    ineFrontData: Effect;
-    ineBackData: Effect;
-    pdfData: Effect;
-    ine: Effect;
+    uploadFileEffect: Effect;
   };
   reducers: {
     setStatus: Reducer<StateModel>;
@@ -32,27 +28,8 @@ export const Model: ModelType = {
     data: {},
   },
   effects: {
-    *ine({ payload }: any, { call, put }: any) {
-      const responseFront = yield call(ineFromDataService, payload.objectIneFront);
-      const responseBack = yield call(ineBackDataService, payload.objectIneBack);
-
-      const { status: statusFront } = responseFront; //400 -< undefined
-      const { status: statusBack } = responseBack; //200
-
-      if (statusFront) {
-        yield put({ type: 'setStatus', payload: { error: true } });
-      } else if (statusBack) {
-        yield put({ type: 'setStatus', payload: { error: true } });
-      } else {
-        yield put({ type: 'setDataUpload', payload: responseFront });
-        yield put({ type: 'setStatus', payload: { error: false } });
-        yield put({ type: 'setFlowStatus', payload: true });
-        yield put({ type: 'setFlowStatus', payload: false });
-      }
-    },
-
-    *pdfData({ payload }: any, { call, put }: any) {
-      const response = yield call(pdfDataService, payload);
+    *uploadFileEffect({ payload }: any, { call, put }: any) {
+      const response = yield call(uploadFilesServices, payload);
       const { status } = response;
       if (status) {
         yield put({ type: 'setStatus', payload: { error: true } });
