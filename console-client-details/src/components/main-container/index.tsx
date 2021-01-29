@@ -1,4 +1,4 @@
-import { Button, Col, DatePicker, Input, Row, Form } from 'antd';
+import { Button, Col, DatePicker, Input, Row, Form, Skeleton } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { Link, useIntl } from 'umi';
 import moment from 'moment';
@@ -34,6 +34,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
 
     const [birt, setBirt] = useState<any>(undefined);
     const birthDate = moment(dataDetails?.birthDate).format(dateFormat);
+    const [load, setLoad] = useState(false);
 
     /**
      * Values to set in the form about the data received.
@@ -65,11 +66,13 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
      */
     const getDataForm = () => {
         setDataForm({ ...form.getFieldsValue(), birthday: birt });
+        setLoad(true);
     }
 
     const handlePickerChange = (e: any) => {
         setBirt(e);
     }
+
 
     /**
      * Definition of fields for the form.
@@ -134,7 +137,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,
                         element:
                             <>
-                                 <DatePicker
+                                <DatePicker
                                     format='DD/MM/YYYY'
                                     value={moment(dataDetails.birthDate ? birt : '01/01/1990', dateFormat)}
                                     onChange={handlePickerChange}
@@ -333,7 +336,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                 <Row>
                     <Col xs={24} md={15} xl={15} className={styles.container}>
                         <CustomerVideoComponent {...customerVideo} />
-                        <FormBlock {...propsForm} />
+                        {
+                            load ? <Skeleton /> : <FormBlock {...propsForm} />
+                        }
                     </Col>
                     <Col xs={24} md={8} xl={8}>
                         <div className={styles.stepsCont}>
@@ -366,7 +371,9 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
             <Col span={24}>
                 <Row>
                     <Col xs={24} xl={15} className={styles.container}>
-                        <FormBlock {...propsForm} />
+                    {
+                            load ? <Skeleton /> : <FormBlock {...propsForm} />
+                    }
                     </Col>
                     <Col xs={24} xl={8}>
                         <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'clientDetails.Form-btn' })}</Button>
