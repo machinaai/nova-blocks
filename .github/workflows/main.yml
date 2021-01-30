@@ -12,8 +12,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v2.1.4
       - run: |
-          ls
-          npm i
+          npm install --ignore-scripts
           npm run lint-ui
 
 
