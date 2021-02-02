@@ -22,7 +22,7 @@ import { StagesN4Enum } from './enums/stages.enum';
 import { useWebSockets } from './hooks/useWebSockets';
 import { FlowEnum } from './enums/flow.enum';
 
-type PAGE_NAME_UPPER_CAMEL_CASEProps = {
+type VideoConferenceProps = {
   streams: StateModel['streams'];
   current: StateModel['currentStage'];
   otpUser: StateModel['otpUser'];
@@ -66,7 +66,7 @@ const chooseFlow = (type: FlowEnum) => {
  * }
  * 
  */
-const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
+const VideoConference: React.FC<VideoConferenceProps> = ({
   streams,
   current,
   otpUser,
@@ -91,7 +91,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
     useEffect(() => {
       if (phoneUser) {
         dispatch({
-          type: 'BLOCK_NAME_CAMEL_CASE/setStreams',
+          type: 'videoConference/setStreams',
           payload: phoneUser,
         });
       }
@@ -125,9 +125,9 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   );
 };
 
-export default connect(({ BLOCK_NAME_CAMEL_CASE }: { BLOCK_NAME_CAMEL_CASE: StateModel }) => ({
-  streams: BLOCK_NAME_CAMEL_CASE.streams,
-  current: BLOCK_NAME_CAMEL_CASE.currentStage,
-  otpUser: BLOCK_NAME_CAMEL_CASE.otpUser,
-  dataUser: BLOCK_NAME_CAMEL_CASE.dataUser,
-}))(PAGE_NAME_UPPER_CAMEL_CASE);
+export default connect(({ videoConference }: { videoConference: StateModel }) => ({
+  streams: videoConference.streams,
+  current: videoConference.currentStage,
+  otpUser: videoConference.otpUser,
+  dataUser: videoConference.dataUser,
+}))(VideoConference);
