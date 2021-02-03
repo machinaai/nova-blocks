@@ -9,7 +9,7 @@ import { UploadFixture } from './fixtures/fixture';
 import { Alert } from 'antd';
 
 const UploadFiles: React.FC<UploadFilesProps> = ({
-  phoneNumber= UploadFixture.phoneNumber,
+  phoneUser= UploadFixture.phoneUser,
   typeFlowProp = UploadFixture.typeFlow,
   onComplete,
   onSetUserData,
@@ -37,12 +37,12 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
 
  useEffect(() => {
   if(dataIneComponent && dataIneComponent.base64InePdf) {
-    createObjFiles({frontImage:'', backImage:'', inePdf:dataIneComponent.base64InePdf,phone: phoneNumber})
+    createObjFiles({frontImage:'', backImage:'', inePdf:dataIneComponent.base64InePdf,phone: phoneUser})
   } else if((dataIneComponent && dataIneComponent.base64IneFront) && (dataIneComponent && dataIneComponent.base64IneBack)) {
     createObjFiles({...objectServiceFiles, 
       frontImage: dataIneComponent.base64IneFront,
       backImage: dataIneComponent.base64IneBack,
-      phone: phoneNumber
+      phone: phoneUser
       }
     )
   } else {
@@ -53,12 +53,12 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
 
   useEffect(() => {
     if(dataAdressComponent && dataAdressComponent.base64ImagePdf) {
-      createObjAdress({imageAdress:'', pdfAdress: dataAdressComponent.base64ImagePdf, phone: phoneNumber,
+      createObjAdress({imageAdress:'', pdfAdress: dataAdressComponent.base64ImagePdf, phone: phoneUser,
      })
     } else if(dataAdressComponent && dataAdressComponent.base64ImageAdress) {
       createObjAdress({pdfAdress:'', 
         imageAdress:dataAdressComponent.base64ImageAdress,
-        phone: phoneNumber
+        phone: phoneUser
       }) 
     } else {
       createObjAdress({imageAdress:'', pdfAdress:'', phone: ''});
