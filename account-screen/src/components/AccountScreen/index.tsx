@@ -111,7 +111,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
           </div>
           <div className={styles.downloadContainer}>
             <p>
-              Descarga nuestra aplicación en:
+            {intl.formatMessage({ id: 'accountScreen.F_title1' })}
             </p>
             <div className={styles.imageContainer}>
               <div className={styles.imageContainerApp}>
@@ -124,7 +124,7 @@ export const AccountScreen: React.FC<PropsAccount> = ({
           </div>
           <div className={styles.bottomWrapper2}>
             <p>
-              Descarga nuestra app en la tienda
+              {intl.formatMessage({ id: 'accountScreen.F_title2' })}
             </p>
             {downStore}
           </div>
