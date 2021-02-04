@@ -1,16 +1,16 @@
 export default {
-  'BLOCK_NAME.Title-Rb-1':'Real time',
-  'BLOCK_NAME.Title-Rb-2':'Pending Documentation',
-  'BLOCK_NAME.Title-Rb-3':'Pending Validation',
-  'BLOCK_NAME.Title-Rb-4':'Pending Adding Beneficiaries',
-  'BLOCK_NAME.Title-close-request':'Próximos A Cerrar Solicitud',
-  'BLOCK_NAME.title-extra-content1':'Send reminders',
-  'BLOCK_NAME.title-extra-content2':'Send promotion',
+  'realTimeTable.Title-Rb-1':'Real time',
+  'realTimeTable.Title-Rb-2':'Pending Documentation',
+  'realTimeTable.Title-Rb-3':'Pending Validation',
+  'realTimeTable.Title-Rb-4':'Pending Adding Beneficiaries',
+  'realTimeTable.Title-close-request':'Próximos A Cerrar Solicitud',
+  'realTimeTable.title-extra-content1':'Send reminders',
+  'realTimeTable.title-extra-content2':'Send promotion',
 
-  'BLOCK_NAME.Table-col1':'Request number',
-  'BLOCK_NAME.Table-col2':'Name',
-  'BLOCK_NAME.Table-col3':'Device',
-  'BLOCK_NAME.Table-col7':'Firm',
-  'BLOCK_NAME.Table-col8':'Beneficiaries',
-  'BLOCK_NAME.Table-col9':'Online'
+  'realTimeTable.Table-col1':'Request number',
+  'realTimeTable.Table-col2':'Name',
+  'realTimeTable.Table-col3':'Device',
+  'realTimeTable.Table-col7':'Firm',
+  'realTimeTable.Table-col8':'Beneficiaries',
+  'realTimeTable.Table-col9':'Online'
 };

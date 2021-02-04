@@ -17,17 +17,17 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
 
     const columnsTable = [
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col1' }),
+            title: intl.formatMessage({ id: 'realTimeTable.Table-col1' }),
             dataIndex: 'idRequest',
             key: 'idRequest',
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col2' }),
+            title: intl.formatMessage({ id: 'realTimeTable.Table-col2' }),
             dataIndex: 'name',
             key: 'name',
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col3' }),
+            title: intl.formatMessage({ id: 'realTimeTable.Table-col3' }),
             dataIndex: 'origin',
             key: 'origin',
         },
@@ -71,7 +71,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
             },
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col7' }),
+            title: intl.formatMessage({ id: 'realTimeTable.Table-col7' }),
             dataIndex: 'statusSign',
             key: 'statusSign',
             className: `${styles.statusBorder}`,
@@ -84,7 +84,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
             },
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col8' }),
+            title: intl.formatMessage({ id: 'realTimeTable.Table-col8' }),
             dataIndex: 'statusBen',
             key: 'statusBen',
             className: `${styles.statusBorder}`,
@@ -97,7 +97,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
             },
         },
         {
-            title: intl.formatMessage({ id: 'BLOCK_NAME.Table-col9' }),
+            title: intl.formatMessage({ id: 'realTimeTable.Table-col9' }),
             dataIndex: 'action',
             key: 'action',
             render: (text: any) => {
@@ -134,17 +134,17 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
     }
 
     if (valueFilter === 'documentation') {
-        const propsTableDoc = getPropsTableTitle('PENDING_DOCUMENTS', 'BLOCK_NAME.Title-Rb-2');
+        const propsTableDoc = getPropsTableTitle('PENDING_DOCUMENTS', 'realTimeTable.Title-Rb-2');
         divContent = <>
             <DataTableBlock {...propsTableDoc}/>
         </>
     } else if (valueFilter === 'validation') {
-        const propsTableVal = getPropsTableTitle('PENDING_VALIDATION', 'BLOCK_NAME.Title-Rb-3');
+        const propsTableVal = getPropsTableTitle('PENDING_VALIDATION', 'realTimeTable.Title-Rb-3');
         divContent = <>
             <DataTableBlock {...propsTableVal}/>
         </>
     } else if (valueFilter === 'benefit') {
-        const propsTableBen = getPropsTableTitle('PENDING_BENEFICIARY', 'BLOCK_NAME.Title-Rb-4');
+        const propsTableBen = getPropsTableTitle('PENDING_BENEFICIARY', 'realTimeTable.Title-Rb-4');
         divContent = <>
             <DataTableBlock {...propsTableBen}/>
         </>
@@ -162,31 +162,31 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
                 }}
                 style={{color:`${extraCont?.color}`}}
             />
-            <p style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'BLOCK_NAME.title-extra-content1' })}</p>
+            <p style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'realTimeTable.title-extra-content1' })}</p>
         </div>
         const propsCollapsedBlock = {
             data: [
                 {
                     key: '1',
-                    title: intl.formatMessage({ id: 'BLOCK_NAME.Title-Rb-2' }),
+                    title: intl.formatMessage({ id: 'realTimeTable.Title-Rb-2' }),
                     content: <DataTableBlock {...propsDoc} />,
                     extraContent
                 },
                 {
                     key: '2',
-                    title: intl.formatMessage({ id: 'BLOCK_NAME.Title-Rb-3' }),
+                    title: intl.formatMessage({ id: 'realTimeTable.Title-Rb-3' }),
                     content: <DataTableBlock {...propsVal} />,
                     extraContent
                 },
                 {
                     key: '3',
-                    title: intl.formatMessage({ id: 'BLOCK_NAME.Title-Rb-4' }),
+                    title: intl.formatMessage({ id: 'realTimeTable.Title-Rb-4' }),
                     content: <DataTableBlock {...propsBenefit} />,
                     extraContent
                 },
                 {
                     key: '4',
-                    title: intl.formatMessage({ id: 'BLOCK_NAME.Title-close-request' }),
+                    title: intl.formatMessage({ id: 'realTimeTable.Title-close-request' }),
                     content: <DataTableBlock {...propsCloseData} />,
                     extraContent: <div className={styles.extraCont}>
                         <BellFilled
@@ -195,12 +195,12 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
                             }}
                             style={{color:`${extraCont?.color}`}}
                         />
-                        <p style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'BLOCK_NAME.title-extra-content2' })}</p>
+                        <p style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'realTimeTable.title-extra-content2' })}</p>
                     </div>
                 },
             ]
         }
-        const propsTable = getPropsTableTitle('REAL_TIME', 'BLOCK_NAME.Title-Rb-1');
+        const propsTable = getPropsTableTitle('REAL_TIME', 'realTimeTable.Title-Rb-1');
         divContent = <>
             <div className={styles.tableBlock}>
                 <DataTableBlock {...propsTable} />
