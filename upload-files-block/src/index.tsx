@@ -90,8 +90,7 @@ const UploadBlock: React.FC<UploadBlockProps> = (
         />
       )}
       <div>
-        { changeview ? 
-        <div className={styles.container}>
+        { changeview ?
           <div className={styles.options}>
             <div>
               <Button className={styles.btnUpload} type="primary" onClick={() => {action && action(); setSpin(true)}}> {secondView.bntNextTitle} </Button>
@@ -104,7 +103,6 @@ const UploadBlock: React.FC<UploadBlockProps> = (
               </Button>
             </div>
           </div>
-        </div>
         : null
       }
       </div>
