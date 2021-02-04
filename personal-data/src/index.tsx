@@ -226,12 +226,13 @@ const PersonalData: React.FC<PersonalDataProps> = ({
               <div className={styles.colum}>
                 <ConfigProvider locale={locale}>
                   <Form.Item name="date" rules={[{ required: true }]}>
+                    <p className={styles.label_date}>{internationalization.formatMessage({
+                        id: 'personaldata.formManually.date',
+                      })}</p>
                     <DatePicker
                       format={dateFormat}
                       picker="date"
-                      placeholder={internationalization.formatMessage({
-                        id: 'personaldata.formManually.date',
-                      })}
+                      placeholder= ''
                       defaultPickerValue={
                         dataSave?.customerData.datebirth || moment('01/01/1990', dateFormat)
                       }
