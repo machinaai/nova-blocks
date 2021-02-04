@@ -15,4 +15,9 @@ export default {
       register_date: null,
     });
   },
+  'POST /services/flowproxyml/api/upload-adress': (req: Request, res: Response) => {
+    res.status(200).send({
+      adress: 'Carretera Pablo, 38, Bilzen,Sáez del Tuy, 7709, México'
+    });
+  },
 };

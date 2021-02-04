@@ -76,11 +76,13 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
         type: 'requestModel/uploadFileEffect',
         payload:objectServiceFiles,
       });
+    } else if (typeFlowProp === TypeFlow.ADDRESS) {
+      dispatch({
+        type: 'requestModel/uploadAdressEffect',
+        payload:objectServiceAdress,
+      });
     }
-    // }else if (typeFlowProp === TypeFlow.Adress {
-    //     console.log('peticiones a adress');
-    //   }
-    // }
+    
   }
   /**
    * Variable to create alert message error

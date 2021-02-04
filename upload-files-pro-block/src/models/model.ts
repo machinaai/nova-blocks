@@ -1,5 +1,5 @@
 import { Effect, Reducer } from '@@/core/umiExports';
-import { uploadFilesServices } from '../service';
+import { uploadFilesServices, uploadAdressServices } from '../service';
 
 export interface StateModel {
   data?: any;
@@ -13,6 +13,7 @@ export interface ModelType {
   state: any;
   effects: {
     uploadFileEffect: Effect;
+    uploadAdressEffect: Effect;
   };
   reducers: {
     setStatus: Reducer<StateModel>;
@@ -30,6 +31,18 @@ export const Model: ModelType = {
   effects: {
     *uploadFileEffect({ payload }: any, { call, put }: any) {
       const response = yield call(uploadFilesServices, payload);
+      const { status } = response;
+      if (status) {
+        yield put({ type: 'setStatus', payload: { error: true } });
+      } else {
+        yield put({ type: 'setStatus', payload: { error: false } });
+        yield put({ type: 'setDataUpload', payload: response });
+        yield put({ type: 'setFlowStatus', payload: true });
+        yield put({ type: 'setFlowStatus', payload: false });
+      }
+    },
+    *uploadAdressEffect({ payload }: any, { call, put }: any) {
+      const response = yield call(uploadAdressServices, payload);
       const { status } = response;
       if (status) {
         yield put({ type: 'setStatus', payload: { error: true } });

@@ -12,3 +12,11 @@ export async function uploadFilesServices(params: any) {
     errorHandler,
   });
 }
+
+export async function uploadAdressServices(params: any) {
+  return request(enviromentEndPoints.adressEndPoint, {
+    method: 'POST',
+    data: params,
+    errorHandler,
+  });
+}
