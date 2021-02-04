@@ -1,27 +1,19 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin-top: 2em;
-  margin-bottom: 1.5em;
-  margin-right: 0;
-  margin-left: 1em;
-
-  @media only screen and (min-width: 768px) {
-    width: 804px;
-    margin-right: 1em;
-    margin-left: 1em;
-  }
-
-  > .options {
+  
+  .options {
     display: flex;
     flex-direction: column;
     align-items: initial;
+    margin-top: 38px;
 
     @media only screen and (min-width: 768px) {
       flex-direction: row;
       align-items: center;
+      margin-top: 2em;
     }
 
     > .again {
@@ -32,6 +24,7 @@
       cursor: pointer;
 
       @media only screen and (min-width: 768px) {
+        margin-top: 0;
         margin-left: 26px;
       }
     }
