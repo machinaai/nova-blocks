@@ -43,14 +43,14 @@
     top: 2em;
     transition: opacity 700ms;
     width: 100%;
-    background-position: 40vw 50px;
+    background-position: 45vw 50px;
     background-size: 70%;
+    overflow-y: hidden;
   }
   .features {
     flex: 0 0 83.333333%;
     margin-top: 70px;
     justify-content: center;
-    // margin-right: 16%;
     margin-left: 13.5%;
   }
   .icoLogo {
@@ -64,7 +64,7 @@
 
   .h1Title {
     display: flex;
-    max-width: 55%;
+    max-width: 40%;
     margin-top: 5%;
     margin-bottom: 0.5rem;
     padding-bottom: 8px;
@@ -79,10 +79,12 @@
     padding-bottom: 14px;
     color: black;
     font-size: 42px;
+    max-width: 35%;
   }
 }
 @media (min-width: 721px) and (max-width: 875px) {
   .withBg {
+    height: 35em;
     background-position: 46vw 50px;
     background-size: 70%;
   }
@@ -100,6 +102,18 @@
     background-repeat: no-repeat;
     background-position: -20px;
     background-size: 100%;
+  }
+  .h1Title {
+    color: black;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 50px;
+    max-width: 45%;
+  }
+
+  .h3Subtitle {
+    color: black;
+    font-size: 30px;
   }
 }
 @media (min-width: 320px) and (max-width: 720px) {
@@ -137,4 +151,3 @@
     color: #fff;
   }
 }
-

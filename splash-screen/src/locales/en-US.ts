@@ -1,9 +1,9 @@
 export default {
-  'splashScreen.val1-h1': 'your account',
+  'splashScreen.val1-h1': 'Your account',
   'splashScreen.val1-h1-br': 'digitally',
-  'splashScreen.val1-h3': 'where and when you',
+  'splashScreen.val1-h3': 'Where and when you',
   'splashScreen.val1-h3-br': 'prefer',
-  'splashScreen.val2-h1': 'in less',
+  'splashScreen.val2-h1': 'En less',
   'splashScreen.val2-h1-br': 'than 5 minutes',
   'splashScreen.val2-h3': 'Forget about paperwork and',
   'splashScreen.val2-h3-br': 'long forms',
@@ -11,6 +11,6 @@ export default {
   'splashScreen.val3-h1-br': 'easy and safe',
   'splashScreen.val3-h3': 'Your account ready to',
   'splashScreen.val3-h3-br': 'use immediately',
-  'carousel.signUp': 'sign up',
-  'carousel.next': 'next',
+  'carousel.signUp': 'Sign up',
+  'carousel.next': 'Next',
 };

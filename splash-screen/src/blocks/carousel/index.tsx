@@ -60,6 +60,7 @@ const CarouselBlock: React.FC<PropsCarousel> = (props = dataFixture) => {
       <Carousel
         ref={carousel}
         touchMove={false}
+        dots={false}
         afterChange={() => {
           onChange(slideNumberBtn);
         }}
