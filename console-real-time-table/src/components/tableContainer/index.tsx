@@ -162,7 +162,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
                 }}
                 style={{color:`${extraCont?.color}`}}
             />
-            <p style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'realTimeTable.title-extra-content1' })}</p>
+            <p className={styles.titleExtraCont} style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'realTimeTable.title-extra-content1' })}</p>
         </div>
         const propsCollapsedBlock = {
             data: [
@@ -195,7 +195,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
                             }}
                             style={{color:`${extraCont?.color}`}}
                         />
-                        <p style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'realTimeTable.title-extra-content2' })}</p>
+                        <p className={styles.titleExtraCont} style={{color:`${extraCont?.color}`,fontFamily:`${extraCont?.fontText}`}}>{intl.formatMessage({ id: 'realTimeTable.title-extra-content2' })}</p>
                     </div>
                 },
             ]
