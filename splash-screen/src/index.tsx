@@ -93,9 +93,9 @@ const Splash: React.FC<SplashProps> = (props) => {
     redirect: onComplete
   };
 
-  if (size.width <= 5000 && size.width >= 876) {
+  if (size.width <= 8000 && size.width >= 670) {
     logoIcon = logo1;
-  } else if (size.width < 875 && size.width > 721) {
+  } else if (size.width < 669 && size.width > 721) {
     logoIcon = logo2;
   } else {
     logoIcon = logo2;
