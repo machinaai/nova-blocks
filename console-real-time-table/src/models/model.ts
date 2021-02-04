@@ -25,7 +25,7 @@ interface Model {
 }
 
 const Model: Model = {
-  namespace: 'Real_Time_Table',
+  namespace: 'realTimeTable',
   state: {},
   effects: {
     *getDataTables({ payload }:any, { call, put }:any) {

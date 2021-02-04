@@ -5,7 +5,7 @@ import { TableContainer } from './components/tableContainer';
 import { ExtraCont } from './interfaces/ProblockProps.interface';
 import { useHistory } from 'react-router';
 
-interface PAGE_NAME_UPPER_CAMEL_CASEProps {
+interface ConsoleRealTimeTableProps {
   valInputSearch?: string,
   valueFilter?: string,
   extraCont?:ExtraCont,
@@ -16,7 +16,7 @@ interface PAGE_NAME_UPPER_CAMEL_CASEProps {
   status?: StateModel['error'];
 }
 
-const ConsoleRealTimeTable: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
+const ConsoleRealTimeTable: React.FC<ConsoleRealTimeTableProps> = ({
   valInputSearch = '',
   valueFilter = 'all',
   routePath,
@@ -31,7 +31,7 @@ const ConsoleRealTimeTable: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
 
   const getActiveCustomers = () => {
     dispatch({
-      type: 'Real_Time_Table/getDataTables',
+      type: 'realTimeTable/getDataTables',
     });
   };
 
@@ -42,7 +42,7 @@ const ConsoleRealTimeTable: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   const setValField = (val: any) => {
     const { idRequest } = val;
     dispatch({
-      type: 'Real_Time_Table/setIdRequestClient',
+      type: 'realTimeTable/setIdRequestClient',
       payload:idRequest
     });
     router.push(`${routePath}?id=${idRequest}`);
@@ -63,9 +63,9 @@ const ConsoleRealTimeTable: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   );
 };
 
-export default connect(({ Real_Time_Table }: { Real_Time_Table: StateModel }) => ({
-  dataTable: Real_Time_Table.dataTable,
-  idRequest: Real_Time_Table.idRequest,
-  status: Real_Time_Table.error,
-  routePath:Real_Time_Table.routePath
+export default connect(({ realTimeTable }: { realTimeTable: StateModel }) => ({
+  dataTable: realTimeTable.dataTable,
+  idRequest: realTimeTable.idRequest,
+  status: realTimeTable.error,
+  routePath:realTimeTable.routePath
 }))(ConsoleRealTimeTable);
