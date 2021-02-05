@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, connect, useIntl } from "umi";
 
 import Title from "./components/contentTitle";
@@ -32,26 +32,43 @@ const RegisterOtp: React.FC<RegisterOtpProps> = ({
 }) => {
   const Internationalization = useIntl();
   const dispatch = useDispatch();
+  const [newData, setNewData] = useState({
+    upTitle: '',
+    title: '',
+    content: ''
+  });
+
+  /**
+   * Function that mask phone number
+   * @param phoneValue 
+   */
+  const maskNumber = (phoneValue: any) => {
+    const phone = phoneValue?.toString();
+    const formatPhone = `${phone?.substring(0, 2)} ${phone?.substring(2, 6)} ${phone?.substring(6, 10)} `.trim();
+    return formatPhone.replace(formatPhone.substring(0, 7), '** ****');
+  }
+
   useEffect(() => {
     if (phoneSave && onSetPhone) {
       onSetPhone(phoneSave);
     }
-  }, [phoneSave]);
-
-  const data = useMemo(
-    () => ({
+    const data = {
       upTitle: Internationalization.formatMessage({
         id: `registerOtp.${step}.upTitle`,
       }),
       title: Internationalization.formatMessage({
         id: `registerOtp.${step}.title`,
       }),
-      content: Internationalization.formatMessage({
+      content: step === 'validate' ? `${Internationalization.formatMessage({
         id: `registerOtp.${step}.content`,
-      }),
-    }),
-    [step]
-  );
+      })} ${maskNumber(phoneSave)}` :
+        Internationalization.formatMessage({
+          id: `registerOtp.${step}.content`,
+        }),
+    }
+    setNewData(data);
+  }, [phoneSave]);
+
 
   useEffect(() => {
     if (flagFlowComplete && onComplete) {
@@ -105,7 +122,7 @@ const RegisterOtp: React.FC<RegisterOtpProps> = ({
 
   return (
     <>
-      <Title data={data} />
+      <Title data={newData} />
       {step === StepEnum.getOtp ? (
         <GetOtp action={getOtp} />
       ) : (
