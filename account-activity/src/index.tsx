@@ -85,7 +85,7 @@ const AccountActivityBlock: React.FC<AccountActivityProps> = (
         },
         setOnClose,
         setShowModal,
-        setShowDrawer
+        setShowDrawer,
     }
     /**
      * Method to change the value to show the modal or drawer
@@ -133,6 +133,8 @@ const AccountActivityBlock: React.FC<AccountActivityProps> = (
         }
     }, [flowComplete]);
 
+    console.log('flow', flow)
+
     const options = {
         title: `${intl.formatMessage({ id: 'AccountActivity.modalTitle' })}`,
         subtitle: `${intl.formatMessage({ id: 'AccountActivity.modalSubtitle' })}`,
@@ -157,7 +159,6 @@ const AccountActivityBlock: React.FC<AccountActivityProps> = (
             },
         ]
     }
-
     /**
      * Props for the OptionsBlock 
      */

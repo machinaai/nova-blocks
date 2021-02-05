@@ -4,6 +4,7 @@ import { useIntl } from 'umi';
 import { CheckBoxProps } from '../../interfaces/checkOptions.interface';
 import { CheckBoxOptions } from '../checkbox/index';
 import styles from './index.less';
+import RadioButton from '../Radio-Button';
 
 interface Props {
     optionsCheck: string[],
@@ -11,7 +12,7 @@ interface Props {
     fontFamily: Font,
     setOnClose: Function,
     setShowModal: Function,
-    setShowDrawer: Function
+    setShowDrawer: Function,
 }
 interface Font {
     fontTitle: string,
@@ -25,7 +26,7 @@ export const AccountActivity: React.FC<Props> = ({
     fontFamily: font,
     setOnClose,
     setShowModal,
-    setShowDrawer
+    setShowDrawer,
 }) => {
     const intl = useIntl();
     let valueCheck;
@@ -43,10 +44,10 @@ export const AccountActivity: React.FC<Props> = ({
     }, [checkVal]);
 
     if (checkVal.length === 0) {
-        if (oldVal[0].includes('Menos') || oldVal[0].includes('less')) {
+        if (oldVal[0].includes('Menos') || oldVal[0].includes('Less')) {
             valueCheck = [`${intl.formatMessage({ id: 'AccountActivity.optionCheck2' })} $18,000`];
             setCheck([`${intl.formatMessage({ id: 'AccountActivity.optionCheck2' })} $18,000`])
-        } else if (oldVal[0].includes('Má') || oldVal[0].includes('more')) {
+        } else if (oldVal[0].includes('Má') || oldVal[0].includes('More')) {
             valueCheck = [`${intl.formatMessage({ id: 'AccountActivity.optionCheck1' })} $18,000`]
             setCheck([`${intl.formatMessage({ id: 'AccountActivity.optionCheck1' })} $18,000`]);
         }
@@ -60,17 +61,6 @@ export const AccountActivity: React.FC<Props> = ({
         defValue: valueCheck
     }
 
-    /**
-     * Method to get the value of the checkbox
-     * @param e value of the selected check
-     */
-    const onChange = (e: any) => {
-        setStateCheck({
-            ...stateCheck,
-            checked: e.target.checked,
-        });
-    };
-
     const valDis = props.defValue === undefined ? true : false;
     const valDisBut = !stateCheck.checked || valDis ? true : false;
 
@@ -79,7 +69,7 @@ export const AccountActivity: React.FC<Props> = ({
      */
     const onValidateFlow = () => {
         const { defValue } = props;
-        if (defValue.includes('Menos') || defValue.includes('less')) {
+        if (defValue.includes('Menos') || defValue.includes('Less')) {
             setFlow('n2');
             setOnClose(true);
             setShowModal(false),
@@ -87,7 +77,6 @@ export const AccountActivity: React.FC<Props> = ({
         } else {
             setFlow('n4')
         }
-
     }
     return (
         <div className={styles.container}>
@@ -95,15 +84,7 @@ export const AccountActivity: React.FC<Props> = ({
             <p className={styles.subtitle} style={{ fontFamily: `${font.fontSubtitle}` }}>{intl.formatMessage({ id: 'AccountActivity.subtitle' })}</p>
             <CheckBoxOptions {...props} />
             <div className={styles.buttons}>
-                <Checkbox
-                    checked={stateCheck.checked}
-                    disabled={valDis}
-                    onChange={onChange}
-                    className={styles.textTerms}
-                    style={{ fontFamily: `${font.fontTextTerms}` }}
-                >
-                    {intl.formatMessage({ id: 'AccountActivity.terms-conditions1' })} <a className={styles.termsLikn} href="#">{intl.formatMessage({ id: 'AccountActivity.terms-conditions2' })}</a>
-                </Checkbox>
+                <RadioButton setStateCheck={setStateCheck} />
                 <br />
                 <Button
                     type="primary"
