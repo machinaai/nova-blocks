@@ -31,7 +31,8 @@ const OptionsBlock: React.FC<ModalProps> = (props) => {
   useEffect(() => {
     if (onlyModal && onlyDrawer) {
       let userAgent = navigator.userAgent || navigator.vendor;
-      if (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) {
+
+      if (/android/i.test(userAgent) || (/iPhone/.test(userAgent) && !window.MSStream)) {
         setShowDrawer(true);
       } else {
         setShowModal(true);
