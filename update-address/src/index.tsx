@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, connect, useIntl } from 'umi';
-import OptionsBlock from './blocks/m-d-block-options';
+import OptionsBlock from './blocks/modal-drawer-options/index';
 import UpdateAddressComponent from './components/update-address';
 import { StepEnum } from './enums/step.enum';
 import { dataFixture, dataFontFixture } from './fixture/dataFixture';
