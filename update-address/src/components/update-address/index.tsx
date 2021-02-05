@@ -26,7 +26,7 @@ const UpdateAddress: React.FC<Props> = ({
         setShowDrawer(true);
     }
     const userAgent = navigator.userAgent || navigator.vendor;
-    const blockVal = (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) ? true : false
+    const blockVal = (/android/i.test(userAgent) || (/iPhone/.test(userAgent) && !window.MSStream)) ? true : false
 
     const options = [
         { option: `${intl.formatMessage({ id: 'updateAddressLocale.op1' })} (Telmex, Axtel, Izzi)` },
