@@ -1,6 +1,6 @@
 export default {
-  'AccountActivity.optionCheck1': 'less than',
-  'AccountActivity.optionCheck2': 'more of',
+  'AccountActivity.optionCheck1': 'Less than',
+  'AccountActivity.optionCheck2': 'More of',
   'AccountActivity.modalTitle': 'Continue with INE/IFE',
   'AccountActivity.modalSubtitle': 'Select an option',
   'AccountActivity.modalOption1': 'Scan document',
