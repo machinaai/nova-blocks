@@ -4,7 +4,7 @@ import { PieChartProps } from './interfaces/dataInterface.interface';
 import { dataFixture } from './fixtures/used-channels.fixture';
 import styles from './index.less';
 
-const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, indexVal = 0, setVal }) => {
+const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, indexVal = 0, setVal, colors }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
     [data],
   );
 
-  const colors = ['#9e59ff', '#3092ff', '#e8e8e8'];
+  const defaultColors = ['#9e59ff', '#3092ff', '#e8e8e8'];
 
   const widget = (
     <div className={styles.widget}>
@@ -44,18 +44,8 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
           <Legend visible={false} />
           <Tooltip shared showTitle={false} />
           <Coordinate type="theta" innerRadius={0.9} />
-          <Interval
-            position="percent"
-            adjust="stack"
-            color={['type', colors]}
-            style={{
-              stroke: '#444',
-              lineWidth: 1,
-            }}
-            tooltip={false}
-          />
           <Annotation.Text
-            position={['50%', '40%']}
+            position={['50%', '55%']}
             content={data && `${data[index]?.value?.toString()}%`}
             className={styles.percentaje}
             style={{
@@ -68,10 +58,10 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
             offsetY={-20}
           />
           <Annotation.Text
-            position={['50%', '60%']}
+            position={['50%', '55%']}
             content={data && data[index]?.type}
             style={{
-              fontSize: '20',
+              fontSize: '15',
               fill: '#000000',
               textAlign: 'center',
               fontWeight: 'bold',
@@ -82,18 +72,6 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
         <View data={data}>
           <Axis visible={false} />
           <Coordinate type="polar" innerRadius={0.9} />
-          <Interval
-            label={false}
-            position="type*value"
-            color="#444"
-            tooltip={false}
-            size={['type', (val) => {
-              if (val % 3 === 0) {
-                return 4;
-              }
-              return 1;
-            }]}
-          />
         </View>
         <View data={data} scale={{
         }}>
@@ -101,7 +79,7 @@ const PieChart: React.FC<PieChartProps> = ({ data = dataFixture, height = 285, i
           <Interval
             position="percent"
             adjust="stack"
-            color="type"
+            color={['type', colors ? colors : defaultColors]}
             label={false}
           />
         </View>

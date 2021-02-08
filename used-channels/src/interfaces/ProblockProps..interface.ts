@@ -3,7 +3,8 @@ export interface PieChartProps {
     data?: DataChart[] | any
     height?: number;
     indexVal?: number;
-    setVal?:Function | any
+    setVal?:Function | any;
+    colors?: any;
 }
 
 export interface DataChart {
