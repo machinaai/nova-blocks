@@ -16,8 +16,7 @@ interface PaperlessProps {
   image?: string,
   colorBtn1?: string,
   colorBtn2?: string,
-  font?: Fonts
-  redirect?:string
+  font?: Fonts,
 
   cardNumber?: StateModel['cardNumber'];
   error: StateModel['error'];
@@ -32,7 +31,6 @@ const Paperless: React.FC<PaperlessProps> = (props) => {
     colorBtn1,
     colorBtn2,
     font = fontFixture,
-    redirect,
     cardNumber,
     error,
     emailVal,
@@ -71,10 +69,6 @@ const Paperless: React.FC<PaperlessProps> = (props) => {
       type: "Registry_Paperless/setEmail",
       payload: email
     })
-
-    setTimeout(() => {
-      history.push(`${redirect}`);
-    }, 1000);
   };
 
   useEffect(() => {
