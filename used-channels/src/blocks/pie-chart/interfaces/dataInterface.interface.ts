@@ -9,6 +9,7 @@ export interface PieChartProps {
   height?: number;
   indexVal?: number;
   setVal?: Function | any;
+  colors?: any;
 }
 /*
  * Data to show used channels

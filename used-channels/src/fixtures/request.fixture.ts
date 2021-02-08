@@ -6,16 +6,16 @@ export const dataFixture = [
     {
         icon:mobile,
         name:'Mobile',
-        backgroungCol: '#3aa0ff'
+        backgroungCol: 'rgb(228, 218, 237)'
     },
     {
         icon:web,
         name:'Web',
-        backgroungCol: '#36cbcb',
+        backgroungCol: 'rgb(229, 244, 255)',
     },
     {
         icon:tablet,
         name:'Tablet',
-        backgroungCol: '#4ecb73',
+        backgroungCol: 'rgb(243, 243, 243)',
     }
 ]
