@@ -27,8 +27,6 @@ export const getCleanData = (data: any) => {
    * @param data Table's data
    */
 export const filterEntry = (query: any, data: any) => {
-    console.log(data,'filter');
-    
     return data.filter((el: any)=> {
         let newIdAccount = el.idAccount.replace(/[()-]/g, '');
         newIdAccount = newIdAccount.replace(/ /gi, '');
