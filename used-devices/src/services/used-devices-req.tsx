@@ -6,8 +6,7 @@ const errorHandler = (error: { response: Response }): Response => {
   return error.response;
 };
 export async function UsedDevicesService(params: ServiceParams) {
-  const { data, endPoint} = params;  
-  console.log('paramas', params)
+  const { data, endPoint} = params;
   if (data) {  
     const {userType, startDate,endDate} = data;
     
