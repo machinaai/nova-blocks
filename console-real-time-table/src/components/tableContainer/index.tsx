@@ -205,7 +205,7 @@ export const TableContainer: React.FC<PropsComponent> = ({ dataTable, valueFilte
             <div className={styles.tableBlock}>
                 <DataTableBlock {...propsTable} />
             </div>
-            <div>
+            <div className={styles.tableBlock}>
                 <CollapseTableBlock {...propsCollapsedBlock} />
             </div>
         </>
