@@ -12,7 +12,6 @@ const CollapseTableBlock: React.FC<PropsBlock> = ({ data = dataFixture }) => {
     if (key !== []){
       valIcon=<PlusOutlined />
     }
-    console.log(key);
   }
   return (
     <Collapse 

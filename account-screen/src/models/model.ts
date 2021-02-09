@@ -53,8 +53,6 @@ const Model: Model = {
       };
     },
     setOption(state, { payload }) {
-      console.log('option',payload);
-      
       return {
         ...state,
         option: payload,

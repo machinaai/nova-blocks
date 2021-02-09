@@ -133,8 +133,6 @@ const AccountActivityBlock: React.FC<AccountActivityProps> = (
         }
     }, [flowComplete]);
 
-    console.log('flow', flow)
-
     const options = {
         title: `${intl.formatMessage({ id: 'AccountActivity.modalTitle' })}`,
         subtitle: `${intl.formatMessage({ id: 'AccountActivity.modalSubtitle' })}`,

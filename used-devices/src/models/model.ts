@@ -32,7 +32,6 @@ const Model: Model = {
   },
   effects: {
     *getUsedDevices({ payload }: any, { call, put }: any) {
-      console.log(payload, 'payload')
       const res = yield call(UsedDevicesService, payload);
       yield put({
         type: res.status ? 'setError' : 'setUsedDevices',
@@ -60,7 +59,6 @@ const Model: Model = {
       };
     },
     setEndPoin(state: any, { payload }: any) {
-      console.log('enviromentEndPoints', payload)
       return {
         ...state,
         endPointRequest: payload,
