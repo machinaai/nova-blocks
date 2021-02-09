@@ -1,4 +1,4 @@
 export default {
-  'usedChannels.title': 'Canales mas usados',
+  'usedChannels.title': 'Canales más usados',
   'usedChannels.titleTooltip': 'Ayuda',
 };
