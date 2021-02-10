@@ -118,8 +118,6 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             className={styles.inputCapitalize}
                         />
                     },
-                ],
-                col2: [
                     {
                         inputName: 'gender',
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field4' })}:`,
@@ -132,6 +130,8 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             className={styles.inputCapitalize}
                         />
                     },
+                ],
+                col2: [
                     {
                         inputName: 'birthday',
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,

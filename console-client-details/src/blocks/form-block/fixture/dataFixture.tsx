@@ -24,13 +24,13 @@ export const dataFieldsFixture = {
                     label: `Apellido materno:`,
                     element: <Input/>
                 },
-            ],
-            col2: [
                 {
                     inputName: 'gender',
                     label: `Sexo:`,
                     element: <Input/>
                 },
+            ],
+            col2: [
                 {
                     inputName: 'birthday',
                     label: `Fecha de nacimiento:`,
