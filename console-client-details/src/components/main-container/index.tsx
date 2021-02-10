@@ -305,14 +305,16 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
         data: {
             previewVisible: false,
             previewImage: '',
-            fileList: transformDataImage(imagesDocs)
-        }
+            fileList: transformDataImage(imagesDocs),
+        },
+        heightContainer:395
     }
     /**
      * Props for AudioBlock
      */
     const audioProps: PropsAudio = {
-        data: setAudioVideo(audioDocs)
+        data: setAudioVideo(audioDocs),
+        heightContainer:180
     }
     /**
      * Props for CustomerVideoComponent
