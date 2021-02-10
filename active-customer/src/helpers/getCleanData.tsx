@@ -1,4 +1,3 @@
-import { DataTable } from '../interfaces/ProblockProps.interface';
 
 /**
  * Method to clean data to show in the table

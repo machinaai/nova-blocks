@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useIntl } from 'umi';
-import DataTableBlock from '../../blocks/table-data/src';
+import DataTableBlock from '../../blocks/table-data';
 import { filterEntry } from '../../helpers/getCleanData';
 import { PropsComponent } from '../../interfaces/ProblockProps.interface';
 import styles from './index.less';
-import InputSearchBlock from '../../blocks/input-search-block/src/index';
+import InputSearchBlock from '../../blocks/input-search-block/index';
 
 
 export const TableContainer: React.FC<PropsComponent> = ({ dataTable, action }) => {
