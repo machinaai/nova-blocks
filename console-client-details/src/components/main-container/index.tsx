@@ -118,8 +118,6 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             className={styles.inputCapitalize}
                         />
                     },
-                ],
-                col2: [
                     {
                         inputName: 'gender',
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field4' })}:`,
@@ -132,6 +130,8 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             className={styles.inputCapitalize}
                         />
                     },
+                ],
+                col2: [
                     {
                         inputName: 'birthday',
                         label: `${intl.formatMessage({ id: 'clientDetails.Form-field5' })}:`,
@@ -305,14 +305,16 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
         data: {
             previewVisible: false,
             previewImage: '',
-            fileList: transformDataImage(imagesDocs)
-        }
+            fileList: transformDataImage(imagesDocs),
+        },
+        heightContainer:395
     }
     /**
      * Props for AudioBlock
      */
     const audioProps: PropsAudio = {
-        data: setAudioVideo(audioDocs)
+        data: setAudioVideo(audioDocs),
+        heightContainer:180
     }
     /**
      * Props for CustomerVideoComponent
