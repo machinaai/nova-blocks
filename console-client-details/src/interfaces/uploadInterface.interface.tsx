@@ -1,5 +1,7 @@
 export interface PropsUpload {
-    data?: DataInterface
+    data?: DataInterface,
+    heightContainer?:number
+
 }
 export interface DataInterface {
     previewVisible: boolean,
