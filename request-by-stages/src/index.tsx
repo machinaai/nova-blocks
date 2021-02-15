@@ -25,7 +25,6 @@ interface Font {
 }
 const RequestByStages: React.FC<RequestByStagesProps> = ({
   fontFam = fontFamFixture,
-  actionIconHelp = () => { console.log('Help') },
   icons = iconsFixture,
   dataSteps,
   dateRequest,
@@ -50,7 +49,7 @@ const RequestByStages: React.FC<RequestByStagesProps> = ({
 
   const propsFunnelChart: FunnelChartProps = {
     dataOptions: dataDevice,
-    heightStatistic: 195,
+    heightStatistic: 143,
     heightCanvas: 140
   }
 
@@ -64,7 +63,7 @@ const RequestByStages: React.FC<RequestByStagesProps> = ({
         <div className={styles.header}>
           <h2 className={styles.title} style={{ fontFamily: `${fontFam.fontTitle}` }}>{intl.formatMessage({ id: 'requestByStages.title' })}</h2>
           <Tooltip placement="top" className={styles.icon} title={intl.formatMessage({ id: 'requestByStages.titleTooltip' })}>
-            <Button type='text' icon={<InfoCircleOutlined onClick={actionIconHelp} />} />
+            <InfoCircleOutlined/>
           </Tooltip>
         </div>
         { dataSteps ? (<FunnelChartBlock {...propsFunnelChart} />) : (<p className={styles.data}>{intl.formatMessage({ id: 'requestByStages.no.data' })}</p> ) }

@@ -1,3 +1,4 @@
+import { InfoCircleOutlined } from '@ant-design/icons';
 import { Card, Row, Col, Button, Tooltip } from 'antd';
 import React from 'react';
 import { dataFixture } from './fixture/data.fixture';
@@ -26,10 +27,8 @@ const TotalRequestCard: React.FC<PropsTotalReq> = ({
         <Col span={18}>
           <div className={styles.header}>
             <h2 style={{ fontFamily: fontFam.fontTitle }}>{title}</h2>
-            <Tooltip placement="top" title={optionInfo.tooltipTitle} className={styles.icon}>
-              <div className={styles.btnInfo}>
-                <Button type='text' shape="circle" icon={optionInfo.icon} size='large' onClick={optionInfo.action} />
-              </div>
+           <Tooltip placement="top" className={styles.icon} title={optionInfo.tooltipTitle}>
+              <InfoCircleOutlined />
             </Tooltip>
           </div>
           <p className={styles.totalRequest} style={{ fontFamily: fontFam.fontTotalReq }}>
