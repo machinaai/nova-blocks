@@ -1,7 +1,8 @@
 import { Card, Row, Col, Button, Tooltip } from 'antd';
 import React from 'react';
 import styles from './index.less';
-import { PropsDataReq  } from '../../interfaces/dataReq.interface';
+import { PropsDataReq } from '../../interfaces/dataReq.interface';
+import { InfoCircleOutlined } from '@ant-design/icons';
 
 
 const DataRequestBlock: React.FC<PropsDataReq> = ({
@@ -20,10 +21,8 @@ const DataRequestBlock: React.FC<PropsDataReq> = ({
           <Col span={19}>
             <div className={styles.header}>
               <h2 style={{ fontFamily: fontFam?.fontTitle }}>{titles?.title}</h2>
-              <Tooltip placement="top" title={optionInfo?.tooltipTitle} className={styles.icon}>
-                <div className={styles.btnInfo}>
-                  <Button type='text' shape="circle" icon={optionInfo?.icon} size='large' onClick={optionInfo?.action} />
-                </div>
+              <Tooltip placement="top" className={styles.icon} title={optionInfo?.tooltipTitle}>
+                <InfoCircleOutlined />
               </Tooltip>
             </div>
             {options?.map((op: any) => (
