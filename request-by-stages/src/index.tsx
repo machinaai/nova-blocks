@@ -48,13 +48,13 @@ const RequestByStages: React.FC<RequestByStagesProps> = ({
   const {dataDevice,dataStatistic} = getCleanData(dataSteps);
 
   const propsFunnelChart: FunnelChartProps = {
-    dataOptions: dataDevice,
+    dataOptions: dataDevice || [],
     heightStatistic: 143,
     heightCanvas: 140
   }
 
   const propsExperienceStatistic: StatisticProps = {
-    dataOptions: dataStatistic,
+    dataOptions: dataStatistic || [],
     icons
   }
   return (
