@@ -132,9 +132,9 @@ const PersonalData: React.FC<PersonalDataProps> = ({
   const disabledDate = (current: any) => {
     return current && current > moment().subtract(6570, 'days');
   };
-  
-  
-  
+
+
+
 
   return (
     <div className={styles.form_data}>
@@ -182,7 +182,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                   />
                 </Form.Item>
               </div>
-            
+
               <div className={styles.colum}>
                 <Form.Item name="name" rules={[{ required: true }]}>
                   <InputAuto
@@ -224,25 +224,23 @@ const PersonalData: React.FC<PersonalDataProps> = ({
             </div>
             <div className={styles.group}>
               <div className={styles.colum}>
-                <ConfigProvider locale={locale}>
-                  <Form.Item name="date" rules={[{ required: true }]}>
-                    <p className={styles.label_date}>{internationalization.formatMessage({
-                        id: 'personaldata.formManually.date',
-                      })}</p>
-                    <DatePicker
-                      format={dateFormat}
-                      picker="date"
-                      placeholder= ''
-                      defaultPickerValue={
-                        dataSave?.customerData.datebirth || moment('01/01/1990', dateFormat)
-                      }
-                      onChange={dateOk}
-                      inputReadOnly
-                      className={styles.date}
-                      disabledDate={disabledDate}
-                    />
-                  </Form.Item>
-                </ConfigProvider>
+                <p className={styles.label_date}>{internationalization.formatMessage({
+                  id: 'personaldata.formManually.date',
+                })}</p>
+                <Form.Item name="date" rules={[{ required: true }]}>
+                  <DatePicker
+                    format={dateFormat}
+                    picker="date"
+                    placeholder=''
+                    defaultPickerValue={
+                      dataSave?.customerData.datebirth || moment('01/01/1990', dateFormat)
+                    }
+                    onChange={dateOk}
+                    inputReadOnly
+                    className={styles.date}
+                    disabledDate={disabledDate}
+                  />
+                </Form.Item>
               </div>
               <div className={styles.colum}>
                 <Form.Item name="address" rules={[{ required: true }]}>
@@ -287,7 +285,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                     shape="round"
                     htmlType="submit"
                     disabled={
-                      !form.isFieldsTouched(true) || form.getFieldValue(['curp'])?.length < 18 || form.getFieldValue(['ine'])?.length <18 ||
+                      !form.isFieldsTouched(true) || form.getFieldValue(['curp'])?.length < 18 || form.getFieldValue(['ine'])?.length < 18 ||
                       form.getFieldsError().filter(({ errors }) => errors.length).length
                     }
                   >
