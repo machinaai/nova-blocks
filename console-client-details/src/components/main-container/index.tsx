@@ -307,7 +307,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
             previewImage: '',
             fileList: transformDataImage(imagesDocs),
         },
-        heightContainer:395
+        heightContainer:350
     }
     /**
      * Props for AudioBlock
@@ -347,7 +347,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             <StepsStatusBlock {...propsStep} />
                         </div>
                         {imagesDocs.length !== 0 && <UploadBlock {...uploadProps} />}
-                        <AudioBlock {...audioProps} />
+                        {audioDocs.length !== 0 ? <AudioBlock {...audioProps} /> : null }
                         <Button type='primary' size='large' style={{ width: '100%' }} htmlType='submit' onClick={getDataForm} >{intl.formatMessage({ id: 'clientDetails.Form-btn' })}</Button>
                         <Button href={`${pathBtnReturn}`} size='large' type="link" block >{intl.formatMessage({ id: 'clientDetails.Form-btn-return' })}</Button>
                     </Col>
@@ -366,7 +366,7 @@ export const DetailsContainer: React.FC<Props> = ({ dataDetails, setDataForm, pa
                             <StepsStatusBlock {...propsStep} />
                         </div>
                         {imagesDocs.length !== 0 && <UploadBlock {...uploadProps} />}
-                        <AudioBlock {...audioProps} />
+                        {audioDocs.length !== 0 ? <AudioBlock {...audioProps} /> : null }
                     </Col>
                 </Row>
             </Col>
