@@ -94,7 +94,7 @@ export const transformDataImage = (data: any) => {
     let newDta: ItemFile[] = [];
     data.map((element: any, index: any) => {
         const { url, type } = element
-        newDta = [...newDta, { uid: String(index), name: `${type}`, status: 'done', url: `https://rao.reboot.vc${url}` }]
+        newDta = [...newDta, { uid: String(index), name: `${type}`, status: 'done', url: `${url}` }]
     })
     return newDta
 }
@@ -107,7 +107,7 @@ export const setAudioVideo = (data: any)=>{
     let newDta: ItemFileAudio[] = [];
     data.map((element: any, index: any) => {
         const { url } = element
-        newDta = [...newDta, { uid: String(index), url: `https://rao.reboot.vc${url}` }]
+        newDta = [...newDta, { uid: String(index), url: `${url}` }]
     })
     return newDta
 }

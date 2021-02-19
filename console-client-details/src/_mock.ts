@@ -29,40 +29,44 @@ export default {
       },
       documents: [
         {
-          url: '/static/ico-paperless.65d06432.png',
+          url: 'assets/nova-bank/ico-paperless.png',
           type: 'IMAGE',
         },
         {
-          url: '/static/ico-paperless.65d06432.png',
+          url: 'assets/nova-bank/ico-paperless.png',
           type: 'IMAGE',
         },
         {
-          url: '/static/ico-paperless.65d06432.png',
+          url: 'assets/nova-bank/ico-paperless.png',
           type: 'IMAGE',
         },
         {
-          url: 'https://albalearning.com/S0NID0/cuentos/gshdleyl29/albalearning-eljinetesincabeza_cuentos.mp3',
-          type: 'AUDIO',
-        },
-        {
-          url: 'https://albalearning.com/S0NID0/cuentos/gshdleyl29/albalearning-eljinetesincabeza_cuentos.mp3',
-          type: 'AUDIO',
-        },
-        {
-          url: 'https://albalearning.com/S0NID0/cuentos/gshdleyl29/albalearning-eljinetesincabeza_cuentos.mp3',
-          type: 'AUDIO',
-        },
-        {
-          url: 'https://albalearning.com/S0NID0/cuentos/gshdleyl29/albalearning-eljinetesincabeza_cuentos.mp3',
+          url: 'assets/nova-bank/videoTest.mp4',
           type: 'VIDEO',
         },
         {
-          url: 'https://albalearning.com/S0NID0/cuentos/gshdleyl29/albalearning-eljinetesincabeza_cuentos.mp3',
+          url: 'assets/nova-bank/videoTest.mp4',
           type: 'VIDEO',
         },
         {
-          url: 'https://albalearning.com/S0NID0/cuentos/gshdleyl29/albalearning-eljinetesincabeza_cuentos.mp3',
+          url: 'assets/nova-bank/videoTest.mp4',
           type: 'VIDEO',
+        },
+        {
+          url: 'assets/nova-bank/videoTest.mp4',
+          type: 'VIDEO',
+        },
+        {
+          url: 'assets/nova-bank/audioTest.mp3',
+          type: 'AUDIO',
+        },
+        {
+          url: 'assets/nova-bank/audioTest.mp3',
+          type: 'AUDIO',
+        },
+        {
+          url: 'assets/nova-bank/audioTest.mp3',
+          type: 'AUDIO',
         },
       ],
     });
