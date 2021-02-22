@@ -67,7 +67,7 @@ const RegisterOtp: React.FC<RegisterOtpProps> = ({
         }),
     }
     setNewData(data);
-  }, [phoneSave]);
+  }, [phoneSave, step]);
 
 
   useEffect(() => {
