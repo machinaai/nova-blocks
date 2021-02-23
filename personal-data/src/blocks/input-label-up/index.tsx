@@ -44,32 +44,33 @@ const InputAuto: React.FC<InputProps> = (props) => {
   const eventsInputs = (e: any) => {
     const { value } = e.target;
     if (onlyNumbersAndLetters) {
-      // const reg = /^\w*(\w*)?$/;
       const reg = /^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*([0-9a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*)?$/;
-      if (upperCase) {
-        if (value.match(reg)) {
+      if (value.match(reg)) {
+        if (upperCase) {
           setValue(value.toUpperCase());
+        } else {
+          setValue(value);
         }
-      } else {
-        setValue(value);
       }
     }
+
     if (onlyLetters) {
       const reg = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*([a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*)?$/;
-      if (upperCase) {
-        if (value.match(reg)) {
+
+      if (value.match(reg)) {
+        if (upperCase) {
           setValue(value.toUpperCase());
+        } else {
+          setValue(value);
         }
-      } else {
-        setValue(value);
       }
     }
+
     if (onlyNumbers) {
       const reg = /^\d*(\d*)?$/;
-      if (upperCase) {
-        if (value.match(reg)) {
-          setValue(value.toUpperCase());
-        }
+
+      if (value.match(reg)) {
+        setValue(value);
       }
     }
 
