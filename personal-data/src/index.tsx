@@ -11,6 +11,7 @@ import { StateModel } from './models/model';
 import TooltipHelp from './blocks/tooltipHelp';
 import ineBack from './blocks/tooltipHelp/assets/ine-back.png';
 import ifeBack from './blocks/tooltipHelp/assets/ife-back.png';
+import {removeEmoji} from './helpers/helper';
 // import { phoneTest } from '../../Account-Opening/components/Step1/index';
 
 interface PersonalDataProps {
@@ -61,13 +62,13 @@ const PersonalData: React.FC<PersonalDataProps> = ({
     if (dataSave) {
       const {
         customerName: { name },
-        customerData: { CURP, idINE, placeBirth, gender },
+        customerData: { CURP, idINE, residence, gender },
       } = dataSave;
       form.setFieldsValue({
         name,
         ine: idINE,
         gender,
-        placeBirth,
+        residence,
         CURP,
       });
     }
@@ -88,7 +89,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
       // phone ??
       // flow id
       customerName: {
-        name: values.name,
+        name: removeEmoji(values.name),
         lastName: 'name',
         motherLastName: 'name',
       },
@@ -96,7 +97,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
         CURP: values.curp,
         idIne: values.ine,
         datebirth: dateFormatView,
-        birthplace: values.birthplace,
+        residence: removeEmoji(values.residence),
         gender: values.gender,
       },
     };
@@ -104,14 +105,14 @@ const PersonalData: React.FC<PersonalDataProps> = ({
     setObjectService({
       phone: phoneUser,
       flowId: "1234",
-      name: values.name,
+      name: removeEmoji(values.name),
       secondName: "name",
       lastName: "name",
       mlastName: "name",
       ineNumber: values.ine,
       gender: values.gender,
       birthDate: dateService,
-      birthPlace: values.birthplace,
+      residence: removeEmoji(values.residence),
       curp: values.curp,
     });
 
@@ -132,9 +133,6 @@ const PersonalData: React.FC<PersonalDataProps> = ({
   const disabledDate = (current: any) => {
     return current && current > moment().subtract(6570, 'days');
   };
-
-
-
 
   return (
     <div className={styles.form_data}>
@@ -177,7 +175,6 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                     upperCase
                     onPasteDisabled
                     onCopyDisabled
-                    onPattern="[A-Z0-9]*"
                     onlyNumbersAndLetters
                   />
                 </Form.Item>
@@ -190,11 +187,9 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                       id: 'personaldata.formManually.name',
                     })}
                     className={styles.input}
-                    upperCase
                     maxLength={60}
                     onPasteDisabled
                     onCopyDisabled
-                    onPattern="[\sA-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ.,]*"
                     onlyLetters
                   />
                 </Form.Item>
@@ -243,7 +238,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                 </Form.Item>
               </div>
               <div className={styles.colum}>
-                <Form.Item name="address" rules={[{ required: true }]}>
+                <Form.Item name="residence" rules={[{ required: true }]}>
                   <InputAuto
                     placeholder={internationalization.formatMessage({
                       id: 'personaldata.formManually.address',
@@ -252,7 +247,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                     maxLength={100}
                     onPasteDisabled
                     onCopyDisabled
-                    onPattern="[\sA-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ.,#0-9]*"
+                    onlyNumbersAndLetters
                   />
                 </Form.Item>
               </div>
