@@ -86,14 +86,6 @@ const VerifyData: React.FC<VerifyDataProps> = ({ data, action }) => {
               <div className={styles.field_container}>
                 <p className={styles.label}>
                   {internationalization.formatMessage({
-                    id: 'identityVerification.formManually.address',
-                  })}:
-                </p>
-                <p className={styles.p}>{data.birthplace} </p>
-              </div>
-              <div className={styles.field_container}>
-                <p className={styles.label}>
-                  {internationalization.formatMessage({
                     id: 'identityVerification.formManually.curp',
                   })}:
                 </p>
