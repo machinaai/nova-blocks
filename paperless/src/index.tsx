@@ -11,6 +11,7 @@ import { StateModel } from './models/model';
 import { useHistory } from "react-router-dom";
 import { card } from "./fixture/cardDetail.fixture";
 import { Form } from "antd";
+import { removeEmoji } from "./helpers/remove-emoji";
 
 interface PaperlessProps {
   image?: string,
@@ -67,7 +68,7 @@ const Paperless: React.FC<PaperlessProps> = (props) => {
     });
     dispatch({
       type: "Registry_Paperless/setEmail",
-      payload: email
+      payload: removeEmoji(email)
     })
   };
 

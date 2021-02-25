@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, Input } from "antd";
 import { useIntl } from "umi";
+import InputAuto from "../input-label-up/index";
 import styles from "./index.less";
 
 interface Props {
@@ -23,10 +24,6 @@ const FormBlock: React.FC<Props> = ({ options, actionForm, BtnOptions }) => {
     required: "${label} is required!",
     types: {
       email: "${label} is not validate email!",
-      number: "${label} is not a validate number!",
-    },
-    number: {
-      range: "${label} must be between ${min} and ${max}",
     },
   };
 
@@ -36,28 +33,27 @@ const FormBlock: React.FC<Props> = ({ options, actionForm, BtnOptions }) => {
     forceUpdate({});
   }, []);
 
-  const onFinish = (values: any) => {
-    console.log("Finish:", values);
-  };
-
   return (
     <Form
       form={form}
-      layout="vertical"
-      name="nest-messages"
+      name="control-hooks"
       onFinish={actionForm}
-      validateMessages={validateMessages}
-      style={{width: '85%'}}
-    >
+      style={{ width: '85%' }}
+      validateMessages={validateMessages}>
+
       {options?.map((item) => (
+
         <Form.Item
           key={item.label}
           name={["user", `${item.inputName}`]}
-          label={`${item.label}`}
           rules={item.ruleValidate}
-          shouldUpdate={true}
         >
-          <Input placeholder={item.label} />
+          <InputAuto
+            placeholder={`${item.label}`}
+            className={styles.input}
+            maxLength={100}
+            onlyNumbersAndLetters
+          />
         </Form.Item>
       ))}
       <Form.Item shouldUpdate={true}>
@@ -67,7 +63,7 @@ const FormBlock: React.FC<Props> = ({ options, actionForm, BtnOptions }) => {
             shape="round"
             size="large"
             htmlType="submit"
-            style={{width: '100%'}}
+            style={{ width: '100%' }}
             className={styles.BtnOpt}
             disabled={
               !form.isFieldsTouched(true) ||
