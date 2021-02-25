@@ -60,7 +60,7 @@ const Model: ModelState = {
         yield put({ type: 'setStatus', payload: status });
       } else {
         // only use with session token
-        
+
         // yield setToken(response.token);
         // yield call(createSessionService, {
         //   token: getToken(),
@@ -69,6 +69,7 @@ const Model: ModelState = {
         yield put({ type: 'setFlowStatus', payload: true });
         yield put({ type: 'setStatus', payload: 200 });
         yield put({ type: 'setFlowStatus', payload: false });
+        yield put({ type: 'setStep', payload: StepEnum.getOtp });
       }
     },
   },
