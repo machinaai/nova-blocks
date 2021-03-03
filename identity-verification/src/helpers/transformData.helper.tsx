@@ -1,5 +1,5 @@
 /**
- * Tranform data by manually component
+ * Tranform data by video conference
  *
  * @param {*} data
  * @return {*} 
