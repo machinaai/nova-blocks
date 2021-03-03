@@ -61,6 +61,26 @@
       ]
     },
     {
+      "title": "animationsLottie",
+      "value": "animationsLottie",
+      "key": "animationsLottie",
+      "description": "Base-pro-block",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/animationsLottie",
+      "type": "block",
+      "path": "animationsLottie",
+      "isPage": false,
+      "defaultPath": "animationsLottie",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/animationsLottie/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "animationsLottie",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
       "title": "bar-graph",
       "value": "bar-graph",
       "key": "bar-graph",
