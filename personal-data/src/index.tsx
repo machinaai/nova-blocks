@@ -86,12 +86,10 @@ const PersonalData: React.FC<PersonalDataProps> = ({
 
   const submitInfo = (values: any) => {
     informationObject = {
-      // phone ??
-      // flow id
       customerName: {
         name: removeEmoji(values.name),
-        lastName: 'name',
-        motherLastName: 'name',
+        lastName: removeEmoji(values.lastName),
+        motherLastName: removeEmoji(values.secondlastName),
       },
       customerData: {
         CURP: values.curp,
@@ -102,23 +100,24 @@ const PersonalData: React.FC<PersonalDataProps> = ({
       },
     };
 
-    setObjectService({
-      phone: phoneUser,
-      flowId: "1234",
-      name: removeEmoji(values.name),
-      secondName: "name",
-      lastName: "name",
-      mlastName: "name",
-      ineNumber: values.ine,
-      gender: values.gender,
-      birthDate: dateService,
-      residence: removeEmoji(values.residence),
-      curp: values.curp,
-    });
-
     dispatch({
       type: 'personalData/submitCustomerData',
-      payload: objectService,
+      payload: {
+        flowId: "1234",
+        customerName: {
+          name: removeEmoji(values.name),
+          lastName: removeEmoji(values.lastName),
+          motherLastName: removeEmoji(values.secondlastName),
+          },
+        customerData: {
+          idINE: values.ine,
+          gender: values.gender,
+          birthDate: dateService,
+          birthPlace: removeEmoji(values.residence),
+          curp: values.curp,
+        },
+        phone: phoneUser
+      },
     });
 
     if (informationObject && onSetUserData) {
@@ -196,24 +195,32 @@ const PersonalData: React.FC<PersonalDataProps> = ({
               </div>
 
               <div className={styles.colum}>
-                <p className={styles.radio}>
-                  {internationalization.formatMessage({
-                    id: 'personaldata.formManually.gender',
-                  })}
-                </p>
-                <Form.Item name="gender" rules={[{ required: true }]}>
-                  <Radio.Group size="large" buttonStyle="solid">
-                    <Radio value="H">
-                      {internationalization.formatMessage({
-                        id: 'personaldata.formManually.gender.1',
-                      })}
-                    </Radio>
-                    <Radio value="M">
-                      {internationalization.formatMessage({
-                        id: 'personaldata.formManually.gender.2',
-                      })}
-                    </Radio>
-                  </Radio.Group>
+                <Form.Item name="lastName" rules={[{ required: true }]}>
+                  <InputAuto
+                    placeholder={internationalization.formatMessage({
+                      id: 'personaldata.formManually.lastName',
+                    })}
+                    className={styles.input}
+                    maxLength={60}
+                    onPasteDisabled
+                    onCopyDisabled
+                    onlyLetters
+                  />
+                </Form.Item>
+              </div>
+
+              <div className={styles.colum}>
+                <Form.Item name="secondlastName" rules={[{ required: true }]}>
+                  <InputAuto
+                    placeholder={internationalization.formatMessage({
+                      id: 'personaldata.formManually.secondlastName',
+                    })}
+                    className={styles.input}
+                    maxLength={60}
+                    onPasteDisabled
+                    onCopyDisabled
+                    onlyLetters
+                  />
                 </Form.Item>
               </div>
             </div>
@@ -267,7 +274,27 @@ const PersonalData: React.FC<PersonalDataProps> = ({
                   />
                 </Form.Item>
               </div>
-
+              <div className={styles.colum}>
+                <p className={styles.radio}>
+                  {internationalization.formatMessage({
+                    id: 'personaldata.formManually.gender',
+                  })}
+                </p>
+                <Form.Item name="gender" rules={[{ required: true }]}>
+                  <Radio.Group size="large" buttonStyle="solid">
+                    <Radio value="H">
+                      {internationalization.formatMessage({
+                        id: 'personaldata.formManually.gender.1',
+                      })}
+                    </Radio>
+                    <Radio value="M">
+                      {internationalization.formatMessage({
+                        id: 'personaldata.formManually.gender.2',
+                      })}
+                    </Radio>
+                  </Radio.Group>
+                </Form.Item>
+              </div>
             </div>
           </div>
           <div className={styles.btnContainer}>
