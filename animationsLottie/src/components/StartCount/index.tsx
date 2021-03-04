@@ -60,7 +60,7 @@ const StartCount: React.SFC<StartCountProps> = () => {
                                 eventListeners={[
                                     {
                                       eventName: 'DOMLoaded',
-                                      callback: () => {console.log('the animation completed:');},
+                                      callback: () => {console.log('seeee');},
                                     },
                                 ]}
                     />

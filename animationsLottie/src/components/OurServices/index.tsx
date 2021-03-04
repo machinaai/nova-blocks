@@ -18,7 +18,7 @@ const OurServices: React.FC<OurServicesProps> = () => {
         }
       };
 
-      lottie.searchAnimations()
+      
     return ( 
         <div className={styles.container}>
             <div>

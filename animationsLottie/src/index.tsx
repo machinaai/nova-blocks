@@ -5,6 +5,7 @@ import OurServices from './components/OurServices/index';
 import CustomSkeleton from "./components/CustomSkeleton";
 import StartCount from "./components/StartCount";
 import { Button } from 'antd';
+import { useHistory } from "react-router-dom";
 
 
 export interface ControllsAnimationsProps {
@@ -25,6 +26,8 @@ const ControllsAnimations: React.FC<ControllsAnimationsProps> = () => {
     }
   };
 
+  const  history = useHistory();
+
   return ( 
     <div>
       <div className="controlled">
@@ -35,6 +38,13 @@ const ControllsAnimations: React.FC<ControllsAnimationsProps> = () => {
           isStopped={isStopped}
           isPaused={isPaused}
           isClickToPauseDisabled
+        //   eventListeners={[
+        //     {
+        //       eventName: 'complete',
+        //       callback: () => { window.location.href = "https://novasolutionsystems.com/"
+        //        },
+        //     },
+        // ]}
         />
         <Button 
           type="primary"
