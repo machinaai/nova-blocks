@@ -1,0 +1,32 @@
+{
+  "name": "@nova-blocks/google-maps",
+  "version": "0.0.1",
+  "description": "google-maps",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/machinaai"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "umi dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.5.0",
+    "@react-google-maps/api": "^2.1.1",
+    "antd": "^4.7.2",
+    "react": ">=16.0.0",
+    "react-google-maps": "^9.4.5",
+    "umi-request": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "umi": "^3.2.23",
+    "@umijs/preset-react": "1.x",
+    "umi-types": "^0.3.0"
+  }
+}
