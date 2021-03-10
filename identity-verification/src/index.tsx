@@ -12,6 +12,7 @@ import { StateModel } from './models/model';
 import { dataUserTransform } from './helpers/dataUserTransform.helper';
 import { transformData } from './helpers/transformData.helper';
 import { transformDataVideoConference } from './helpers/transformDataVideo.helper';
+import { transformDataManually } from './helpers/transformDataManually.helper';
 //fixtures 
 import { stagesFixture } from './fixtures/stages.fixture';
 
@@ -167,7 +168,7 @@ const IdentityVerification: React.FC<IdentityVerificationProps> = ({
         case FlowN2N4Enum.N2Manually:
           dispatch({
             type: 'identityVerification/setUserData',
-            payload: { informationObject: event },
+            payload: { informationObject: transformDataManually(event) },
           });
           break;
     }
