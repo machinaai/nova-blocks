@@ -1,6 +1,26 @@
 {
   "list": [
     {
+      "title": "SocialMedia",
+      "value": "SocialMedia",
+      "key": "SocialMedia",
+      "description": "Pro-block for share on social media",
+      "url": "https://github.com/machinaai/nova-blocks/tree/master/SocialMedia",
+      "type": "block",
+      "path": "SocialMedia",
+      "isPage": false,
+      "defaultPath": "SocialMedia",
+      "img": "https://raw.githubusercontent.com/machinaai/nova-blocks/master/SocialMedia/snapshot.png",
+      "tags": [
+        "pro-block"
+      ],
+      "name": "SocialMedia",
+      "previewUrl": "https://ant.design/components",
+      "features": [
+        "antd"
+      ]
+    },
+    {
       "title": "account-activity",
       "value": "account-activity",
       "key": "account-activity",
