@@ -27,7 +27,7 @@ export default {
   'personaldata.formManually.id': 'Número de INE/IFE',
   'personaldata.formManually.name': 'Nombre',
   'personaldata.formManually.lastName': 'Apellido Paterno',
-  'personaldata.formManually.secondlastName': 'Apellido Paterno',
+  'personaldata.formManually.secondlastName': 'Apellido Materno',
   'personaldata.formManually.gender': 'Genero',
   'personaldata.formManually.gender.1': 'Hombre',
   'personaldata.formManually.gender.2': 'Mujer',
